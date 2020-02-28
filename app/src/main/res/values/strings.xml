@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SiRFS Companion</string>
+    <string name="listCharName">Character name</string>
+    <string name="listRaceClass">Race, class and level</string>
+    <string name="listDate">Creation date</string>
+    <string name="character_picture">Character picture</string>
+</resources>

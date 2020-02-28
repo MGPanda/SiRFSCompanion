@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="races1e">
+        <item>Humano</item>
+        <item>Elfo del Este</item>
+        <item>Elfo del Oeste</item>
+        <item>Crunisio</item>
+        <item>Orco</item>
+        <item>Enano</item>
+        <item>Dracónido</item>
+        <item>Vaark</item>
+        <item>Félido</item>
+    </string-array>
+
+    <string-array name="racesDesc1e">
+        <item>A pesar de ser la raza más joven del mundo, los humanos han conseguido superar en número a todas las demás especies inteligentes y construir asentamientos en todos los confines del planeta, desde las costas de Yruk al este hasta las frondosas selvas occidentales al otro lado del mar, además de convivir con todas las otras razas en sus propias ciudades. Dondequiera que mires encontrarás humanos, y donde hay humanos hay también una vasta red de puertos mercantes entre los cuales circulan mercancías de todo tipo.
+            \nAdemás de por su capacidad para vivir en cualquier entorno, por hostil que pueda ser, los humanos tienen fama de tacaños y codiciosos, quizás debido a ser los inventores de la moneda, y también por la inestabilidad política de sus principados, cuyas fronteras cambian constantemente. A pesar de sus disputas internas y afán por el dinero, los humanos no dudarán en aliarse para enfrentarse a cualquier amenaza de otras razas y ayudar a aquellos que más lo necesiten. Una mentalidad algo contradictoria, sin duda, pero parece ser que les está funcionando.</item>
+        <item>Altos, delgados, pálidos y de orejas puntiagudas, los elfos del este son seres nobles y longevos con talento innato por la magia, que estudian con fascinación desde que asentaron en la isla de Ulié, sobre la que construyeron impresionantes colegios de magia y universidades arcanas en el centro de sus preciosas ciudades.
+            \nComo cabría esperar, los elfos del este tienen una reputación como artistas y amantes del arte, además de como hábiles hechiceros. A menudo, combinan sus dos grandes aficiones en una, creando maravillosos artefactos mágicos de todo tipo que desgraciadamente no suelen abandonar Ulié, igual que sus solitarios creadores.</item>
+        <item>Los elfos del oeste se separaron de sus hermanos Ulieanos milenios atrás, por motivos desconocidos. Cruzaron el océano y se asentaron en las selvas occidentales. Con el tiempo, su piel se oscureció hasta adoptar un tono cobrizo y abandonaron el estilo de vida académico para dedicarse a la caza y protección de sus selvas. Las orejas puntiagudas, la longevidad y la complexión delgada, no obstante, la conservaron.
+            \nViven en cabañas construidas moldeando los árboles cercanos mediante rituales secretos que guardan con recelo, y tienen un fuerte vínculo con las criaturas salvajes con las que conviven. Debido a su estilo de vida tradicional, los elfos del oeste aprenden a disparar con arco y a luchar cuerpo a cuerpo desde muy temprana edad, con lo que han obtenido una temible reputación de letales tiradores.</item>
+        <item>Los crunisios son criaturas altas, de piel pálida, fuertes músculos y un par de enormes alas membranosas cual murciélago a la espalda que habitan las gélidas estepas del norte, donde fundaron un imperio unificado que en su edad de oro abarcó el continente en su totalidad.
+            \nFueron la primera raza inteligente que apareció y la primera en crear ciudades-estado, lo que les dio un amplio margen de tiempo para centrarse en la creación artística y estudio científico, además de para imponerse sobre las demás razas, a las que consideran estúpidas, incultas, desagradables a la vista y generalmente molestas. A día de hoy el imperio crunisio ha perdido gran parte de su territorio e influencia, pero siguen conservando gran parte de sus riquezas de antaño y no deberían ser menospreciados.</item>
+        <item>Nadie sabe con exactitud de dónde salieron estos peculiares seres de piel grisácea, rabia incontrolable e increíble potencia física. Algunos eruditos creen que los orcos son una variedad más pequeña y menos rocosa de troll de roca; otros creen que son el resultado de un horrible experimento llevado a cabo por un hechicero demente. En cualquier caso, su hogar parece ser la isla de Uzul, al oeste, y su mayor afición es el saqueo.
+            \nPoseen una nefasta fama de salvajes, estúpidos, sangrientos, brutales, malolientes, maleducados e ignorantes, y no es sorprendente si tenemos en cuenta que durante casi dos siglos se dedicaron casi exclusivamente a saquear asentamientos costeros, dejando atrás un rastro de cadáveres y ceniza. Es sorprendente que a día de hoy se les permita vivir en los mismos pueblos en los que viven humanos o crunisios.</item>
+        <item>Los enanos son una raza de criaturas bajitas, musculosas y barbudas, originarias de las Tierras de Poniente, al otro lado del océano. Viven en enormes cuevas y túneles excavados bajo tierra en los que destilan fuertes bebidas alcohólicas y forjan armas de pesado metal.
+            \nSon famosos por su afición a la cerveza, coleccionar metales y piedras preciosas, sus barbas largas y pobladas y el "frit", su grasiento y delicioso plato tradicional, que se puede degustar en cualquiera de sus tabernas subterráneas en las que por supuesto nunca falta cerveza.</item>
+        <item>Los dracónidos son una raza de reptiles bípedos de gran constitución que habitan entre las altas cordilleras de Yruk. Su organización en extensos clanes familiares desde tiempos inmemoriales marca sus características físicas, el color de las escamas, la presencia de cuernos, el número de garras e incluso la capacidad de exhalar fuego varían de una región a otra de Yruk e, incluso, de un clan a otro.
+        \nRaza orgullosa y con un gran sentido práctico, son expertos en la forja y el trabajo del metal. Amantes de la tradición y con un rico folklore de transmisión oral con una visión muy particular de la religión. Consideran a Erdelarei como un patrón y protector, viéndolo como el Delari artesano y creador, con un intenso componente ctónico, al que honran a través del trabajo y, según algunos clanes, a través de la batalla, que los dracónidos consideran todo un arte.</item>
+        <item>Los vaark son una raza bípeda con apariencia caprina que habitan la isla de Gaarf, al sur de los principados humanos. Presentan manos prensiles con pulgares oponibles al final de sus extremidades superiores y pezuñas en sus extremidades inferiores, grueso pelaje en todo el cuerpo, una corta cola vestigial y cabeza de cabra.
+        \nVivir en una ubicación tan remota les ha permitido vivir en paz, sin verse afectados por las intrigas de las demás razas y sin perder su rica cultura chamanística, sus propias creencias espirituales o su estilo de vida pacífico. Poseen además un curioso sentido de la empatía y el altruismo que impulsa a numerosos vaarks a abandonar la isla para ayudar a las demás razas inteligentes en función de sanadores, sin ningún tipo de juicio o discriminación, con lo que han conseguido ser considerados neutrales a ojos de las demás naciones.</item>
+        <item>Los félidos son una raza de criaturas bípedas que, como su nombre indica, presentan múltiples similitudes con otros animales felinos. Miden aproximadamente un metro y medio, tienen orejas puntiagudas sobre la cabeza, ojos felinos, cola y suave pelaje de diversos colores.
+        \nEsta raza procedente de las junglas ecuatoriales de las Tierras de Poniente posee una temible reputación por su estilo de caza sin armas, acechando a sus presas desde las sombras esperando al momento oportuno para atacar. Lo peor de todo es que disfrutan con ello, y eso se ve reflejado en su retorcido sentido del humor.</item>
+    </string-array>
+
+    <string-array name="racesStats1e">
+        <item>0 0 0 0 0 0 0 0 0</item>
+        <item>-2 -1 0 2 1 0 0 -3 6</item>
+        <item>0 1 2 0 0 1 0 -3 -3</item>
+        <item>1 0 0 1 1 0 1 0 0</item>
+        <item>3 0 -2 -2 -1 -1 1 6 0</item>
+        <item>2 0 -1 0 -1 -2 1 6 0</item>
+        <item>2 0 -1 0 0 -2 1 6 0</item>
+        <item>-1 -1 -2 1 2 1 0 0 3</item>
+        <item>-1 2 0 -1 -1 3 0 -3 3</item>
+    </string-array>
+
+    <string-array name="racesBonus1e">
+        <item>Adaptabilidad</item>
+        <item>Mercado Gris</item>
+        <item>Conocimiento arcano</item>
+        <item>Naturaleza mágica</item>
+        <item>Rituales de la naturaleza(n)Tirador experto</item>
+    </string-array>
+
+    <string-array name="racesBonusDesc1e">
+        <item>Aunque las diferencias entre un humano y otro sean mínimas, un observador hábil podrá apreciar fácilmente rasgos distintivos según el origen y la ocupación del sujeto.\nA la hora de crear un personaje humano, el jugador podrá asignar un punto a un atributo de su elección (+5 si se trata de PE o PV).</item>
+        <item>Aprovechándose de cualquier ambigüedad legislativa y vacío legal, los humanos han creado una enorme red de comercio libre de aranceles.\nLos personajes humanos comienzan la partida con el triple de oro que las demás razas y acceso al Mercado Gris, presente en todas las ciudades portuarias del globo y en el que podrán comprar casi cualquier producto más barato que en tiendas convencionales.</item>
+        <item>Entre otras cosas, la educación recibida en Ulié incluye numerosas lecciones sobre la magia y el arte del encantamiento.\nLos elfos del este comienzan la partida con la capacidad para identificar objetos mágicos y sus efectos. Además, todo el daño causado con armas mágicas aumenta en 1 por nivel.</item>
+        <item>Quizás por suerte, quizás debido a la selección natural, todos los elfos de Ulié poseen cierta resistencia al poder destructivo de la magia. Los elfos del este reciben de forma pasiva +10 a la armadura frente a daño mágico.</item>
+        <item>Los elfos del oeste han vivido en equilibrio con la naturaleza desde que cruzaron el océano, y todavía hoy intentarán protegerla.\nLos animales salvajes (y también algunas plantas particularmente agresivas) se mostrarán mucho menos agresivos con el personaje, siempre y cuando este no dañe innecesariamente la flora y la fauna.</item>
+        <item>Los elfos del oeste practican el uso de armas de disparo y lanzamiento de proyectiles continuamente desde su más tierna infancia, convirtiéndolos en letales tiradores.\nLos personajes elfos del oeste obtienen +1 al crítico de forma pasiva siempre y cuando el valor de uno o más de sus atributos (exceptuando PE y PV) sea igual o superior a 3.</item>
+    </string-array>
+</resources>
