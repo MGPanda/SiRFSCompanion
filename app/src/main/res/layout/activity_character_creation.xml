@@ -261,7 +261,7 @@
                     android:ems="10"
                     android:gravity="center"
                     android:hint="@string/_1d10"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:textColor="@color/textIcons"
                     android:textColorHint="@color/secondaryText" />
 
@@ -311,7 +311,7 @@
                     android:ems="10"
                     android:gravity="center"
                     android:hint="@string/_1d10"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:textColor="@color/textIcons"
                     android:textColorHint="@color/secondaryText" />
 

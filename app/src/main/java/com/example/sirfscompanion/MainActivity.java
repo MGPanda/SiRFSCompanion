@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
-
+    private MyDB mydb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,5 +16,6 @@ public class MainActivity extends AppCompatActivity {
     public void addNew(View view) {
         Intent i = new Intent(this, CharacterCreation.class);
         startActivityForResult(i,0);
+        mydb = new MyDB(this);
     }
 }

@@ -90,6 +90,30 @@ public class CharacterCreation extends AppCompatActivity {
 
             }
         });
+        PV.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus && !PV.getText().equals("")) {
+                    if (Integer.parseInt(PV.getText().toString()) > (20 + raceStats[7] + classStats[7])) {
+                        PV.setText(String.valueOf(20 + raceStats[7] + classStats[7]));
+                    } else if (Integer.parseInt(PV.getText().toString()) < 10) {
+                        PV.setText("10");
+                    }
+                }
+            }
+        });
+        PE.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus && !PE.getText().equals("")) {
+                    if (Integer.parseInt(PE.getText().toString()) > (20 + raceStats[8] + classStats[8])) {
+                        PE.setText(String.valueOf(20 + raceStats[8] + classStats[8]));
+                    } else if (Integer.parseInt(PE.getText().toString()) < 10) {
+                        PE.setText("10");
+                    }
+                }
+            }
+        });
     }
 
     public void roll(View view) {
