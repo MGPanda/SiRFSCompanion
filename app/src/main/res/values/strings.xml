@@ -1,7 +1,17 @@
 <resources>
     <string name="app_name">SiRFS Companion</string>
-    <string name="listCharName">Character name</string>
-    <string name="listRaceClass">Race, class and level</string>
-    <string name="listDate">Creation date</string>
-    <string name="character_picture">Character picture</string>
+    <string name="ccInfo">¿Con quién tengo el placer de hablar hoy?</string>
+    <string name="ccName">Nombre de tu personaje</string>
+    <string name="fue">FUE</string>
+    <string name="des">DES</string>
+    <string name="pun">PUN</string>
+    <string name="intel">INT</string>
+    <string name="sab">SAB</string>
+    <string name="agi">AGI</string>
+    <string name="vol">VOL</string>
+    <string name="_1d10">1d10</string>
+    <string name="pv">PV</string>
+    <string name="roll">ROLL</string>
+    <string name="max">MAX</string>
+    <string name="pe">PE</string>
 </resources>

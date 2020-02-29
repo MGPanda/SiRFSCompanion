@@ -45,6 +45,7 @@
         <item>-1 2 0 -1 -1 3 0 -3 3</item>
     </string-array>
 
+    <!--POR REVISAR-->
     <string-array name="racesBonus1e">
         <item>Adaptabilidad</item>
         <item>Mercado Gris</item>
@@ -53,6 +54,7 @@
         <item>Rituales de la naturaleza(n)Tirador experto</item>
     </string-array>
 
+    <!--POR REVISAR-->
     <string-array name="racesBonusDesc1e">
         <item>Aunque las diferencias entre un humano y otro sean mínimas, un observador hábil podrá apreciar fácilmente rasgos distintivos según el origen y la ocupación del sujeto.\nA la hora de crear un personaje humano, el jugador podrá asignar un punto a un atributo de su elección (+5 si se trata de PE o PV).</item>
         <item>Aprovechándose de cualquier ambigüedad legislativa y vacío legal, los humanos han creado una enorme red de comercio libre de aranceles.\nLos personajes humanos comienzan la partida con el triple de oro que las demás razas y acceso al Mercado Gris, presente en todas las ciudades portuarias del globo y en el que podrán comprar casi cualquier producto más barato que en tiendas convencionales.</item>
@@ -60,5 +62,40 @@
         <item>Quizás por suerte, quizás debido a la selección natural, todos los elfos de Ulié poseen cierta resistencia al poder destructivo de la magia. Los elfos del este reciben de forma pasiva +10 a la armadura frente a daño mágico.</item>
         <item>Los elfos del oeste han vivido en equilibrio con la naturaleza desde que cruzaron el océano, y todavía hoy intentarán protegerla.\nLos animales salvajes (y también algunas plantas particularmente agresivas) se mostrarán mucho menos agresivos con el personaje, siempre y cuando este no dañe innecesariamente la flora y la fauna.</item>
         <item>Los elfos del oeste practican el uso de armas de disparo y lanzamiento de proyectiles continuamente desde su más tierna infancia, convirtiéndolos en letales tiradores.\nLos personajes elfos del oeste obtienen +1 al crítico de forma pasiva siempre y cuando el valor de uno o más de sus atributos (exceptuando PE y PV) sea igual o superior a 3.</item>
+    </string-array>
+
+    <string-array name="classes1e">
+        <item>Alquimista</item>
+        <item>Asesino</item>
+        <item>Bárbaro</item>
+        <item>Bardo</item>
+        <item>Cazador</item>
+        <item>Druida</item>
+        <item>Elementarista - Arcano</item>
+        <item>Elementarista - Fuego</item>
+        <item>Elementarista - Hielo</item>
+        <item>Elementarista - Tierra</item>
+        <item>Guerrero</item>
+        <item>Monje</item>
+        <item>Nigromante</item>
+        <item>Paladín</item>
+    </string-array>
+
+    <!--POR REVISAR-->
+    <string-array name="classesStats1e">
+        <item>0 0 0 0 0 0 0</item>
+        <item>0 0 0 0 0 0 0</item>
+        <item>0 0 0 0 0 0 0</item>
+        <item>0 0 0 0 0 0 0</item>
+        <item>0 0 0 0 0 0 0</item>
+        <item>0 0 0 0 0 0 0</item>
+        <item>0 0 0 0 0 0 0</item>
+        <item>0 0 0 0 0 0 0</item>
+        <item>0 0 0 0 0 0 0</item>
+        <item>0 0 0 0 0 0 0</item>
+        <item>0 0 0 0 0 0 0</item>
+        <item>0 0 0 0 0 0 0</item>
+        <item>0 0 0 0 0 0 0</item>
+        <item>0 0 0 0 0 0 0</item>
     </string-array>
 </resources>

@@ -15,5 +15,6 @@ public class MainActivity extends AppCompatActivity {
     }
     public void addNew(View view) {
         Intent i = new Intent(this, CharacterCreation.class);
+        startActivityForResult(i,0);
     }
 }
