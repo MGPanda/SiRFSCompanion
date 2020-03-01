@@ -6,6 +6,5 @@
     android:layout_height="wrap_content"
     android:textSize="18sp"
     android:gravity="left"
-    android:textColor="@color/textIcons"
     android:padding="5dip"
     />

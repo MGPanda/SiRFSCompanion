@@ -14,4 +14,9 @@
     <string name="roll">ROLL</string>
     <string name="max">MAX</string>
     <string name="pe">PE</string>
+    <string name="creacionPersonaje">Creación de personaje</string>
+    <string name="detailInfo">INFORMACIÓN</string>
+    <string name="detailLevelUp">SUBIR DE NIVEL</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
 </resources>

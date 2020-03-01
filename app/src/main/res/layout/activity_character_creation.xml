@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundDark"
     tools:context=".CharacterCreation">
 
     <LinearLayout
@@ -17,7 +16,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/ccInfo"
-            android:textColor="@color/textIcons"
             android:textSize="18sp" />
 
         <EditText
@@ -26,9 +24,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/ccName"
-            android:inputType="textPersonName"
-            android:textColor="@color/textIcons"
-            android:textColorHint="@color/secondaryText" />
+            android:inputType="textCapWords" />
 
         <Spinner
             android:id="@+id/ccRace"
@@ -61,7 +57,6 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/fue"
-                    android:textColor="@color/textIcons"
                     android:textStyle="bold"
                     tools:ignore="NestedWeights" />
 
@@ -70,8 +65,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/secondaryText" />
+                    android:gravity="center" />
             </LinearLayout>
 
             <LinearLayout
@@ -87,7 +81,6 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/des"
-                    android:textColor="@color/textIcons"
                     android:textStyle="bold"
                     tools:ignore="NestedWeights" />
 
@@ -96,8 +89,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/secondaryText" />
+                    android:gravity="center" />
             </LinearLayout>
 
             <LinearLayout
@@ -113,7 +105,6 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/pun"
-                    android:textColor="@color/textIcons"
                     android:textStyle="bold"
                     tools:ignore="NestedWeights" />
 
@@ -122,8 +113,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/secondaryText" />
+                    android:gravity="center" />
             </LinearLayout>
 
             <LinearLayout
@@ -139,7 +129,6 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/intel"
-                    android:textColor="@color/textIcons"
                     android:textStyle="bold"
                     tools:ignore="NestedWeights" />
 
@@ -148,8 +137,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/secondaryText" />
+                    android:gravity="center" />
             </LinearLayout>
 
             <LinearLayout
@@ -165,7 +153,6 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/sab"
-                    android:textColor="@color/textIcons"
                     android:textStyle="bold"
                     tools:ignore="NestedWeights" />
 
@@ -174,8 +161,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/secondaryText" />
+                    android:gravity="center" />
             </LinearLayout>
 
             <LinearLayout
@@ -191,7 +177,6 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/agi"
-                    android:textColor="@color/textIcons"
                     android:textStyle="bold"
                     tools:ignore="NestedWeights" />
 
@@ -200,8 +185,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/secondaryText" />
+                    android:gravity="center" />
             </LinearLayout>
 
             <LinearLayout
@@ -217,7 +201,6 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/vol"
-                    android:textColor="@color/textIcons"
                     android:textStyle="bold"
                     tools:ignore="NestedWeights" />
 
@@ -226,8 +209,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/secondaryText" />
+                    android:gravity="center" />
             </LinearLayout>
         </LinearLayout>
 
@@ -250,7 +232,6 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/pv"
-                    android:textColor="@color/textIcons"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -261,9 +242,7 @@
                     android:ems="10"
                     android:gravity="center"
                     android:hint="@string/_1d10"
-                    android:inputType="number"
-                    android:textColor="@color/textIcons"
-                    android:textColorHint="@color/secondaryText" />
+                    android:inputType="number" />
 
                 <TextView
                     android:id="@+id/ccPVRoll"
@@ -273,18 +252,19 @@
                     android:onClick="roll"
                     android:text="@string/roll"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/ccPVMax"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:onClick="max"
                     android:text="@string/max"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -300,7 +280,6 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/pe"
-                    android:textColor="@color/textIcons"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -311,9 +290,7 @@
                     android:ems="10"
                     android:gravity="center"
                     android:hint="@string/_1d10"
-                    android:inputType="number"
-                    android:textColor="@color/textIcons"
-                    android:textColorHint="@color/secondaryText" />
+                    android:inputType="number" />
 
                 <TextView
                     android:id="@+id/ccPERoll"
@@ -323,18 +300,19 @@
                     android:onClick="roll"
                     android:text="@string/roll"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/ccPEMax"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:onClick="max"
                     android:text="@string/max"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
 

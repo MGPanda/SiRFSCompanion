@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
         app:srcCompat="@drawable/ic_launcher_foreground"
         tools:ignore="ContentDescription" />
 
@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="10sp"
-        android:layout_weight="10"
+        android:layout_weight="1"
         android:gravity="center_vertical"
         android:orientation="vertical">
 
@@ -25,20 +25,20 @@
             android:id="@+id/listCharName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/textIcons"
+            android:text="CHARACTER NAME"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/listRaceClass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/textIcons"
+            android:text="RACE CLASS LEVEL"
             android:textSize="16sp" />
 
         <TextView
             android:id="@+id/listDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/textIcons" />
+            android:text="DATE" />
     </LinearLayout>
 </LinearLayout>

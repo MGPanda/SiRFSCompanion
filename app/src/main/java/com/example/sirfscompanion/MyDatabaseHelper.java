@@ -14,7 +14,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     private static final String TABLE_NAME = "characters";
 
     // Database creation sql statement
-    private static final String DATABASE_CREATE = "create table "+TABLE_NAME+"( _id integer primary key,img blob, name text, level integer, race text, class text, fue integer, des integer, pun integer, int integer, sab integer, agi integer, vol integer, pv integer, maxpv integer, pe integer, maxpe integer, armor integer, marmor integer, critbonus int, critdmgbonus int, spellbonus int, weapons text, equip text, relics text, rules text, gold text, inventory text);";
+    private static final String DATABASE_CREATE = "create table if not exists "+TABLE_NAME+"( _id integer primary key,name text, img blob, crdate text, level integer, race text, class text, fue integer, des integer, pun integer, int integer, sab integer, agi integer, vol integer, pv integer, maxpv integer, pe integer, maxpe integer, armor integer, marmor integer, critbonus int, critdmgbonus int, spellbonus int, weapons text, equip text, relics text, gold text, inventory text);";
 
     public MyDatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
