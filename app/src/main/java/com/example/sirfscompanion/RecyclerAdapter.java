@@ -1,17 +1,20 @@
 package com.example.sirfscompanion;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
     private Context _c;
@@ -44,20 +47,28 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private ImageView _iv;
+        private CircleImageView _civ;
         private TextView _name, _date, _raceClass;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            this._iv = itemView.findViewById(R.id.imageView);
+            this._civ = itemView.findViewById(R.id.imageView);
             this._name = itemView.findViewById(R.id.listCharName);
             this._date = itemView.findViewById(R.id.listDate);
             this._raceClass = itemView.findViewById(R.id.listRaceClass);
         }
-        public void bind(Char c) {
-            this._iv.setImageBitmap(c.getCharImg());
+        public void bind(final Char c) {
+            this._civ.setImageBitmap(BitmapFactory.decodeByteArray(c.getCharImg(), 0, c.getCharImg().length));
             this._name.setText(c.getCharName());
             this._date.setText(c.getCharDate());
-            this._raceClass.setText(String.format("%s %s %s", c.getCharRace(), c.getCharClass(), c.getCharLevel()));
+            this._raceClass.setText(String.format("%s %s %d", c.getCharRace(), c.getCharClass(), c.getCharLevel()));
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(_c, Detail.class);
+                    i.putExtra("CHAR", c);
+                    _c.startActivity(i);
+                }
+            });
         }
     }
 }

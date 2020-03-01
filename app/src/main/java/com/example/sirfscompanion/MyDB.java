@@ -59,9 +59,7 @@ public class MyDB {
         ContentValues values = new ContentValues();
         values.put(CHAR_ID, nextId());
         values.put(CHAR_NAME, c.getCharName());
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        c.getCharImg().compress(Bitmap.CompressFormat.JPEG, 0, baos);
-        values.put(CHAR_IMG, baos.toByteArray());
+        values.put(CHAR_IMG, c.getCharImg());
         values.put(CHAR_CRDATE, c.getCharDate());
         values.put(CHAR_LEVEL, c.getCharLevel());
         values.put(CHAR_RACE, c.getCharRace());
@@ -120,7 +118,7 @@ public class MyDB {
     }
 
     public void insertTest() {
-        Char c = new Char(0,"Toni Taronges", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero),"2020-03-01",1,"Enano","Bárbaro",3,0,-2,-2,-1,-1,1,14,26,18,20,10,0,3,1,0,"","","",100,"");
+        Char c = new Char(0,"Toni Taronges", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero),"2020-03-01",1,"Elfo del Este","Elementarista - Arcano",-2,-1,0,2,1,0,0,14,17,18,26,10,0,3,1,0,"","","",100,"");
         createChar(c);
     }
 

@@ -4,10 +4,13 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
-public class Char {
+import java.io.ByteArrayOutputStream;
+import java.io.Serializable;
+
+public class Char implements Serializable {
     private int CHAR_ID;
     private String CHAR_NAME;
-    private Bitmap CHAR_IMG;
+    private byte[] CHAR_IMG;
     private String CHAR_CRDATE;
     private int CHAR_LEVEL;
     private String CHAR_RACE;
@@ -37,8 +40,7 @@ public class Char {
     public Char(Cursor cu) {
         this.CHAR_ID = cu.getInt(0);
         this.CHAR_NAME = cu.getString(1);
-        byte[] img = cu.getBlob(2);
-        this.CHAR_IMG = BitmapFactory.decodeByteArray(img, 0, img.length);
+        this.CHAR_IMG = cu.getBlob(2);
         this.CHAR_CRDATE = cu.getString(3);
         this.CHAR_LEVEL = cu.getInt(4);
         this.CHAR_RACE = cu.getString(5);
@@ -70,7 +72,9 @@ public class Char {
                 int critdmgbonus, int spellbonus, String weapons, String equip, String relics, int gold, String inventory) {
         this.CHAR_ID = id;
         this.CHAR_NAME = name;
-        this.CHAR_IMG = img;
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        img.compress(Bitmap.CompressFormat.JPEG, 20, baos);
+        this.CHAR_IMG = baos.toByteArray();
         this.CHAR_CRDATE = date;
         this.CHAR_LEVEL = level;
         this.CHAR_RACE = race;
@@ -114,11 +118,11 @@ public class Char {
         CHAR_NAME = charName;
     }
 
-    public Bitmap getCharImg() {
+    public byte[] getCharImg() {
         return CHAR_IMG;
     }
 
-    public void setCharImg(Bitmap charImg) {
+    public void setCharImg(byte[] charImg) {
         CHAR_IMG = charImg;
     }
 
