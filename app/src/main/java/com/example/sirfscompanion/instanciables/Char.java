@@ -1,4 +1,4 @@
-package com.example.sirfscompanion;
+package com.example.sirfscompanion.instanciables;
 
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -34,6 +34,7 @@ public class Char implements Serializable {
     private String CHAR_WEAPONS;
     private String CHAR_EQUIP;
     private String CHAR_RELICS;
+    private String CHAR_SKILLS;
     private int CHAR_GOLD;
     private String CHAR_INVENTORY;
 
@@ -64,12 +65,13 @@ public class Char implements Serializable {
         this.CHAR_WEAPONS = cu.getString(23);
         this.CHAR_EQUIP = cu.getString(24);
         this.CHAR_RELICS = cu.getString(25);
-        this.CHAR_GOLD = cu.getInt(26);
-        this.CHAR_INVENTORY = cu.getString(27);
+        this.CHAR_SKILLS = cu.getString(26);
+        this.CHAR_GOLD = cu.getInt(27);
+        this.CHAR_INVENTORY = cu.getString(28);
     }
 
     public Char(int id, String name, Bitmap img, String date, int level, String race, String mClass, int fue, int des, int pun, int mInt, int sab, int agi, int vol, int pv, int maxpv, int pe, int maxpe, int armor, int marmor, int critbonus,
-                int critdmgbonus, int spellbonus, String weapons, String equip, String relics, int gold, String inventory) {
+                int critdmgbonus, int spellbonus, String weapons, String equip, String relics, String skills, int gold, String inventory) {
         this.CHAR_ID = id;
         this.CHAR_NAME = name;
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -98,6 +100,7 @@ public class Char implements Serializable {
         this.CHAR_WEAPONS = weapons;
         this.CHAR_EQUIP = equip;
         this.CHAR_RELICS = relics;
+        this.CHAR_SKILLS = skills;
         this.CHAR_GOLD = gold;
         this.CHAR_INVENTORY = inventory;
     }
@@ -308,6 +311,14 @@ public class Char implements Serializable {
 
     public void setCharRelics(String charRelics) {
         CHAR_RELICS = charRelics;
+    }
+
+    public String getCharSkills() {
+        return CHAR_SKILLS;
+    }
+
+    public void setCharSkills(String charSkills) {
+        CHAR_SKILLS = charSkills;
     }
 
     public int getCharGold() {

@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight">
-        <activity android:name=".Detail"></activity>
-        <activity android:name=".CharacterCreation" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".firstEdition.CharInfo"></activity>
+        <activity android:name=".firstEdition.Detail" />
+        <activity android:name=".firstEdition.CharacterCreation" />
+        <activity android:name=".control.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,4 +1,4 @@
-package com.example.sirfscompanion;
+package com.example.sirfscompanion.control;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -12,6 +12,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
+import com.example.sirfscompanion.R;
+import com.example.sirfscompanion.firstEdition.RecyclerAdapter;
+import com.example.sirfscompanion.firstEdition.CharacterCreation;
 
 public class MainActivity extends AppCompatActivity {
     private static MyDB _mydb;
@@ -42,25 +46,29 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, CharacterCreation.class);
         startActivityForResult(i, 0);
     }
+
     public void darkMode(MenuItem mi) {
         if (_nightMode == Configuration.UI_MODE_NIGHT_NO) {
-            getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
             mi.setIcon(getResources().getDrawable(R.drawable.ic_lightbulb_outline_white_24dp));
+            getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
             _nightMode = Configuration.UI_MODE_NIGHT_YES;
         } else {
-            getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
             mi.setIcon(getResources().getDrawable(R.drawable.ic_lightbulb_outline_black_24dp));
+            getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
             _nightMode = Configuration.UI_MODE_NIGHT_NO;
         }
     }
+
     public static MainActivity get_ma() {
         return _ma;
     }
+
     public static boolean isDarkMode() {
         if (_nightMode == Configuration.UI_MODE_NIGHT_NO) {
             return false;
         } else return true;
     }
+
     public void setAdapter() {
         Cursor c = MyDB.selectAll();
         if (c != null) {

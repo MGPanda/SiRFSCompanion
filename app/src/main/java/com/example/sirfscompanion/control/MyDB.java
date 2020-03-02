@@ -1,13 +1,13 @@
-package com.example.sirfscompanion;
+package com.example.sirfscompanion.control;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
-import java.io.ByteArrayOutputStream;
+import com.example.sirfscompanion.R;
+import com.example.sirfscompanion.instanciables.Char;
 
 public class MyDB {
 
@@ -43,6 +43,7 @@ public class MyDB {
     public final static String CHAR_WEAPONS = "weapons";
     public final static String CHAR_EQUIP = "equip";
     public final static String CHAR_RELICS = "relics";
+    public final static String CHAR_SKILLS = "skills";
     public final static String CHAR_GOLD = "gold";
     public final static String CHAR_INVENTORY = "inventory";
 
@@ -83,6 +84,7 @@ public class MyDB {
         values.put(CHAR_WEAPONS, c.getCharWeapons());
         values.put(CHAR_EQUIP, c.getCharEquip());
         values.put(CHAR_RELICS, c.getCharRelics());
+        values.put(CHAR_SKILLS, c.getCharSkills());
         values.put(CHAR_GOLD, c.getCharGold());
         values.put(CHAR_INVENTORY, c.getCharInventory());
         return database.insert(CHAR_TABLE, null, values);
@@ -91,7 +93,7 @@ public class MyDB {
     public static Cursor selectAll() {
         try {
             String[] cols = new String[]{CHAR_ID, CHAR_NAME, CHAR_IMG, CHAR_CRDATE, CHAR_LEVEL, CHAR_RACE, CHAR_CLASS, CHAR_FUE, CHAR_DES, CHAR_PUN, CHAR_INT, CHAR_SAB, CHAR_AGI, CHAR_VOL, CHAR_PV,
-                    CHAR_MAXPV, CHAR_PE, CHAR_MAXPE, CHAR_ARMOR, CHAR_MARMOR, CHAR_CRITBONUS, CHAR_CRITDMGBONUS, CHAR_SPELLBONUS, CHAR_WEAPONS, CHAR_EQUIP, CHAR_RELICS, CHAR_GOLD, CHAR_INVENTORY};
+                    CHAR_MAXPV, CHAR_PE, CHAR_MAXPE, CHAR_ARMOR, CHAR_MARMOR, CHAR_CRITBONUS, CHAR_CRITDMGBONUS, CHAR_SPELLBONUS, CHAR_WEAPONS, CHAR_EQUIP, CHAR_RELICS, CHAR_SKILLS, CHAR_GOLD, CHAR_INVENTORY};
             Cursor mCursor;
             mCursor = database.query(true, CHAR_TABLE, cols, null
                     , null, null, null, "_id asc", null);
@@ -118,68 +120,9 @@ public class MyDB {
     }
 
     public void insertTest() {
-        Char c = new Char(0,"Toni Taronges", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero),"2020-03-01",1,"Elfo del Este","Elementarista - Arcano",-2,-1,0,2,1,0,0,14,17,18,26,10,0,3,1,0,"","","",100,"");
+        Char c = new Char(0, "Toni Taronges", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-01", 5, "Humano", "Alquimista", -2, -1, 0, 2, 1, 0, 0, 14, 17, 18, 26, 10, 0, 3, 1, 0, "", "", "", "0 1 2 3 8 9 14", 100, "");
+        createChar(c);
+        c = new Char(0, "Pep Pilotes", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-01", 5, "Humano", "Alquimista", -2, -1, 0, 2, 1, 0, 0, 14, 17, 18, 26, 10, 0, 3, 1, 0, "", "", "", "0 1 2 3 8 9 14", 100, "");
         createChar(c);
     }
-
-    /*public static long createRecords(int id, String name, String date, String isComplete) {
-        if (id == 0) {
-            id = nextId();
-        }
-        ContentValues values = new ContentValues();
-        values.put(TODO_ID, id);
-        values.put(TODO_NAME, name);
-        values.put(TODO_DATE, date);
-        values.put(TODO_ISCOMPLETE, isComplete);
-        return database.insert(TODO_TABLE, null, values);
-    }
-
-    public static void insertTODO() {
-        Cursor c = database.rawQuery("SELECT COUNT(*) FROM todolist", null);
-        c.moveToFirst();
-        int i = c.getInt(0);
-        if (i == 0) {
-            createRecords(1, "Fill Gas", "09/02/2017 23:02", "false");
-            createRecords(2, "Call John", "09/02/2017 23:01", "false");
-        }
-    }
-    public static int nextId() {
-        String[] cols = new String[]{TODO_ID};
-        Cursor mCursor = database.query(true, TODO_TABLE, cols, null
-                , null, null, null, "_id desc", null);
-        mCursor.moveToFirst();
-        int id = mCursor.getInt(0)+1;
-        return id;
-    }
-    public static Cursor selectRecords(boolean b) {
-        String[] cols = new String[]{TODO_ID, TODO_NAME, TODO_DATE, TODO_ISCOMPLETE};
-        Cursor mCursor;
-        if (b) {
-            mCursor = database.query(true, TODO_TABLE, cols, null
-                    , null, null, null, "date asc", null);
-        } else {
-            mCursor = database.query(true, TODO_TABLE, cols, "iscomplete = ?"
-                    , new String[]{"false"}, null, null, "date asc", null);
-        }
-        if (mCursor != null) {
-            mCursor.moveToFirst();
-        }
-        return mCursor; // iterate to get each value.
-    }
-
-    public static void deleteItem(int id) {
-        database.delete(TODO_TABLE, "_id = ?", new String[]{String.valueOf(id)});
-    }
-
-    public static long completeItem(int id, String name, String date, String isComplete) {
-        ContentValues values = new ContentValues();
-        values.put(TODO_NAME, name);
-        values.put(TODO_DATE, date);
-        values.put(TODO_ISCOMPLETE, isComplete);
-        return database.update(TODO_TABLE, values, "_id = ?", new String[]{String.valueOf(id)});
-    }
-
-    public SQLiteDatabase getDatabase() {
-        return database;
-    }*/
 }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Detail">
+    tools:context=".firstEdition.Detail">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -53,7 +53,8 @@
                 android:text="@string/detailInfo"
                 android:textColor="@color/colorPrimary"
                 android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="detailInfo"/>
 
             <TextView
                 android:id="@+id/detailLevelUp"

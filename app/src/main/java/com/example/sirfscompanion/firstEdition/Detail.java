@@ -1,12 +1,18 @@
-package com.example.sirfscompanion;
+package com.example.sirfscompanion.firstEdition;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
+
+import com.example.sirfscompanion.control.MainActivity;
+import com.example.sirfscompanion.R;
+import com.example.sirfscompanion.instanciables.Char;
 
 import java.util.Locale;
 
@@ -49,5 +55,10 @@ public class Detail extends AppCompatActivity {
         _detailVOLVal.setText(String.valueOf(_c.getCharVol()));
         _detailPV.setText(String.format(Locale.getDefault(), "%d / %d", _c.getCharPv(), _c.getCharMaxpv()));
         _detailPE.setText(String.format(Locale.getDefault(), "%d / %d", _c.getCharPe(), _c.getCharMaxpe()));
+    }
+    public void detailInfo(View view) {
+        Intent i = new Intent(this, CharInfo.class);
+        i.putExtra("CHAR", _c);
+        startActivity(i);
     }
 }

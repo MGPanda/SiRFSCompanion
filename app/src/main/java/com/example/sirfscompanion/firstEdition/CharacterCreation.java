@@ -1,4 +1,4 @@
-package com.example.sirfscompanion;
+package com.example.sirfscompanion.firstEdition;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,9 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.example.sirfscompanion.control.MainActivity;
+import com.example.sirfscompanion.R;
 
 import java.util.Random;
 
@@ -51,13 +54,13 @@ public class CharacterCreation extends AppCompatActivity {
                 for (int i = 0; i < aux.length; i++) {
                     raceStats[i] = Integer.parseInt(aux[i]);
                 }
-                FUE.setText(String.valueOf(raceStats[0] + classStats[0]));
-                DES.setText(String.valueOf(raceStats[1] + classStats[1]));
-                PUN.setText(String.valueOf(raceStats[2] + classStats[2]));
-                INT.setText(String.valueOf(raceStats[3] + classStats[3]));
-                SAB.setText(String.valueOf(raceStats[4] + classStats[4]));
-                AGI.setText(String.valueOf(raceStats[5] + classStats[5]));
-                VOL.setText(String.valueOf(raceStats[6] + classStats[6]));
+                FUE.setText(String.valueOf(raceStats[0]));
+                DES.setText(String.valueOf(raceStats[1]));
+                PUN.setText(String.valueOf(raceStats[2]));
+                INT.setText(String.valueOf(raceStats[3]));
+                SAB.setText(String.valueOf(raceStats[4]));
+                AGI.setText(String.valueOf(raceStats[5]));
+                VOL.setText(String.valueOf(raceStats[6]));
                 PV.setText(null);
                 PE.setText(null);
             }
@@ -74,21 +77,6 @@ public class CharacterCreation extends AppCompatActivity {
         ccClass.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String[] aux = getResources().getStringArray(R.array.classesStats1e);
-                String aux2 = aux[position];
-                aux = aux2.split(" ");
-                for (int i = 0; i < aux.length; i++) {
-                    classStats[i] = Integer.parseInt(aux[i]);
-                }
-                FUE.setText(String.valueOf(raceStats[0] + classStats[0]));
-                DES.setText(String.valueOf(raceStats[1] + classStats[1]));
-                PUN.setText(String.valueOf(raceStats[2] + classStats[2]));
-                INT.setText(String.valueOf(raceStats[3] + classStats[3]));
-                SAB.setText(String.valueOf(raceStats[4] + classStats[4]));
-                AGI.setText(String.valueOf(raceStats[5] + classStats[5]));
-                VOL.setText(String.valueOf(raceStats[6] + classStats[6]));
-                PV.setText(null);
-                PE.setText(null);
             }
 
             @Override
