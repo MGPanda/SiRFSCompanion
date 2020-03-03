@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,16 +27,23 @@ public class CharInfo extends AppCompatActivity {
         ActionBar ab = getSupportActionBar();
         assert ab != null;
         ab.setTitle(R.string.infoChar);
-        if (MainActivity.isDarkMode()) getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES); else getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         Char c = (Char) getIntent().getSerializableExtra("CHAR");
         RecyclerView rv = findViewById(R.id.recyclerViewInfo);
         RecyclerAdapterInfo rai = new RecyclerAdapterInfo(this, c);
         rv.setAdapter(rai);
         rv.setLayoutManager(new LinearLayoutManager(this));
-        if (c.getCharClass().equals(getResources().getString(R.string.alquimista))) {
-            findViewById(R.id.alchTitle).setVisibility(View.VISIBLE);
+        ViewGroup layout = findViewById(R.id.infoLayout);
+        if (c.getCharClass().equals(getResources().getStringArray(R.array.classes1e)[0])) {
+            TextView title = new TextView(this);
+            layout.addView(title);
+            title.setText(R.string.listaPociones);
+            title.setTextSize(18);
+            title.setTypeface(null, Typeface.BOLD);
             String[] pociones = getResources().getStringArray(R.array.alquimistaPociones);
-            TableLayout tl = findViewById(R.id.alchTable);
+            TableLayout tl = new TableLayout(this);
+            layout.addView(tl);
+            tl.getLayoutParams().width= LinearLayout.LayoutParams.MATCH_PARENT;
+            tl.getLayoutParams().height= LinearLayout.LayoutParams.WRAP_CONTENT;
             for (int i = 0; i < pociones.length; i++) {
                 String[] aux = pociones[i].split("XNEWX");
                 TableRow tr = new TableRow(this);
@@ -49,6 +57,8 @@ public class CharInfo extends AppCompatActivity {
                 tv1.setLayoutParams(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f));
                 tv2.setLayoutParams(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 5f));
             }
+        } else if (c.getCharClass().equals(getResources().getStringArray(R.array.classes1e)[4])) {
+
         }
     }
 }

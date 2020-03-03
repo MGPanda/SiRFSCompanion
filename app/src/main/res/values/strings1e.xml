@@ -112,6 +112,14 @@
         <br><br><b>Objetos equipables:</b> Armadura ligera, armas de una mano (sin doble empuñadura), bastones, armas arrojadizas y armas de disparo pequeñas.]]></item>
         <item><![CDATA[<i>Es muy difícil determinar el origen del oficio del asesino. Algunos historiadores defienden la tesis de que aparecieron junto a las primeras formas de gobierno, mientras que otros opinan que aparecieron en los principados humanos, poco después de la invención de la moneda. El hecho de que los buenos son invariablemente aquellos que no constan en los tratados de historia hace que estudiarlos sea una labor difícil. En cualquier caso, está claro que sus métodos no han cambiado demasiado. Se valen del sigilo y la infiltración, junto con algunas técnicas mágicas, para eliminar a su objetivo con un único y certero golpe, haciendo el menor ruido posible.</i>
         <br><br><b>Objetos equipables:</b> Armadura ligera, armas de una mano, armas arrojadizas y armas de disparo pequeñas.]]></item>
+        <item><![CDATA[<i>Salvajes y temperamentales, los bárbaros disfrutan cortando cabezas (o en su defecto aplatando cráneos) y no dudan a la hora de lanzarse a la batalla completamente desprevovistos de armadura y empuñando armas en ambas manos. Con el tiempo (y el progreso de la civilización), la antigua disciplina marcial de golpear cosas con otras cosas hasta que una de las dos cosas hace "crac" se ha ido perdiendo, aunque todavía goza de cierta popularidad entre orcos e individuos de otras razas igual de musculosos y estúpidos.</i>
+        <br><br><b>Objetos equipables:</b> Armas de una y dos manos, armas arrojadizas.]]></item>
+        <item><![CDATA[<i>Muchos son los que practican el oficio de los bardos; músicos ambulantes que viajan de taberna en taberna con su instrumento a la espalda y tocando a cambio de vino y unas pocas monedas. Para la mayoría, no es un oficio muy lucrativo y la satisfacción de interpretar es suficiente recompensa, pero existen también algunos bardos que dedican su vida a la aventura, en busca de canciones perdidas que todavía conservan restos de su poder mágico con las que hallar la fama y la gloria.
+        <br><br><b>Objetos equipables:</b> Armadura ligera, armas de una mano (sin doble empuñadura), instrumentos musicales (cuentan como armas de disparo).]]></item>
+        <item><![CDATA[<i>El oficio de la caza se remonta a los albores de las razas inteligentes, como respuesta a la necesidad imperiosa de comida. No obstante, con la aparición de la moneda, muchos descubrieron que resultaba mucho más rentable dedicar sus esfuerzos a perseguir y matar bestias peligrosas y cobrar cantidades exorbitantes de dinero por ello, que luego invirtieron en la creación de gremios y en el desarrollo de armas y herramientas cada vez más efectivas y letales.</i>
+        <br><br><b>Objetos equipables:</b> Armadura ligera, armas de una mano, armas arrojadizas y armas de disparo de cualquier tipo.]]></item>
+        <item><![CDATA[<i>Los druidas aparecieron milenios atrás, durante la emigración élfica hacia el oeste, más útiles para la vida en los bosques que los hechiceros formales de su tierra natal. Utilizan su fuerte conexión con Ishdelarei para ejercer como sacerdotes y sacerdotisas, sanadores y guardianes de sus bosques sagrados, que moldean con canciones mágicas.</i>
+        <br><br><b>Objetos equipables:</b> Armadura ligera, armas de una mano (sin doble empuñadura), bastones.]]></item>
     </string-array>
 
     <string-array name="classesSkills1e">
@@ -130,7 +138,6 @@
         XNEWXPesadilla de Midas
         XNEWXMutágeno de Embaucador
         XNEWXConflagración Solar</item>
-
         <item>Merodeador
             XNEWXPuñalada
             XNEWXGolpe Cruel
@@ -146,6 +153,66 @@
             XNEWXFinal sangriento
             XNEWXProfesional
             XNEWXBurlar a la muerte</item>
+        <item>Grito de batalla
+        XNEWXBruto salvaje
+        XNEWXGolpe poderoso
+        XNEWXAmbidextría ofensiva
+        XNEWXEjecutor
+        XNEWXPintura de guerra
+        XNEWXDecapitar
+        XNEWXFuria barbárica
+        XNEWXRematar
+        XNEWXLocura sangrienta
+        XNEWXGrito sobrecogedor
+        XNEWXTrocear
+        XNEWXEmpuñadura titánica
+        XNEWXGuerra personificada
+        XNEWXCólera desatada</item>
+        <item>Canciones encantadas
+        XNEWXBalada de Garrim Puñoebrio
+        XNEWXNota maldita
+        XNEWXCrescendo
+        XNEWXAcorde sanador
+        XNEWXTambores de la locura
+        XNEWXCanto de sirena
+        XNEWXCanción de las tormentas
+        XNEWXTregua
+        XNEWXCanción del bastión
+        XNEWXEstallido sónico
+        XNEWXAfinado a la perfección
+        XNEWXSegundo acorde de la discordia
+        XNEWXLa cajita de música
+        XNEWXSegundo acorde del coraje</item>
+        <item>Disparo firme
+        XNEWXCompañero animal
+        XNEWXMunición perforante
+        XNEWX¡Ataca!
+        XNEWXTrampa para huargos
+        XNEWXOjo de halcón
+        XNEWXArbusto portátil
+        XNEWXDisparo múltiple
+        XNEWXVínculo inquebrantable
+        XNEWXDisparo certero
+        XNEWXSentido salvaje
+        XNEWXIngeniería
+        XNEWXDisparo mortal
+        XNEWXDisparo explosivo
+        XNEWXMaestro de las bestias</item>
+        <item>Tarareo de las zarzas
+        XNEWXEnseñanzas de Ishdelarei
+        XNEWXToque de sanación
+        XNEWXAmiguitos del bosque
+        XNEWXCorazón salvaje
+        XNEWXFuego lunar
+        XNEWXFlorecimiento vital
+        XNEWXBandada de Cuervos
+        XNEWXRegeneración salvaje
+        XNEWXCambiaformas
+        XNEWXMarcha de los bosques
+        XNEWXRegalo de Ishdelarei
+        XNEWXRenacer
+        XNEWXEclipse
+        XNEWXCólera de la diosa</item>
     </string-array>
 
     <string-array name="classesSkillsDesc1e">
@@ -180,6 +247,70 @@
         XNEWX<i>Habilidad. -3 para impactar, 6 PE por lanzamiento.</i><br><br>El asesino se abalanza sobre su objetivo y lo golpea con precisión quirúrgica. Si la salud del objetivo es inferior al 25% de sus PV máximos, morirá automáticamente. En caso contrario, <i>Final sangriento</i> infligirá un 10% de la salud máxima del enemigo como daño puro con cada arma, redondeando hacia abajo.
         XNEWX<i>Pasiva.</i><br><br>Tras mucho entrenar, el asesino aprende técnicas nuevas, lo que le permite aprender una segunda habilidad de nivel 2 o de nivel 3.
         XNEWX<i>Pasiva.</i><br><br>Cuando el asesino vaya a recibir daño letal, tira 1D20 y súmale tu agilidad. Con un 20 o más, ignora el daño, recupera 1D6 PE y juega un turno adicional. En caso contrario, sufre el daño normalmente y realiza tu tirada de <i>Voluntad férrea</i>.]]></item>
+
+        <item><![CDATA[<i>Hechizo. Dificultad 8+, 2 PE por lanzamiento.</i><br><br>El bárbaro libera un estremecedor grito a pleno pulmón que intimidará a todos los enemigos en combate, aplicando un penalizador a sus tiradas y en algunos casos obligándolos a huir, además de proporcionarle al bárbaro +2 FUE en su siguiente turno.
+        XNEWX<i>Pasiva.</i><br><br>El bárbaro es algo más grande y tosco de lo normal, lo que le confiere +5 PV máximos iniciales y otros +3 PV máximos o +1 FUE cada vez que suba de nivel. Por si fuera poco, posee también una elevada resistencia al alcohol y sufre un 25% menos de daño en combate desarmado.
+        XNEWX<i>Habilidad. +1 para impactar, 3PE por lanzamiento.</i><br><br>El bárbaro ataca a su objetivo y realiza una tirada enfrentada de FUE con él. Si gana, derribará a su objetivo e infligirá 1D3 puntos de daño adicionales con un arma.
+        XNEWX<i>Pasiva.</i><br><br>El bárbaro posee amplia experiencia empuñando dos armas a la vez, lo que le proporciona +1 a su DES y +2 a su FUE mientras esté empuñando dos armas de una mano.
+        XNEWX<i>Pasiva.</i><br><br>El bárbaro es un experto en el combate con armas a dos manos, lo que le proporciona +1 al golpe crítico pasivamente y +100% al daño crítico mientras empuñe una.
+        XNEWX<i>Hechizo. Dificultad 2+, 5 PE por lanzamiento. No puede lanzarse en combate.</i><br><br>El bárbaro se prepara para la batalla con pinturas de guerra ancestrales que le proporcionarán +10 puntos de armadura, +1 VOL y +10% a todo el daño infligido contra jefes. La <i>pintura de guerra</i> permanecerá activa hasta que el bárbaro finalice un combate.
+        XNEWX<i>Habilidad. -2 para impactar, 3 PE por lanzamiento.</i><br><br>El bárbaro intenta decapitar a su objetivo con un ataque corriente pero obteniendo +100% al daño crítico. Además, si <i>Decapitar</i> mata a su objetivo, el bárbaro recuperará 1D6 PE.
+        XNEWX<i>Pasiva.</i><br><br>El bárbaro cree firmemente que lo mejor en la vida es aplastar a tus enemigos, verles destrozados y oír los lamentos de sus mujeres, lo que le confiere +1 FUE por cada golpe crítico, golpe de gracia o cada vez que inflija daño con una habilidad (un único contador por habilidad). El efecto es acumulable y permanece activo hasta el final del combate o hasta que el bárbaro sea aturdido.
+        XNEWX<i>Habilidad. +3 para impactar, 5 PE por lanzamiento.</i><br><br>El bárbaro ataca cruelmente a un objetivo derribado o aturdido con un ataque que se considerará crítico automáticamente si impacta.
+        XNEWX<i>Hechizo. Dificultad 16+, -1 por cada 10% de los PV máximos perdidos, todos los PE restantes.</i><br><br>El bárbaro entra en un estado de frenesí y cólera absoluta, lo que duplica su valor de FUE, reduce el coste de PE de todos sus hechizos y habilidades a 0 y le permite seguir con vida con menos de 0 PV durante tres turnos. Además, si el bárbaro lanza este hechizo con menos de la mitad de sus PV máximos, será también inmune a la mayoría de efectos de pérdida de control del personaje.
+        XNEWX<i>Pasiva.</i><br><br>El bárbaro ha perfeccionado su técnica de gritar con todas sus fuerzas, lo que le permite lanzar <i>Grito de batalla</i> incluso bajo la mayoría de efectos de pérdida de control del personaje (excluyendo silencios). Además, al lanzar el hechizo, el bárbaro se liberará de susodichos efectos y recuperará un 25% de los PV que le falten.
+        XNEWX<i>Habilidad. -2 para impactar, 5 PE por lanzamiento.</i><br><br>El bárbaro abandona cualquier preocupación por su propia seguridad y libera un aluvión de golpes contra su objetivo, golpeándolo dos veces con cada arma. Si el objetivo muere debido a esta habilidad, el bárbaro recuperará 1D3 PE.
+        XNEWX<i>Pasiva.</i><br><br>Tras mucho pensar en si es mejor utilizar un arma a dos manos o dos armas a una mano, el bárbaro llega a la conclusión de que la mejor opción es empuñar dos armas a dos manos, lo que le proporciona, evidentemente, la capacidad de empuñar un arma a dos manos en cada mano. No obstante, mientras el bárbaro empuñe dos armas a dos manos, no podrá beneficiarse de <i>Ambidextría ofensiva</i> ni <i>Ejecutor</i>, ni podrá lanzar <i>Trocear</i>.
+        XNEWX<i>Pasiva.</i><br><br>Una furia sobrehumana recorre las venas del bárbaro, que ahora disfruta verdaderamente con el derramamiento de sangre. El personaje recuperará PV iguales al 10% de todo el daño infligido, o el doble al atestar un golpe de gracia. Además, mientras el bárbaro esté bajo los efectos de <i>Locura sangrienta</i>, <i>Grito de batalla</i> o <i>Pintura de guerra</i>, recibirá también +10 a la armadura.
+        XNEWX<i>Pasiva.</i><br><br>El bárbaro se convierte en una auténtica máquina de matar, lo que mejora sus habilidades de nivel 4: <i>Locura sangrienta</i> durará hasta el final del combate en vez de solamente tres turnos, <i>Grito sobrecogedor</i> eliminará todos los efectos negativos presentes sobre el bárbaro y <i>Trocear</i> ya no costará PE.]]></item>
+
+        <item><![CDATA[<i>Pasiva.</i><br><br>El bardo tiene acceso a <i>canciones</i>, hechizos especiales sin dificultad que puede lanzar como acciones instantáneas y que se mantendrán activas hasta que el personaje sea aturdido, silenciado, decida detener la canción, decida lanzar una canción distinta o se quede sin PE para mantener la canción activa.
+        XNEWX<i>Canción. 2 PE por turno.</i><br><br>El bardo narra la historia de Garrim Puñoebrio, un enano conocido por su falta de equilibrio. Mientras la canción permanezca activa, el bardo y todos sus aliados obtendrán +1 a todas sus tiradas y +1 adicional por cada 3 puntos de INT del lanzador.
+        XNEWX<i>Hechizo. Dificultad 11+, 2 PE por lanzamiento.</i><br><br>El bardo libera una nota hiriente como el frío acero, que surca el aire como una flecha veloz y se clava en los oídos de su objetivo, infligiendo 1D3+VOL puntos de daño puro.
+        XNEWX<i>Hechizo. Dificultad 6+, 3 PE por lanzamiento.</i><br><br>El bardo aumenta la intensidad y el volumen de la canción que está tocando, duplicando la efectividad de la misma hasta el principio de su siguiente turno.
+        XNEWX<i>Hechizo. Dificultad 9+, 5 PE por lanzamiento.</i><br><br>El bardo toca un acorde hechizado con propiedades curativas, restaurando la mitad de los PV máximos del bardo y de un objetivo amistoso.
+        XNEWX<i>Canción. 1 PE por turno.</i><br><br>El bardo toca un tétrico ritmo que mientras permanezca activo, reducirá la armadura de todos los enemigos presentes en VOLx5. Además, si el bardo inflige daño con <i>Nota maldita</i> mientras toque esta canción, le robará un punto de VOL al objetivo hasta el final del combate.
+        XNEWX<i>Canción. 5 PE por turno.</i><br><br>El bardo entona una antigua melodía capaz de cautivar corazones. Mientras la canción permanezca activa, el bardo y un objetivo deberán realizar una tirada enfrentada de voluntad cada turno. Si gana el bardo, el objetivo quedará sometido a sus designios y obedecerá ciegamente. En caso contrario, el objetivo simplemente quedará encandilado y no realizará ninguna acción durante su turno.<br><br><i>Crescendo no funciona con esta canción.</i>
+        XNEWX<i>Canción. 3 PE por turno.</i><br><br>El bardo toca una alegre canción que convoca nubes de tormenta y desata una potente tormenta eléctrica. Mientras la canción permanezca activa; una vez por turno un relámpago caerá sobre un enemigo elegido al azar, infligiendo 1D6+INT o 1D6+VOL (el atributo más alto).
+        XNEWX<i>Hechizo. Dificultad 13+, 4 PE por lanzamiento.</i><br><br>El bardo toca una nota mágica que hace que todos los combatientes olviden por qué estaban peleando en primer lugar. Durante un turno, nadie podrá utilizar ataques, hechizos u habilidades que inflijan daño o afecten a combatientes enemigos ni perseguir. Además, todos los combatientes podrán huir exitosamente sin necesidad de realizar tirada de ningún tipo.
+        XNEWX<i>Canción. 5 PE por turno.</i><br><br>El bardo tararea una melodía olvidada, acompañada por algún acorde armónico, lo que otorga al bardo y a todos los aliados en combate +2 VOL y un escudo protector que reduce todo el daño sufrido en un 50% (o un 75% con <i>Crescendo</i>).
+        XNEWX<i>Hechizo. Dificultad 8+, 6 PE por lanzamiento.</i><br><br>El bardo libera una onda de sonido descontrolado, que inflige 1D4+INT+VOL puntos de daño a todos los enemigos en combate, además de empujarlos y derribarlos. Con un 16+ natural en la turada de lanzamiento, quedarán también aturdidos.
+        XNEWX<i>Pasiva.</i><br><br>El bardo aprende a afinar su instrumento con precisión inigualable, permitiéndole lanzar un hechizo por combate sin gastar PE y que será lanzado exitosamente y resultará crítico automáticamente. Además, las pifias del bardo lanzando hechizos se considerarán lanzamientos fallidos normales.
+        XNEWX<i>Pasiva.</i><br><br>El bardo incorpora poderosos acordes mágicos en sus canciones, reduciendo todo el daño infligido por enemigos que estén bajo los efectos de <i>Tambores de la locura</i>, <i>Canción de las tormentas</i> o <i>La cajita de música</i> en un 25%.
+        XNEWX<i>Canción. 4 PE por turno.</i><br><br>El bardo toca la canción más triste y melancólica jamás compuesta, obligando a todos los demás personajes en combate (tanto amigos como enemigos) a realizar un chequeo de VOL para realizar cualquier acción.
+        XNEWX<i>Pasiva.</i><br><br>El bardo incorpora poderosos acordes mágicos en sus canciones, haciendo que los aliados del bardo puedan repetir sus chequeos de VOL fallidos mientras estén bajo los efectos de <i>Balada de Garrim Puñoebrio</i>, <i>Acorde sanador</i>, <i>Tregua</i>, <i>Canción del Bastión</i> o <i>La cajita de música</i>.]]></item>
+
+        <item><![CDATA[<i>Habilidad. +0 para impactar, 2 PE por lanzamiento.</i><br><br>El cazador contiene el aliento y apunta con especial cuidado, lo que le permite al personaje repetir la tirada para impactar y le proporciona +2 al golpe crítico. Si el cazador no realiza ningún movimiento ni acción instantánea este turno, la dificultad se ve reducida a -2.
+        XNEWX<i>Pasiva.</i><br><br>El cazador comienza la partida con una mascota de su elección, con las habilidades y atributos de uno de los tres arquetipos incluidos al final del documento. Los compañeros animales suben de nivel junto al cazador.
+        XNEWX<i>Habilidad. -2 para impactar, 2 PE por lanzamiento.</i><br><br>El cazador reemplaza su munición normal por otra de punta perforante, que ignora PUNx5 puntos de armadura. Además, con un 18 o más natural en la tirada para impactar, el proyectil seguirá volando tras atravesar a su objetivo en línea recta, pudiendo impactar a un segundo objetivo pero infligiendo solo un 50% de daño.
+        XNEWX<i>Hechizo. Dificultad 8+, 3 PE por lanzamiento.</i><br><br>El cazador señala a un objetivo para la mascota, que atacará inmediatamente durante el turno del cazador utilizando su habilidad especial, que dependerá del arquetipo de mascota al que pertenezca.<br><br>Como bonificación pasiva añadida, el cazador podrá realizar chequeos de INT para rastrear animales y seres humanoides.
+        XNEWX<i>Hechizo. Dificultad 2+, 5 PE por lanzamiento. No puede usarse en combate.</i><br><br>El cazador coloca y camufla un cepo cargado con pólvora. Si la trampa se activa, la pobre alma que haya pisado el cepo sufrirá 1D20+INT puntos de daño, además de ser derribada y quedar aturdida durante un turno.<br><br>Como bonificiación pasiva añadida, el cazador podrá realizar chequeos de INT para rastrar animales y seres humanoides.
+        XNEWX<i>Pasiva.</i><br><br>El cazador ha pasado incontables horas perfeccionando sus habilidades como tirador, lo que le proporciona +1 al golpe crítico, +2 PUN y +5 PE máximos pasivamente. Además, el cazador podrá realizar chequeos de INT para rastrear animales y seres humanoides.
+        XNEWX<i>Hechizo. Dificultad 8+, 3 PE por lanzamiento. No puede usarse en combate.</i><br><br>El cazador despliega una capa recubierta de hojas y ramitas, bajo la cual se esconde y espera pacientemente. Mientras el cazador permanezca inmóvil, será prácticamente indetectable para la mayoría de enemigos. Además, el primer hechizo o habilidad que utilice desde debajo del arbusto plegable no consumirá PE.
+        XNEWX<i>Habilidad. -3 para impactar, 4 PE por lanzamiento.</i><br><br>El cazador carga su arma de disparo con múltiples proyectiles a la vez, lo que le permite disparar simultáneamente contra tres o menos objetivos distintos, siguiendo las reglas normales de los ataques a distancia.
+        XNEWX<i>Pasiva.</i><br><br>Pasar tanto tiempo junto a su mascota ha acabado formando un vínculo entre bestia y cazador. Mientras el cazador permanezca con vida, la mascota podrá revivir con 1 PV al final del combate. Si el cazador muriera, la mascota entrará en un estado de furia asesina, lo que le permitirá atacar dos veces por turno utilizando su habilidad especial e infligiendo el doble de daño contra el enemigo que hubiera matado a su maestro.
+        XNEWX<i>Pasiva.</i><br><br>El cazador perfecciona su técnica de <i>disparo firme</i>, lo que le proporciona un +2 adicional al golpe crítico cuando utilice la habilidad. Además, si el cazador no necesita repetir la tirada para impactar, <i>disparo firme</i> no gastará PE.
+        XNEWX<i>Pasiva.</i><br><br>El cazador aprende de su mascota del mismo modo que su mascota aprende de él. Tanto el cazador como su mascota obtendrán un re-roll por combate.
+        XNEWX<i>Pasiva.</i><br><br>Además de dedicarse a la caza de criaturas peligrosas, el personaje posee también ciertas nociones de ingeniería, lo que aumenta el daño de <i>Munición perforante</i> en INT y reduce el coste de PE de <i>Trampa para huargos</i> y <i>Disparo explosivo</i> a 3.
+        XNEWX<i>Habilidad. -2 para impactar, 4 PE por lanzamiento.</i><br><br>El cazador apunta a los órganos vitales de su objetivo infligiendo 1D6 puntos de daño puro adicional, o matando al objeto con un crítico.
+        XNEWX<i>Habilidad. -3 para impactar, 6 PE por lanzamiento.</i><br><br>El cazador reemplaza su munición normal por otra explosiva, que infligirá 1D20+INT puntos de daño adicionales a su objetivo y una tercera parte del daño adicional a todos los demás enemigos en combate.
+        XNEWX<i>Pasiva.</i><br><br>El cazador forma su propia manada de bestias, lo que le permitirá tener y proporcionará una bestia de cada arquetipo. Si el cazador utiliza <i>¡Ataca!</i>, todas las mascotas atacarán al mismo objetivo.]]></item>
+
+        <item><![CDATA[<i>Hechizo. Dificultad 9+, 2 PE por lanzamiento.</i><br><br>El druida tararea una suave melodía que hace brotar zarzas alrededor de las piernas de su objetivo, infligiendo 1D3+SAB puntos de daño e inmobilizando al objetivo durante un turno, lo que le impedirá huir, perseguir, realizar cualquier acción de movimiento o levantarse si hubiera sido derribado.
+        XNEWX<i>Pasiva.</i><br><br>Los druidas poseen conocimientos ancestrales y gozan de cierto favor divino, lo que les permite lanzar hechizos y habilidades sin gastar PE, siempre que lo haga durante la noche.
+        XNEWX<i>Hechizo. Dificultad 8+, 2 PE por lanzamiento.</i><br><br>El druida canaliza una pequeña cantidad de energía vital para sanar a su objetivo, que recuperará 1D4+SAB puntos de salud.
+        XNEWX<i>Hechizo. Dificultad 13+, 7 PE por lanzamiento.</i><br><br>El druida convoca un grupo de alegres espíritus de la naturaleza que curarán al druida y a sus aliados, restaurando 1D6+SAB PV. Si el hechizo se lanza fuera del combate, la cura será el doble de efectiva.
+        XNEWX<i>Hechizo. Dificultad 9+, 4 PE por lanzamiento.</i><br><br>El druida entra en comunión con la naturaleza, lo que le permite comunicarse con la flora y la fauna cercana.<br><br>Además, si el druida conoce este hechizo, la naturaleza cercana no atacará al personaje ni a sus aliados sin provocación.
+        XNEWX<i>Hechizo. Dificultad 10+, 3 PE por lanzamiento.</i><br><br>El druida conjura un haz de ardiente luz lunar sobre su objetivo, infligiendo 1D6+INT puntos de daño. Si el objetivo es un no-muerto, demonio o criatura de la noche, el daño aumenta a 1D10+INT.
+        XNEWX<i>Hechizo. Dificultad 11+, 5 PE por lanzamiento.</i><br><br>El druida transmite una gran cantidad de energía vital sobre un único objetivo, restaurando 1D20+SAB puntos de vida.
+        XNEWX<i>Hechizo. Dificultad 13+, 4 PE por lanzamiento.</i><br><br>El druida convoca una bandada de cuervos furiosos y los dirige contra sus enemigos, infligiendo 1D4+INT puntos de daño cada turno durante tres turnos, o hasta que sean dispersados a la fuerza. Además, los objetivos afectados por <i>Bandada de Cuervos</i> perderán también 3 puntos de DES, PUN y AGI.
+        XNEWX<i>Hechizo. Dificultad 11+, 5 PE por lanzamiento.</i><br><br>El druida desata la regeneración natural de su objetivo, haciendo que recupere 1D8+SAB PV cada turno hasta que vuelva a alcanzar su máximo de PV o muera.
+        XNEWX<i>Hechizo. Dificultad 11+, 5 PE por lanzamiento.</i><br><br>El druida se transforma en pez manta, lechuza u oso, perdiendo la capacidad de empuñar armas y lanzar hechizos (excepto <i>Corazón salvaje</i>) hasta que vuelva a su forma original, y obteniendo atributos y habilidades según el animal que elija. Consulta la tabla adjunta al final del documento.
+        XNEWX<i>Hechizo. Dificultad 13+, 5 PE por lanzamiento.</i><br><br>El druida llama a los árboles para que acudan en su auxilio, lo que provoca que hasta 1D3 árboles cercanos levanten sus raíces del suelo y luchen para el druida hasta el final del combate. Los árboles poseen 10 PV, armadura igual al quíntuple de la SAB del druida e infligen 1D4 puntos de daño, +1 por cada punto de INT del lanzador.
+        XNEWX<i>Pasiva.</i><br><br>Al inicio de cada turno, el druida recuperará VOL+INT+SAB puntos de vida. Si la salud del druida ya estuviera al máximo, <i>Regalo de Ishdelarei</i> curará al personaje amistoso con menos PV restantes.
+        XNEWX<i>Hechizo. Dificultad 12+, 10 PE por lanzamiento.</i><br><br>El druida concentra una enorme cantidad de energía vital en un solo objetivo, cerrando heridas, reparando huesos y sanando órganos. Si se lanza contra un objetivo que haya muerto recientemente, devuélvelo a la vida con la mitad de sus PE y PV máximos. Si se lanza contra un objetivo que todavía esté con vida, recuperará todos sus PE y PV.
+        XNEWX<i>Hechizo. Dificultad 13+, 10 PE por lanzamiento.</i><br><br>El druida convoca los poderes de la luna, ocultando el sol y provocando la llegada de la noche. Si el hechizo se lanza durante el día, se considerará que es de noche a todos los efectos. Por otra parte, si se lanza durante la noche, al inicio de cada turno del druida 1D3 enemigos al azar se verán afectados por <i>Fuego lunar</i> sin necesidad de realizar ninguna tirada para lanzar el hechizo ni sin gastar PE, incluso si el druida no conoce el hechizo.
+        XNEWX<i>Hechizo canalizado. Dificultad 14+, 6 PE por lanzamiento +6 PE por turno.</i><br><br>El druida convoca la cólera de Ishdelarei, infligiendo 1D4+VOL puntos de daño por cada combatiente vivo (excluyendo no-muertos, demonios y criaturas de la noche) por turno al enemigo con más PV, dando prioridad a no-muertos, demonios y criaturas de la noche.]]></item>
     </string-array>
 
     <string-array name="alquimistaPociones">
@@ -199,4 +330,10 @@
         <item>19XNEWXPoción milagrosa de Kala la sanadora. De algún modo y quizás sin proponérselo, el alquimista consigue crear la poción milagrosa. Si el objetivo ha muerto recientemente, devuélvelo a la vida con la mitad de sus PV máximos.</item>
         <item>20XNEWX¡Justo como estaba planeado! Elige cualquier otro resultado de esta tabla y utilízalo como si lo hubieras obtenido normalmente.</item>
     </string-array>
+
+    <string-array name="cazadorMascotas">
+
+    </string-array>
+
+    <string-array name="druidaTransformaciones"></string-array>
 </resources>

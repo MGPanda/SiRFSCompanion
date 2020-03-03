@@ -30,7 +30,6 @@ public class Detail extends AppCompatActivity {
         ActionBar ab = getSupportActionBar();
         assert ab != null;
         ab.setTitle(_c.getCharName());
-        if (MainActivity.isDarkMode()) getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES); else getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         this._civ = findViewById(R.id.detailImage);
         this._detailName = findViewById(R.id.detailName);
         this._detailRaceClass = findViewById(R.id.detailRaceClass);

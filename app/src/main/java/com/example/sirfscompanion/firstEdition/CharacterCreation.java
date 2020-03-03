@@ -29,7 +29,6 @@ public class CharacterCreation extends AppCompatActivity {
         ActionBar ab = getSupportActionBar();
         assert ab != null;
         ab.setTitle(R.string.creacionPersonaje);
-        if (MainActivity.isDarkMode()) getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES); else getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         FUE = findViewById(R.id.ccFUEVal);
         DES = findViewById(R.id.ccDESVal);
         PUN = findViewById(R.id.ccPUNVal);

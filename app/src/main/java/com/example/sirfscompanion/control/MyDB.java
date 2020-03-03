@@ -124,5 +124,13 @@ public class MyDB {
         createChar(c);
         c = new Char(0, "Pep Pilotes", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-01", 5, "Elfo del Este", "Asesino", -2, -1, 0, 2, 1, 0, 0, 14, 17, 18, 26, 10, 0, 3, 1, 0, "", "", "", "0 1 2 3 8 11 12", 100, "");
         createChar(c);
+        c = new Char(0, "Antoni Ametles", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-01", 5, "Elfo del Oeste", "Bárbaro", 0, 1, 2, 0, 0, 1, 0, 14, 17, 17, 17, 10, 0, 3, 1, 0, "", "", "", "0 1 2 5 7 9 12", 100, "");
+        createChar(c);
+        c = new Char(0, "Biel Bimbolla", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-01", 5, "Crunisio", "Bardo", 1, 0, 0, 1, 1, 0, 1, 14, 20, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 5 6 11 14", 100, "");
+        createChar(c);
+        c = new Char(0, "Carles Cirera", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-01", 5, "Orco", "Cazador", 3, 0, -2, -2, -1, -1, 1, 14, 26, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 4 8 11 13", 100, "");
+        createChar(c);
+        c = new Char(0, "Xisco Ximbomba", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-01", 5, "Enano", "Druida", 2, 0, -1, 0, -1, -2, 1, 14, 26, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 4 8 11 13", 100, "");
+        createChar(c);
     }
 }
