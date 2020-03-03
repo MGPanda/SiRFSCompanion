@@ -1,6 +1,7 @@
 package com.example.sirfscompanion.firstEdition;
 
 import android.content.Context;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -70,8 +71,8 @@ public class RecyclerAdapterInfo extends RecyclerView.Adapter<RecyclerAdapterInf
             this._infoDesc = itemView.findViewById(R.id.infoDesc);
         }
         public void bind(final int position) {
-            this._infoTitle.setText(_al.get(position*2));
-            this._infoDesc.setText(_al.get((position*2)+1));
+            this._infoTitle.setText(Html.fromHtml(_al.get(position*2)));
+            this._infoDesc.setText(Html.fromHtml(_al.get((position*2)+1)));
         }
     }
 }

@@ -120,9 +120,9 @@ public class MyDB {
     }
 
     public void insertTest() {
-        Char c = new Char(0, "Toni Taronges", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-01", 5, "Humano", "Alquimista", -2, -1, 0, 2, 1, 0, 0, 14, 17, 18, 26, 10, 0, 3, 1, 0, "", "", "", "0 1 2 3 8 9 14", 100, "");
+        Char c = new Char(0, "Toni Taronges", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-01", 5, "Humano", "Alquimista", 0, 0, 0, 0, 0, 0, 0, 14, 20, 18, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 3 8 9 14", 300, "");
         createChar(c);
-        c = new Char(0, "Pep Pilotes", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-01", 5, "Humano", "Alquimista", -2, -1, 0, 2, 1, 0, 0, 14, 17, 18, 26, 10, 0, 3, 1, 0, "", "", "", "0 1 2 3 8 9 14", 100, "");
+        c = new Char(0, "Pep Pilotes", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-01", 5, "Elfo del Este", "Asesino", -2, -1, 0, 2, 1, 0, 0, 14, 17, 18, 26, 10, 0, 3, 1, 0, "", "", "", "0 1 2 3 8 11 12", 100, "");
         createChar(c);
     }
 }
