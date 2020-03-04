@@ -44,6 +44,7 @@ public class MyDB {
     public final static String CHAR_EQUIP = "equip";
     public final static String CHAR_RELICS = "relics";
     public final static String CHAR_SKILLS = "skills";
+    public final static String CHAR_BONUS = "bonus";
     public final static String CHAR_GOLD = "gold";
     public final static String CHAR_INVENTORY = "inventory";
 
@@ -85,6 +86,7 @@ public class MyDB {
         values.put(CHAR_EQUIP, c.getCharEquip());
         values.put(CHAR_RELICS, c.getCharRelics());
         values.put(CHAR_SKILLS, c.getCharSkills());
+        values.put(CHAR_BONUS, c.getCharBonus());
         values.put(CHAR_GOLD, c.getCharGold());
         values.put(CHAR_INVENTORY, c.getCharInventory());
         return database.insert(CHAR_TABLE, null, values);
@@ -93,7 +95,7 @@ public class MyDB {
     public static Cursor selectAll() {
         try {
             String[] cols = new String[]{CHAR_ID, CHAR_NAME, CHAR_IMG, CHAR_CRDATE, CHAR_LEVEL, CHAR_RACE, CHAR_CLASS, CHAR_FUE, CHAR_DES, CHAR_PUN, CHAR_INT, CHAR_SAB, CHAR_AGI, CHAR_VOL, CHAR_PV,
-                    CHAR_MAXPV, CHAR_PE, CHAR_MAXPE, CHAR_ARMOR, CHAR_MARMOR, CHAR_CRITBONUS, CHAR_CRITDMGBONUS, CHAR_SPELLBONUS, CHAR_WEAPONS, CHAR_EQUIP, CHAR_RELICS, CHAR_SKILLS, CHAR_GOLD, CHAR_INVENTORY};
+                    CHAR_MAXPV, CHAR_PE, CHAR_MAXPE, CHAR_ARMOR, CHAR_MARMOR, CHAR_CRITBONUS, CHAR_CRITDMGBONUS, CHAR_SPELLBONUS, CHAR_WEAPONS, CHAR_EQUIP, CHAR_RELICS, CHAR_SKILLS, CHAR_BONUS, CHAR_GOLD, CHAR_INVENTORY};
             Cursor mCursor;
             mCursor = database.query(true, CHAR_TABLE, cols, null
                     , null, null, null, "_id asc", null);
@@ -120,17 +122,19 @@ public class MyDB {
     }
 
     public void insertTest() {
-        Char c = new Char(0, "Toni Taronges", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-01", 5, "Humano", "Alquimista", 0, 0, 0, 0, 0, 0, 0, 14, 20, 18, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 3 8 9 14", 300, "");
+        Char c = new Char(0, "Toni Taronges", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-01", 5, "Humano", "Alquimista", 0, 0, 0, 0, 0, 0, 0, 14, 20, 18, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 3 8 9 14", "", 300, "");
         createChar(c);
-        c = new Char(0, "Pep Pilotes", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-01", 5, "Elfo del Este", "Asesino", -2, -1, 0, 2, 1, 0, 0, 14, 17, 18, 26, 10, 0, 3, 1, 0, "", "", "", "0 1 2 3 8 11 12", 100, "");
+        c = new Char(0, "Tomeu Tomàtiga", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-01", 5, "Elfo del Este", "Asesino", -2, -1, 0, +2, +1, 0, 0, 14, 17, 17, 26, 10, 0, 3, 1, 0, "", "", "", "0 1 2 3 8 11 12", "", 100, "");
         createChar(c);
-        c = new Char(0, "Antoni Ametles", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-01", 5, "Elfo del Oeste", "Bárbaro", 0, 1, 2, 0, 0, 1, 0, 14, 17, 17, 17, 10, 0, 3, 1, 0, "", "", "", "0 1 2 5 7 9 12", 100, "");
+        c = new Char(0, "Lluc Llimona", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-02", 5, "Elfo del Oeste", "Bárbaro", -2, -1, 0, +2, +1, 0, 0, 14, 17, 17, 26, 10, 0, 3, 1, 0, "", "", "", "0 1 2 5 7 9 12", "", 100, "");
         createChar(c);
-        c = new Char(0, "Biel Bimbolla", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-01", 5, "Crunisio", "Bardo", 1, 0, 0, 1, 1, 0, 1, 14, 20, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 5 6 11 14", 100, "");
+        c = new Char(0, "Simó Sopes", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-02", 5, "Crunisio", "Bardo", -2, -1, 0, +2, +1, 0, 0, 14, 17, 17, 26, 10, 0, 3, 1, 0, "", "", "", "0 1 2 5 6 11 14", "", 100, "");
         createChar(c);
-        c = new Char(0, "Carles Cirera", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-01", 5, "Orco", "Cazador", 3, 0, -2, -2, -1, -1, 1, 14, 26, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 4 8 11 13", 100, "");
+        c = new Char(0, "Carles Cirera", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-02", 5, "Orco", "Cazador", 3, 0, -2, -2, -1, -1, 1, 14, 26, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 4 8 11 13", "", 100, "");
         createChar(c);
-        c = new Char(0, "Xisco Ximbomba", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-01", 5, "Enano", "Druida", 2, 0, -1, 0, -1, -2, 1, 14, 26, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 4 8 11 13", 100, "");
+        c = new Char(0, "Xisco Ximbomba", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-03", 5, "Enano", "Druida", 2, 0, -1, 0, -1, -2, 1, 14, 26, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 4 8 11 13", "", 100, "");
+        createChar(c);
+        c = new Char(0, "Pep Pilotes", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hero), "2020-03-04", 5, "Dracónido", "Elementarista - Arcano", 2, 0, -1, 0, 0, -2, 1, 14, 26, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 4 6 10 13", "DRAC1 DRAC3", 100, "");
         createChar(c);
     }
 }

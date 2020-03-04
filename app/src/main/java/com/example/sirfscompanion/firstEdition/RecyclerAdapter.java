@@ -3,7 +3,6 @@ package com.example.sirfscompanion.firstEdition;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.sirfscompanion.R;
 import com.example.sirfscompanion.instanciables.Char;
 
@@ -60,7 +60,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             this._raceClass = itemView.findViewById(R.id.listRaceClass);
         }
         public void bind(final Char c) {
-            this._civ.setImageBitmap(BitmapFactory.decodeByteArray(c.getCharImg(), 0, c.getCharImg().length));
+            Glide.with(_c).load(c.getCharImg()).asBitmap().into(_civ);
             this._name.setText(c.getCharName());
             this._date.setText(c.getCharDate());
             this._raceClass.setText(String.format("%s %s %d", c.getCharRace(), c.getCharClass(), c.getCharLevel()));

@@ -120,6 +120,8 @@
         <br><br><b>Objetos equipables:</b> Armadura ligera, armas de una mano, armas arrojadizas y armas de disparo de cualquier tipo.]]></item>
         <item><![CDATA[<i>Los druidas aparecieron milenios atrás, durante la emigración élfica hacia el oeste, más útiles para la vida en los bosques que los hechiceros formales de su tierra natal. Utilizan su fuerte conexión con Ishdelarei para ejercer como sacerdotes y sacerdotisas, sanadores y guardianes de sus bosques sagrados, que moldean con canciones mágicas.</i>
         <br><br><b>Objetos equipables:</b> Armadura ligera, armas de una mano (sin doble empuñadura), bastones.]]></item>
+        <item><![CDATA[<i>A diferencia de otras disciplinas mágicas, más centradas en las aplicaciones prácticas de sus poderes, los elementaristas arcanos estudian el origen, funcionamiento y leyes por las que se rige la magia, además de algunas nociones de física necesarias para no partir el mundo en dos accidentalmente. Los elementarista arcanos acostumbran a ser estudiosos excéntricos que a menudo acaban sufriendo de alcoholismo, generalmente porque la vida académica desgasta la cordura de cualquiera. No hay que subestimarlos, de todos modos; los que no enloquecen (y algunos locos también) son excelentes investigadores y cazadores de magos, muy útiles en cualquier grupo de aventureros.</i>
+        <br><br><b>Objetos equipables:</b> Armadura ligera, armas de una mano (sin doble empuñadura), bastones.]]></item>
     </string-array>
 
     <string-array name="classesSkills1e">
@@ -213,6 +215,21 @@
         XNEWXRenacer
         XNEWXEclipse
         XNEWXCólera de la diosa</item>
+        <item>Proyectil arcano
+        XNEWXDetectar magia
+        XNEWXDispersar
+        XNEWXSilenciar
+        XNEWXContrahechizo
+        XNEWXReserva arcana
+        XNEWXPortal
+        XNEWXAura de negación
+        XNEWXRobar hechizo
+        XNEWXPoder desatado
+        XNEWXSalvaguarda mágica
+        XNEWXQuemadura arcana
+        XNEWXSingularidad arcana
+        XNEWXMaestro Arcanista
+        XNEWXFase dimensional</item>
     </string-array>
 
     <string-array name="classesSkillsDesc1e">
@@ -311,6 +328,22 @@
         XNEWX<i>Hechizo. Dificultad 12+, 10 PE por lanzamiento.</i><br><br>El druida concentra una enorme cantidad de energía vital en un solo objetivo, cerrando heridas, reparando huesos y sanando órganos. Si se lanza contra un objetivo que haya muerto recientemente, devuélvelo a la vida con la mitad de sus PE y PV máximos. Si se lanza contra un objetivo que todavía esté con vida, recuperará todos sus PE y PV.
         XNEWX<i>Hechizo. Dificultad 13+, 10 PE por lanzamiento.</i><br><br>El druida convoca los poderes de la luna, ocultando el sol y provocando la llegada de la noche. Si el hechizo se lanza durante el día, se considerará que es de noche a todos los efectos. Por otra parte, si se lanza durante la noche, al inicio de cada turno del druida 1D3 enemigos al azar se verán afectados por <i>Fuego lunar</i> sin necesidad de realizar ninguna tirada para lanzar el hechizo ni sin gastar PE, incluso si el druida no conoce el hechizo.
         XNEWX<i>Hechizo canalizado. Dificultad 14+, 6 PE por lanzamiento +6 PE por turno.</i><br><br>El druida convoca la cólera de Ishdelarei, infligiendo 1D4+VOL puntos de daño por cada combatiente vivo (excluyendo no-muertos, demonios y criaturas de la noche) por turno al enemigo con más PV, dando prioridad a no-muertos, demonios y criaturas de la noche.]]></item>
+
+        <item><![CDATA[<i>Hechizo. Dificultad 11+, 0 PE por lanzamiento.</i><br><br>El elementarista conjura un proyectil de energía mágica en estado puro y lo lanza contra un objetivo, infligiendo 1D4+INT puntos de daño.
+        XNEWX<i>Pasiva.</i><br><br>El entrenamiento básico del elementarista incluye diversas técnicas para detectar e identificar diversas formas de magia. Cuando el personaje realice tiradas para inspeccionar, podrá saber también si hay algún objeto mágico, fuente de energía mágica, otros hechiceros o rastros de magia en las cercanías, además de poder identificar las peculiaridades y efecos de los objetos mágicos que encuentre.
+        XNEWX<i>Hechizo. Dificultad 12+, 3 PE por lanzamiento.</i><br><br>El elementarista manipula el flujo de energía mágica alrededor de un objetivo, eliminando todos los efectos de estado tanto positivos como negativos, o desactivando una trampa mágica. Los efectos aplicados por objetos mágicos que lleve equipados no se podrán disipar.
+        XNEWX<i>Hechizo. Dificultad 10+, 2 PE por lanzamiento.</i><br><br>El elementarista crea una pequeña burbuja de nulidad arcana alrededor de su objetivo, lo que le impedirá lanzar hechizos durante tres turnos, además de impedirle hablar durante un breve periodo de tiempo.
+        XNEWX<i>Hechizo. Dificultad 12+, 3 PE por lanzamiento.</i><br><br>El elementarista conjura un glifo arcano en el suelo o una pared que permanece activo hasta el final del día. Si alguien intenta lanzar un hechizo cerca del glifo, se activará, infligiendo daño puro igual al doble del coste de PE del hechizo, anulando el efecto (si hubiera sido lanzado con éxito) y derribando al lanzador.
+        XNEWX<i>Pasiva.</i><br><br>El elementarista ha aprendido a almacenar más energía mágica de la que podría contener normalmente, lo que le proporciona +3 PE máximos por nivel, además de +3 PE máximos adicionales cada vez que decida aumentar sus PE al subir de nivel.
+        XNEWX<i>Hechizo. Dificultad 6+, 8 PE por lanzamiento.</i><br><br>El elementarista conjura un portal entre su ubicación actual y cualquier otro sitio que haya visitado. El portal podrá utilizarse para desplazarse de forma inmediata entre ambos extremos.<br><br>El portal será lanzado con éxito con un 6+, pero la ubicación del otro extremo podría no ser precisa con una mala tirada.
+        XNEWX<i>Pasiva.</i><br><br>El elementarista proyecta un aura de negación a su alrededor, que reduce todo el daño mágico sufrido por él y sus aliados en un 25%. El efecto de <i>aura de negación</i> no se acumula con otras fuentes de resistencia mágica.
+        XNEWX<i>Hechizo. Dificultad 12+, 3 PE por lanzamiento.</i><br><br>El elementarista copia el último hechizo lanzado por el objetivo, permitiéndole lanzarlo como si fuera su propio hechizo, con el mismo efecto, dificultad y coste de PE. Desgraciadamente, la memoria del elementarista es limitada y si intenta robar otro hechizo, se ve silenciado o aturdido, olvidará el conjuro que copió en primer lugar.
+        XNEWX<i>Hechizo. Dificultad 2+, Coste de PE variable.</i><br><br>El elementarista recurre a su reserva de energía mágica para potenciar sus hechizos. Si <i>Poder desatado</i> se lanza con éxito, el elementarista convertirá la mitad de sus PE actuales (redondeando hacia arriba) en INT, obteniendo +1 INT por cada 3 PE gastados. No obstante, esto provoca que los hechizos sean también más inestables, aumentando el riesgo de pifias de un 1 natural a un 3 natural o inferior, y proporcionando +2 al crítico. El efecto permanece activo hasta el final del combate.
+        XNEWX<i>Hechizo. Dificultad 13+, 3 PE por lanzamiento.</i><br><br>El elementarista envuelve a su objetivo con una burbuja anti-mágica, que confiere inmunidad al daño mágico e impide que el objetivo se vea afectado por cualquier hechizo, sea cual sea la fuente e incluso si infligiera daño puro. Las armas mágicas utilizadas contra el objetivo funcionarán como ataques del mismo tipo realizados con armas corrientes. La salvaguarda permanecerá activa hasta el final del combate o hasta que el elementarista decida lanzar <i>Salvaguarda mágica</i> sobre otro objetivo.
+        XNEWX<i>Hechizo. Dificultad 13+, 4 PE por lanzamiento.</i><br><br>El elementarista quema la energía mágica del objetivo, reduciendo su PE a 0 e infligiendo daño puro igual a la cantidad de PE eliminados + INT.
+        XNEWX<i>Hechizo. Dificultad 16+, 10 PE por lanzamiento.</i><br><br>El elementarista abre una brecha entre este plano de la realidad y el Aeterium, un plano desbordante de energía mágica y constantemente azotado por tormentas arcanas de magnitud inconmensurable. Los efectos de la singularidad son extremadamente devastadores, pero es imposible saber con exactitud hasta qué punto.
+        XNEWX<i>Pasiva.</i><br><br>Tras muchos años de estudio, el elementarista se ha convertido en un maestro de las artes arcanas, lo que le proporciona un +3 al lanzamiento de hechizos, aumenta la resistencia mágica de <i>Aura de negación</i> a un 50%, mejora la precisión del <i>Portal</i>, le permite almacenar un máximo de 3 hechizos con <i>Robar hechizo</i> y aumenta el alcance efectivo de <i>Detectar magia</i>, además de un bonito sombrero y un diploma.
+        XNEWX<i>Hechizo. Dificultad 12+, 4 PE por objetivo.</i><br><br>El elementarista fuerza un cambio de fase sobre los objetivos que desee (tanto aliados como enemigos), haciendo que pasen a ser criaturas etéreas inmunes al daño físico pero que sufrirán un 100% más de daño mágico. Los objetivos seguirán siendo etéreos hasta que el elementarista lance el hechizo de nuevo.]]></item>
     </string-array>
 
     <string-array name="alquimistaPociones">
@@ -332,8 +365,35 @@
     </string-array>
 
     <string-array name="cazadorMascotas">
-
+        <item>Ave Rapaz</item>
+        <item><![CDATA[<b>Ejemplos:</b> Halcón, lechuza invernal, murciélago sureño, rey cuervo, búho emperador, águila…]]></item>
+        <item>0 +0 5 +1 0 +0 0 +0 0 +0 6 +2 1 +0</item>
+        <item>1D4+FUE 10 +3 0 +3 1 +0 10% +0</item>
+        <item><![CDATA[<b>Marcar:</b> <i>Pasiva.</i>XNEWX<b>Revelar:</b> <i>habilidad especial.</i>]]></item>
+        <item>Los ataques cuerpo a cuerpo de la mascota aplican una marca sobre el objetivo. Si el cazador dispara sobre el mismo enemigo, consumirá la marca y podrá repetir su tirada para impactar.
+        XNEWXLa mascota utiliza su posición ventajosa y superioro sentido de la vista para descubrir y marcar todos los enemigos ocultos en combate.</item>
+        <item>Depredador</item>
+        <item><![CDATA[<b>Ejemplos:</b> Lobo, león de montaña, Tigre de occidente, Dientes de sable de la tundra, araña gigante…]]></item>
+        <item>0 +2 0 +1 0 +0 0 +0 0 +0 0 +1 1 +0</item>
+        <item>1D6+FUE 15 +3 5 +3 1 +0 10% +0</item>
+        <item><![CDATA[<b>Heridas abiertas:</b> <i>Pasiva.</i>XNEWX<b>Frenesí:</b> <i>habilidad especial.</i>]]></item>
+        <item>El segundo ataque de la mascota sobre un mismo objetivo infligirá 2 puntos de daño adicional, el tercer ataque 4 puntos de daño adicional, el cuarto 6 y a partir del quinto ataque, +8.
+        XNEWXLa mascota se abalanza sobre un objetivo, realizando dos rápidos ataques que infligen un 25% menos (redondeando hacia arriba) de daño que los ataques normales.</item>
+        <item>Protector</item>
+        <item><![CDATA[<b>Ejemplos:</b> Osezno, tortuga real, ovejo, basilisco pielpiedra, gorila sureño.]]></item>
+        <item>0 +1 -1 +1 0 +0 0 +0 0 +0 -1 +0 3 +0</item>
+        <item>1D4+FUE 18 +6 5 +5 1 +0 0 +0</item>
+        <item><![CDATA[<b>Rugido:</b> <i>Pasiva.</i>XNEWX<b>Arrollar:</b> <i>habilidad especial.</i>]]></item>
+        <item>Los ataques cuerpo a cuerpo de la mascota provocarán al objetivo, obligándole a atacar a la mascota durante su turno.
+        XNEWXLa mascota carga contra un objetivo ignorando las restricciones del movimiento, lo derriba y lo pisotea infligiendo 1D6+FUE puntos de daño.</item>
     </string-array>
 
-    <string-array name="druidaTransformaciones"></string-array>
+    <string-array name="druidaTransformaciones">
+        <item>Forma de pez manta</item>
+        <item>El druida se convierte en pez manta, obteniendo la capacidad de respirar indefinidamente bajo el agua, aumentando enormemente su velocidad de nado y permitiéndole ocultarse en el fondo del mar, ríos o lagos.</item>
+        <item>Forma de lechuza</item>
+        <item>El druida se convierte en lechuza, obteniendo la capacidad de volar, permitiéndole ver en la oscuridad y proporcionándole SABx2 puntos de agilidad.</item>
+        <item>Forma de oso</item>
+        <item>El druida se convierte en un temible oso, obteniendo 10 PV máximos, fuerza igual a su INT, y armadura igual al quíntuple de su SAB. Además, mientras el druida esté en forma de oso, su daño en combate desarmado aumenta a 1D4+FUE.</item>
+    </string-array>
 </resources>

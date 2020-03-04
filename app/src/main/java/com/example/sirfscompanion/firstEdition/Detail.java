@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.sirfscompanion.control.MainActivity;
 import com.example.sirfscompanion.R;
 import com.example.sirfscompanion.instanciables.Char;
@@ -42,7 +43,7 @@ public class Detail extends AppCompatActivity {
         this._detailVOLVal = findViewById(R.id.detailVOLVal);
         this._detailPV = findViewById(R.id.detailPV);
         this._detailPE = findViewById(R.id.detailPE);
-        _civ.setImageBitmap(BitmapFactory.decodeByteArray(_c.getCharImg(), 0, _c.getCharImg().length));
+        Glide.with(this).load(_c.getCharImg()).asBitmap().into(_civ);
         _detailName.setText(_c.getCharName());
         _detailRaceClass.setText(String.format(Locale.getDefault(), "%s %s %d", _c.getCharRace(), _c.getCharClass(), _c.getCharLevel()));
         _detailFUEVal.setText(String.valueOf(_c.getCharFue()));

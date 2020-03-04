@@ -44,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
         _mydb = new MyDB(this);
         _mydb.insertTest();
         _rv = findViewById(R.id.recyclerView);
+        _rv.setHasFixedSize(true);
+        _rv.setItemViewCacheSize(20);
+        _rv.setDrawingCacheEnabled(true);
+        _rv.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
         setAdapter();
     }
 

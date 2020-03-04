@@ -22,4 +22,10 @@
     <string name="infoChar">Información del personaje</string>
     <string name="alquimista">Alquimista</string>
     <string name="listaPociones">Lista de pociones</string>
+    <string name="cazadorMascotas">Mascotas</string>
+    <string name="Damage">Daño</string>
+    <string name="armor">Armadura</string>
+    <string name="CritBonus">Bon. Crítico</string>
+    <string name="critDmgBonus">Bon. Daño crítico</string>
+    <string name="druidaTransformaciones">Transformaciones</string>
 </resources>

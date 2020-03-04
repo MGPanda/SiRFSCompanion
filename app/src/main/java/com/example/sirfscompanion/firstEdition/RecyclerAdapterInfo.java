@@ -31,9 +31,21 @@ public class RecyclerAdapterInfo extends RecyclerView.Adapter<RecyclerAdapterInf
         _al.add(MainActivity.get_ma().getResources().getStringArray(R.array.racesDesc1e)[_p]);
         String[] racesBonus = MainActivity.get_ma().getResources().getStringArray(R.array.racesBonus1e)[_p].split("XNEWX");
         String[] racesBonusDesc = MainActivity.get_ma().getResources().getStringArray(R.array.racesBonusDesc1e)[_p].split("XNEWX");
-        for (int i = 0; i < racesBonus.length; i++) {
-            _al.add(racesBonus[i]);
-            _al.add(racesBonusDesc[i]);
+        if (racesBonus.length > 2) {
+            int[] bonus = new int[2];
+            if (ch.getCharBonus().contains("DRAC0")) bonus[0] = 0;
+            if (ch.getCharBonus().contains("DRAC1")) bonus[0] = 1;
+            if (ch.getCharBonus().contains("DRAC2")) bonus[1] = 2;
+            if (ch.getCharBonus().contains("DRAC3")) bonus[1] = 3;
+            for (int i = 0; i < bonus.length; i++) {
+                _al.add(racesBonus[bonus[i]]);
+                _al.add(racesBonusDesc[bonus[i]]);
+            }
+        } else {
+            for (int i = 0; i < racesBonus.length; i++) {
+                _al.add(racesBonus[i]);
+                _al.add(racesBonusDesc[i]);
+            }
         }
         _al.add(MainActivity.get_ma().getResources().getStringArray(R.array.classes1e)[_p]);
         _al.add(MainActivity.get_ma().getResources().getStringArray(R.array.classesDesc1e)[_p]);

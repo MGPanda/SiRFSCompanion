@@ -35,6 +35,7 @@ public class Char implements Serializable {
     private String CHAR_EQUIP;
     private String CHAR_RELICS;
     private String CHAR_SKILLS;
+    private String CHAR_BONUS;
     private int CHAR_GOLD;
     private String CHAR_INVENTORY;
 
@@ -66,12 +67,13 @@ public class Char implements Serializable {
         this.CHAR_EQUIP = cu.getString(24);
         this.CHAR_RELICS = cu.getString(25);
         this.CHAR_SKILLS = cu.getString(26);
-        this.CHAR_GOLD = cu.getInt(27);
-        this.CHAR_INVENTORY = cu.getString(28);
+        this.CHAR_BONUS = cu.getString(27);
+        this.CHAR_GOLD = cu.getInt(28);
+        this.CHAR_INVENTORY = cu.getString(29);
     }
 
     public Char(int id, String name, Bitmap img, String date, int level, String race, String mClass, int fue, int des, int pun, int mInt, int sab, int agi, int vol, int pv, int maxpv, int pe, int maxpe, int armor, int marmor, int critbonus,
-                int critdmgbonus, int spellbonus, String weapons, String equip, String relics, String skills, int gold, String inventory) {
+                int critdmgbonus, int spellbonus, String weapons, String equip, String relics, String skills, String bonus, int gold, String inventory) {
         this.CHAR_ID = id;
         this.CHAR_NAME = name;
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -101,6 +103,7 @@ public class Char implements Serializable {
         this.CHAR_EQUIP = equip;
         this.CHAR_RELICS = relics;
         this.CHAR_SKILLS = skills;
+        this.CHAR_BONUS = bonus;
         this.CHAR_GOLD = gold;
         this.CHAR_INVENTORY = inventory;
     }
@@ -319,6 +322,14 @@ public class Char implements Serializable {
 
     public void setCharSkills(String charSkills) {
         CHAR_SKILLS = charSkills;
+    }
+
+    public String getCharBonus() {
+        return CHAR_BONUS;
+    }
+
+    public void setCharBonus(String charBonus) {
+        CHAR_BONUS = charBonus;
     }
 
     public int getCharGold() {
