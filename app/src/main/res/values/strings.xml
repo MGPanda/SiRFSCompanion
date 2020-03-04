@@ -9,7 +9,7 @@
     <string name="sab">SAB</string>
     <string name="agi">AGI</string>
     <string name="vol">VOL</string>
-    <string name="_1d10">1d10</string>
+    <string name="_1d10">1D10</string>
     <string name="pv">PV</string>
     <string name="roll">ROLL</string>
     <string name="max">MAX</string>
@@ -20,7 +20,6 @@
     <string name="minus">-</string>
     <string name="plus">+</string>
     <string name="infoChar">Información del personaje</string>
-    <string name="alquimista">Alquimista</string>
     <string name="listaPociones">Lista de pociones</string>
     <string name="cazadorMascotas">Mascotas</string>
     <string name="Damage">Daño</string>

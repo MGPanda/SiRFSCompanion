@@ -22,13 +22,10 @@ public class MainActivity extends AppCompatActivity {
     private static MyDB _mydb;
     private static MainActivity _ma;
     private static RecyclerView _rv;
-    private boolean old;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
-        MenuItem mi = menu.findItem(R.id.miDarkMode);
-        if (old) mi.setVisible(false);
         return true;
     }
 
@@ -36,10 +33,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if (android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.P) {
-            old = true;
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else old = false;
         _ma = this;
         _mydb = new MyDB(this);
         _mydb.insertTest();

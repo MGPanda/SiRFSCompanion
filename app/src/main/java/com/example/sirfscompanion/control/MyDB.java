@@ -136,5 +136,11 @@ public class MyDB {
         createChar(c);
         c = new Char(0, "Pep Pilotes", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.arcane), "2020-03-04", 5, "Dracónido", "Elementarista - Arcano", 2, 0, -1, 0, 0, -2, 1, 14, 26, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 4 6 10 13", "DRAC1 DRAC3", 100, "");
         createChar(c);
+        c = new Char(0, "Frit de Matançes", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.fire), "2020-03-04", 5, "Vaark", "Elementarista - Fuego", 2, 0, -1, 0, 0, -2, 1, 14, 26, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 4 8 11 12", "", 100, "");
+        createChar(c);
+        c = new Char(0, "Tòfol Truita", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.ice), "2020-03-04", 5, "Félido", "Elementarista - Hielo", 2, 0, -1, 0, 0, -2, 1, 14, 26, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 3 7 11 13", "", 100, "");
+        createChar(c);
+        c = new Char(0, "Andreu Avellana", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.earth), "2020-03-04", 5, "Humano", "Elementarista - Tierra", 2, 0, -1, 0, 0, -2, 1, 14, 26, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 5 6 9 12", "", 100, "");
+        createChar(c);
     }
 }

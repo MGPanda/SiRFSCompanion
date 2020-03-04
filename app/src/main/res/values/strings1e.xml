@@ -122,6 +122,12 @@
         <br><br><b>Objetos equipables:</b> Armadura ligera, armas de una mano (sin doble empuñadura), bastones.]]></item>
         <item><![CDATA[<i>A diferencia de otras disciplinas mágicas, más centradas en las aplicaciones prácticas de sus poderes, los elementaristas arcanos estudian el origen, funcionamiento y leyes por las que se rige la magia, además de algunas nociones de física necesarias para no partir el mundo en dos accidentalmente. Los elementarista arcanos acostumbran a ser estudiosos excéntricos que a menudo acaban sufriendo de alcoholismo, generalmente porque la vida académica desgasta la cordura de cualquiera. No hay que subestimarlos, de todos modos; los que no enloquecen (y algunos locos también) son excelentes investigadores y cazadores de magos, muy útiles en cualquier grupo de aventureros.</i>
         <br><br><b>Objetos equipables:</b> Armadura ligera, armas de una mano (sin doble empuñadura), bastones.]]></item>
+        <item><![CDATA[<i>Si alguna vez visitas un colegio del saber del fuego, no tardarás en notar que los estudiantes no están del todo cuerdos. La naturaleza destructiva de la magia ígnea atrae a psicópatas, pirómanos e individuos mentalmente inestables en general, pero lo más preocupante es el hecho de que los elementaristas de fuego superen en número a los estudiantes de todas las otras disciplinas mágicas. Fuera de la universidad, los elementaristas de fuego utilizarn su inigualable poder destructor como mercenarios o aventureros, o lo que permita quemar más cosas en ese momento.</i>
+        <br><br><b>Objetos equipables:</b> Armadura ligera, armas de una mano (sin doble empuñadura), bastones.]]></item>
+        <item><![CDATA[<i>La magia de hielo, curiosamente, atrae a los elementaristas más calculadores. Fríos, si lo prefieres, y rara vez los verás reír. Quizás sea porque se pasan el día envueltos en hielo y a temperaturas bajo cero… En cualquier caso, son extremadamente eficaces en combate, gracias a su amplio abanico de hechizos tanto defensivos como ofensivos que ayudan a controlar el campo de batalla.</i>
+        <br><br><b>Objetos equipables:</b> Armadura ligera, armas de una mano (sin doble empuñadura), bastones.]]></item>
+        <item><![CDATA[<i>Los elementaristas de tierra estudian el arte de crear, trasmutar y manipular minerales utilizando energía mágica, pero a diferencia de las demás disciplinas arcanas, tienden a alejarse de las ciudades llenas de necios e ignorantes, y estudian en la tranquilidad de sus refugios en las montañas. Se dice que tienen un voto de silencio, pero simplemente es que no se molestan a hablar con aquellos que consideran inferiores. Además, la falta de contacto con la sociedad ha acabado originando técnicas de combate poco ortodoxas pero efectivas, desde recubrirse a ellos mismos con piedra como provocar terremotos, pasando por invocar gólems y abrir grietas bajo los pies de sus enemigos.</i>
+        <br><br><b>Objetos equipables:</b> Armadura ligera, armas de una mano (sin doble empuñadura), bastones.]]></item>
     </string-array>
 
     <string-array name="classesSkills1e">
@@ -230,6 +236,51 @@
         XNEWXSingularidad arcana
         XNEWXMaestro Arcanista
         XNEWXFase dimensional</item>
+        <item>Bola de fuego
+        XNEWXIgnición
+        XNEWXAbrasar
+        XNEWXEspada incendiaria
+        XNEWXCaparazón solar
+        XNEWXPirómano
+        XNEWXFénix
+        XNEWXCorazón volcánico
+        XNEWXConjurar elemental
+        XNEWXLlamas infernales
+        XNEWXBola de fuego mejorada
+        XNEWXFuego salvaje
+        XNEWXAliento de dragón
+        XNEWXMaldición de la forja
+        XNEWXFuego residual</item>
+        <item>Lanza de hielo
+        XNEWXCongelación
+        XNEWXArmadura de escarcha
+        XNEWXVentisca
+        XNEWXDescarga de escarcha
+        XNEWXGlifo de escarcha
+        XNEWXElemental de hielo
+        XNEWXPrisión glacial
+        XNEWXBeso gélido
+        XNEWXHielo en las venas
+        XNEWXCoraza invernal
+        XNEWXEsquirlas
+        XNEWXExplosión helada
+        XNEWXSeñor del hielo
+        XNEWXCero absoluto</item>
+        <item>Puños plutónicos
+        XNEWXCoraza granítica
+        XNEWXMarcas telúricas
+        XNEWXCadena terrenal
+        XNEWXPisotón sísmico
+        XNEWXInamovible
+        XNEWXChoque telúrico
+        XNEWXConjurar gólem
+        XNEWXDedos de la montaña
+        XNEWXMonolito
+        XNEWXManos de basalto
+        XNEWXComandar la piedra
+        XNEWXForma de gólem
+        XNEWXAtlas
+        XNEWXAvalancha</item>
     </string-array>
 
     <string-array name="classesSkillsDesc1e">
@@ -344,6 +395,54 @@
         XNEWX<i>Hechizo. Dificultad 16+, 10 PE por lanzamiento.</i><br><br>El elementarista abre una brecha entre este plano de la realidad y el Aeterium, un plano desbordante de energía mágica y constantemente azotado por tormentas arcanas de magnitud inconmensurable. Los efectos de la singularidad son extremadamente devastadores, pero es imposible saber con exactitud hasta qué punto.
         XNEWX<i>Pasiva.</i><br><br>Tras muchos años de estudio, el elementarista se ha convertido en un maestro de las artes arcanas, lo que le proporciona un +3 al lanzamiento de hechizos, aumenta la resistencia mágica de <i>Aura de negación</i> a un 50%, mejora la precisión del <i>Portal</i>, le permite almacenar un máximo de 3 hechizos con <i>Robar hechizo</i> y aumenta el alcance efectivo de <i>Detectar magia</i>, además de un bonito sombrero y un diploma.
         XNEWX<i>Hechizo. Dificultad 12+, 4 PE por objetivo.</i><br><br>El elementarista fuerza un cambio de fase sobre los objetivos que desee (tanto aliados como enemigos), haciendo que pasen a ser criaturas etéreas inmunes al daño físico pero que sufrirán un 100% más de daño mágico. Los objetivos seguirán siendo etéreos hasta que el elementarista lance el hechizo de nuevo.]]></item>
+
+        <item><![CDATA[<i>Hechizo. Dificultad 12+, 3 PE por lanzamiento.</i><br><br>El elementarista conjura una gran bola de fuego entre sus manos que acto seguido lanza contra su objetivo, infligiendo 1D8+INT puntos de daño y aplicando un contador de ignición.
+        XNEWX<i>Pasiva.</i><br><br>La mayoría de hechizos del elementarista prenden fuego a su objetivo, lo que aplica contadores de <i>ignición</i>, que reducen la dificultad de los hechizos del elementarista de fuego en 1 por contador, y el coste de PE en 1 por cada 3 contadores. Solamente un objetivo a la vez puede tener contadores de ignición.
+        XNEWX<i>Hechizo. Dificultad 12+, 1 PE por lanzamiento.</i><br><br>El elementarista aviva las llamas sobre su objetivo, infligiendo daño igual a la cantidad de contadores de <i>ignición</i> + INT. Si <i>abrasar</i> mata a su objetivo, el elementarista recuperará 1D6 PE.
+        XNEWX<i>Pasiva.</i><br><br>El elementarista imbuye su arma con llamas mágicas, lo que aumenta todo el daño infligido con ataques cuerpo a cuerpo en INT. Además, pasar tanto tiempo agitando cosas afiladas le confiere la capacidad necesaria para empuñar armas a dos manos.
+        XNEWX<i>Hechizo. Dificultad 12+, 5 PE por lanzamiento.</i><br><br>El elementarista envuelve a un objetivo amistoso con una burbuja de llamas, proporcionándole +5 puntos de armadura, inmunidad al fuego e infligiendo 1D6+INT puntos de daño a cualquier enemigo que ataque cuerpo a cuerpo al objetivo. <i>Caparazón solar</i> permanecerá activo hasta el final del combate o hasta que el elementarista intente lanzar el hechizo de nuevo.
+        XNEWX<i>Pasiva.</i><br><br>El elementarista disfruta viendo cómo sus enemigos arden hasta la muerte. Cada vez que el personaje ateste un golpe de gracia con uno de sus hechizos, podrá lanzar inmediatamente un hechizo adicional sin coste de PE durante el mismo turno, acompañado por una estremecedora carcajada cargada de sadismo.
+        XNEWX<i>Hechizo. Dificultad 13+, 5 PE por lanzamiento.</i><br><br>El elementarista conjura un llameante fénix explosivo, que surcará  por el aire y se estrellará contra un enemigo, infligiendo 1D12+INT puntos de daño a un único objetivo, y la mitad al resto de enemigos en combate. El objetivo principal recibirá también dos contadores de <i>Ignición</i>.
+        XNEWX<i>Pasiva.</i><br><br>Fuego puro fluye por las venas del elementarista, lo que le confiere +1 al golpe crítico, +100% al daño crítico y una reducción del 50% a todo el daño por fuego sufrido. Además, si el elementarista muere, su cuerpo explotará, infligiendo 2D20+INT puntos de daño a todos los enemigos en combate.
+        XNEWX<i>Hechizo. Dificultad 13+, 5 PE por lanzamiento.</i><br><br>El elementarista conjura una criatura de fuego puro para que luche a su lado, con 10(+2 por nivel) PV y 5 de armadura. El elemental de fuego conoce los hechizos <i>Bola de fuego</i> y <i>Caparazón solar</i>, pero solo posee la mitad de la INT del elementarista. Pasados tres turnos, el elemental abandonará el combate.
+        XNEWX<i>Hechizo. Dificultad 15+, 5 PE por lanzamiento.</i><br><br>El elementarista conjura un pilar de abrasador fuego mágico bajo los pies de su desafortunado objetivo, infligiendo 1D20+INT puntos de daño y aplicando tres contadores de <i>ignición</i>.
+        XNEWX<i>Pasiva.</i><br><br>El elementarista ha aprendido a conjurar bolas de fuego cada vez más y más grandes, lo que aumenta el daño del hechizo <i>bola de fuego</i> a 1D12+INT, reduce su coste de PE a 2 y su dificultad a 11+.
+        XNEWX<i>Pasiva.</i><br><br>El elementarista vive para ver el mundo arder. Cada vez que ateste un golpe crítico con un hechizo (o con un golpe cuerpo a cuerpo, si conoce <i>espada incendiaria</i>), recuperará 1D6 PE y obtendrá +1 INT hasta el final del combate. No obstante, si recupera PE por encima del máximo, sufrirá daño puro igual al exceso de PE.
+        XNEWX<i>Hechizo canalizado. Dificultad 12+, 5 PE por lanzamiento + 3 PE por turno.</i><br><br>El elementarista libera un incesante torrente de fuego contra un único objetivo, infligiendo 1D6+INT+contadores de <i>ignición</i> puntos de daño, y aplicando otro contador de ignición. Cada turno subsiguiente en el que el hechizo permanezca activo, <i>aliento de dragón</i> aplicará el doble de contadores que en el turno anterior.<br><br>Si el objetivo muere, el elementarista podrá dirigir el chorro de fuego contra cualquier otro enemigo.
+        XNEWX<i>Hechizo. Dificultad 12+, 5 PE por lanzamiento.</i><br><br>El elementarista funde la armadura de su desafortunado objetivo, infligiendo daño puro igual al valor de la armadura de su víctima y aumentando todo el daño sufrido en un 25% durante tres turnos. Los lanzamientos de <i>maldición de la forja</i> subsiguientes sobre el mismo objetivo solamente infligirán una tercera parte del daño.
+        XNEWX<i>Pasiva.</i><br><br>El elementarista libera el exceso de calor producido por el lanzamiento de hechizos en forma de llamaradas a su alrededor. Cada vez que el elementarista lance un hechizo con éxito, generará un anillo de fuego que infligirá 1D6+INT/2 puntos de daño a todos los enemigos en combate.<br><br>Si <i>Fuego residual</i> mata a un enemigo, el elementarista no podrá beneficiarse de <i>Pirómano</i>.]]></item>
+
+        <item><![CDATA[<i>Hechizo. Dificultad 10+, 1 PE por lanzamiento.</i><br><br>El elementarista conjura un carámbano de hielo y lo lanza contra su objetivo, infligiendo 1D4+INT puntos de daño y aplicando un contador de <i>congelación</i>.
+        XNEWX<i>Pasiva.</i><br><br>La mayoría de hechizos del elementarista aplican contadores de <i>congelación</i>, que reducen el resultado de todas las tiradas en 1 de forma acumulable, hasta un máximo de -5.
+        XNEWX<i>Hechizo. Dificultad 10+, 1 PE por turno.</i><br><br>El elementarista crea una capa de hielo protector alrededor de su objetivo, lo que le confiere INTx5 puntos de armadura. El efecto permanece activo hasta que el elementarista intente lanzar el mismo hechizo de nuevo, decida desactivarlo o no pueda mantenerlo por cualquier motivo.
+        XNEWX<i>Hechizo. Dificultad 12+, 2 PE por turno.</i><br><br>El elementarista convoca una intensa tormenta de nieve a su alrededor, que inflige INT puntos de daño a todos los enemigos en combate cada turno, aplicando además un contador de <i>congelación</i>. La ventisca reduce también la visibilidad, reduciendo la puntería de todos los combatientes en 5.
+        XNEWX<i>Hechizo. Dificultad 11+, 2 PE por lanzamiento.</i><br><br>El elementarista libera un torrente de escarcha sobre un único objetivo infligiendo 1D6+INT puntos de daño y aplicando tres contadores de <i>congelación</i>. Además, con un 16+ natural en la tirada de lanzamiento, el hechizo también derribará al objetivo.
+        XNEWX<i>Hechizo. Dificultad 10+, 3 PE por lanzamiento. No puede lanzarse en combate.</i><br><br>El elementarista conjura un glifo de escarcha en el suelo, invisible para el ojo inexperto. Si alguien lo pisa, el glifo se activará, infligiendo 1D10+INT puntos de daño, aplicando dos contadores de <i>congelación</i> y derribando al objetivo.
+        XNEWX<i>Hechizo. Dificultad 14+, 4 PE por lanzamiento.</i><br><br>El elementarista invoca un gólem de hielo para que luche a su lado, con 15+INT PV e INTx3 puntos de armadura, y que inflige 1D6+1xNivel puntos de daño por golpe, además de aplicar un contador de <i>congelación</i>.
+        XNEWX<i>Hechizo. Dificultad 12+, 4 PE por lanzamiento.</i><br><br>El elementarista solidifica la capa de escarcha que envuelve a su objetivo, infligiendo 1D4+INT puntos de daño y aturdiéndolo durante un turno por cada contador de <i>congelación</i>, pero aumentando también su resistencia al daño en un 50%.
+        XNEWX<i>Hechizo. Dificultad 12+, 3 PE por lanzamiento.</i><br><br>El elementarista concentra una enorme cantidad de frío en un único objetivo, infligiendo 1D8+INT, más 1 por contador de <i>congelación</i>, multiplicado por el nivel actual del elementarista. El daño infligido por <i>beso gélido</i> es incurable.
+        XNEWX<i>Pasiva.</i><br><br>El elementarista ha acabado aclimatándose al frío intenso que suele provocar, lo que le confiere +1 VOL, un 50% de resistencia al daño y los efectos del frío y +3 INT hasta el final del combate por cada golpe de gracia que dé.
+        XNEWX<i>Pasiva.</i><br><br>El hechicero ha perfeccionado su técnica de lanzamiento de <i>armadura de escarcha</i>, lo que reduce su dificultad a 2+, además de hacer que proporcione un escudo igual a una quinta parte de la salud del objetivo, inmunidad a empujones y a derribos.
+        XNEWX<i>Pasiva.</i><br><br>El uso constante de la <i>lanza de hielo</i> ha permitido al elementarista mejorar su técnica, aumentando el daño base a 1D6+INT y haciendo que al impactar contra su objetivo, la lanza se fraccione en mil pedacitos afilados, que infligen 1D3 puntos de daño a todos los demás enemigos en combate y aplicando un contador de <i>congelación</i> si consiguen infligir daño.
+        XNEWX<i>Hechizo. Dificultad 14+, 5 PE po lanzamiento.</i><br><br>El elementarista provoca una violenta explosión de esquirlas de hielo y escarcha con epicentro en un objetivo, que sufrirá 1D12+INT puntos de daño. Además, todos los demás enemigos en combate sufrirán INT puntos de daño, más 1D3 por cada contador de <i>congelación</i> presente en el objetivo principal.
+        XNEWX<i>Pasiva.</i><br><br>Tras muchos años de estudio, el elementarista se ha convertido en un maestro del saber del hielo, lo que le proporciona +8 PE máximos y mejora su hechizo de nivel 3, haciendo que <i>elemental de hielo</i> invoque a un gigante de hielo con el doble de PV, armadura y daño que un elemental corriente, <i>prisión glacial</i> afecte a todos los enemigos en combate y reduciendo el coste de PE de <i>beso gélido</i> a 0.
+        XNEWX<i>Pasiva.</i><br><br>El elementarista es un experto en el campo de la congelación, lo que duplica el número de contadores de <i>congelación</i> que aplica con todos sus hechizos y elimina el límite de 5 contadores por objetivo. Además, al dar el golpe de gracia a un objetivo afectado por <i>congelación</i>, recuperará 1D6 PE.]]></item>
+
+        <item><![CDATA[<i>Hechizo. Dificultad 6+, 3 PE por lanzamiento.</i><br><br>El elementarista recubre sus brazos con un manto de roca magmática, lo que aumenta su daño sin armas a 1D6+FUE y le proporciona FUE adicional igual a su SAB hasta el final del combate, pero perdiendo también la capacidad de empuñar armas.
+        XNEWX<i>Pasiva.</i><br><br>Al entrar en combate, el elementarista recubre su piel con una gruesa capa de granito que le proporciona SAB puntos de armadura adicional, que aumentarán a SABx3 mientras el personaje esté bajo los efectos de <i>Puños plutónicos</i> o <i>Inamovible</i>, o a SABx5 mientras esté bajo el efecto de ambos hechizos.
+        XNEWX<i>Pasiva.</i><br><br>La piel del elementarista está repleta de tatuajes mágicos normalmente invicibles, pero que brillan formando patrones geométricos cuando absorben energía. Cada vez que el elementarista lance un hechizo exitosamente, recibirá un escudo que absorbe SAB+2xNivel. El efecto de <i>marcas telúricas</i> es acumulable consigo mismo y con otras fuentes de escudo.
+        XNEWX<i>Hechizo. Dificultad 10+, 2 PE por lanzamiento.</i><br><br>El elementarista conjura una cadena de rocas entrelazadas y la lanza contra un único objetivo visible, infligiendo 1D4+SAB puntos de daño. A continuación, realizará una tirada enfrentada de FUE con el objetivo, y si gana, lo arrastrará hasta que esté junto al elementarista y lo inmobilizará durante un turno.
+        XNEWX<i>Hechizo. Dificultad 11+, 3 PE por lanzamiento.</i><br><br>El elementarista golpea el suelo con la fuerza de un gigante, lo que provoca un breve terremoto que derribará a cualquier personaje en combate cuya AGI sea inferior a la SAB del elementarista.
+        XNEWX<i>Hechizo. Dificultad 8+, 2 PE por turno.</i><br><br>El elementarista clava los pies en el suelo y se ancla a sí mismo a la roca, lo que le impide realizar cualquier movimiento pero le otorga +2 VOL, e inmunidad a empujones y derribos. Mientras el hechizo permanezca activo, el elementarista recibirá también SAB puntos de <i>Marcas telúricas</i> al inicio de cada uno de sus turnos.
+        XNEWX<i>Hechizo. Dificultad 12+, 6 PE por lanzamiento.</i><br><br>El elementarista concentra una gran cantidad de energía terrenal en la palma de su mano, que luego transmite contra un objetivo infligiendo 1D8+SAB puntos de daño, lanzándolo a una gran distancia, derribándolo y aturdiéndolo. Si el elementarista tenía escudo de <i>marcas telúricas</i> almacenado, lo transformará en daño mágico adicional.<br><br>Lanzar este hechizo no activa <i>Marcas telúricas</i>.
+        XNEWX<i>Hechizo. Dificultad 12+, 6 PE por lanzamiento.</i><br><br>El elementarista crea un gólem de roca a partir de materiales cercanos para que luche a su lado, con 20+INTx2+SAB puntos de vida, 10+INTx2 puntos de armadura y 1D6+2xNivel puntos de daño cuerpo a cuerpo. Los ataques del gólem tienen una probabilidad de derribar a su objetivo. El gólem permanecerá activo hasta el final del combate.
+        XNEWX<i>Hechizo canalizado. Dificultad 12+, 5 PE por lanzamiento y 2 PE por turno.</i><br><br>El elementarista crea una colosal mano de roca sólida que sale del suelo bajo los pies de su objetivo, lo agarra e intenta aplastarlo. Cada turno, el objetivo deberá realizar una tirada enfrentada de FUE contra la SAB del elementarista. Si gana, escapará el mortal apretón, pero si no, sufrirá 1D10+SAB puntos de daño y no podrá realizar ninguna acción.
+        XNEWX<i>Hechizo. Dificultad 13+, 8 PE por lanzamiento.</i><br><br>El elementarista crea un obelisco invulnerable en el centro del campo de batalla, que permanecerá activo hasta el final del combate. Mientras el monolito esté activo, cada vez que el elementarista lance un hechizo contra un objetivo, el monolito también lo lanzará contra otro enemigo elegido al azar, con la mitad de efectividad.
+        XNEWX<i>Pasiva.</i><br><br>El elementarista ha refinado su técnica de lanzamiento de <i>Puños plutónicos</i>, lo que reduce la dificultad del hechizo a 3+, el coste de PE a 1 y aumenta el daño sin armas de 1D6+FUE a 1D10+FUE.
+        XNEWX<i>Hechizo. Dificultad 10+, 4 PE por lanzamiento.</i><br><br>El elementarista ordena a la roca para que sirva su propósito, lo que le permite crear, desplazar y destruir obstáculos de piedra y arcilla con facilidad, creando puertas o paredes donde antes no había.
+        XNEWX<i>Hechizo. Dificultad 13+, 4 PE por turno.</i><br><br>El elementarista forma un gólem alrededor de su propio cuerpo y lo controla desde el interior, lo que le proporciona SAB puntos de fuerza adicional (acumulables con <i>Puños plutónicos</i>), 20 puntos de escudo de <i>Marcas telúricas</i> y un tamaño considerable, lo que le permite realizar acciones más creativas como agarrar y lanzar enemigos, aliados, invocaciones, rocas, obeliscos…
+        XNEWX<i>Pasiva.</i><br><br>El elementarista comprende lo que es sujetar el peso del mundo, lo que mejora sus hechizos de nivel 3: El coste de <i>Choque telúrico</i> se ve reducido de 6 a 3 PE y su daño aumenta en 1D8 a 1D10, <i>Conjurar gólem</i> ahora invoca dos gólems y <i>Dedos de la montaña</i> creará dos manos de piedra que podrán intentar aplastar a dos objetivos distintos.
+        XNEWX<i>Hechizo. Dificultad 9+, 6 PE por lanzamiento.</i><br><br>El elementarista arranca una gran cantidad de piedras y rocas del suelo, y las lanza en la dirección general de sus oponentes, que deberán obtener un 16+ en una tirada de AGI o sufrirán 1D10+SAB puntos de daño y quedarán aturdidos durante un turno.]]></item>
     </string-array>
 
     <string-array name="alquimistaPociones">
