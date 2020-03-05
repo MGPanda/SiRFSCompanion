@@ -72,9 +72,8 @@ public class Char implements Serializable {
         this.CHAR_INVENTORY = cu.getString(29);
     }
 
-    public Char(int id, String name, Bitmap img, String date, int level, String race, String mClass, int fue, int des, int pun, int mInt, int sab, int agi, int vol, int pv, int maxpv, int pe, int maxpe, int armor, int marmor, int critbonus,
+    public Char(String name, Bitmap img, String date, int level, String race, String mClass, int fue, int des, int pun, int mInt, int sab, int agi, int vol, int pv, int maxpv, int pe, int maxpe, int armor, int marmor, int critbonus,
                 int critdmgbonus, int spellbonus, String weapons, String equip, String relics, String skills, String bonus, int gold, String inventory) {
-        this.CHAR_ID = id;
         this.CHAR_NAME = name;
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         img.compress(Bitmap.CompressFormat.JPEG, 20, baos);

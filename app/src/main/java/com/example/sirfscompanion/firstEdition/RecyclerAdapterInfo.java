@@ -47,6 +47,10 @@ public class RecyclerAdapterInfo extends RecyclerView.Adapter<RecyclerAdapterInf
                 _al.add(racesBonusDesc[i]);
             }
         }
+        String[] classes = MainActivity.get_ma().getResources().getStringArray(R.array.classes1e);
+        for (int i = 0; i < classes.length; i++) {
+            if (classes[i].equals(ch.getCharClass())) _p = i;
+        }
         _al.add(MainActivity.get_ma().getResources().getStringArray(R.array.classes1e)[_p]);
         _al.add(MainActivity.get_ma().getResources().getStringArray(R.array.classesDesc1e)[_p]);
         String[] mySkills = ch.getCharSkills().split(" ");

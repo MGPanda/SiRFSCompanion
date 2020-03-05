@@ -13,7 +13,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.sirfscompanion.R;
+import com.example.sirfscompanion.control.MyDB;
 import com.example.sirfscompanion.instanciables.Char;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -23,13 +25,15 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     private Context _c;
     private Cursor _cu;
     private ArrayList<Char> _al;
-    public RecyclerAdapter(Context c, Cursor cu) {
+    public RecyclerAdapter(Context c) {
         this._c = c;
-        this._cu = cu;
-        this._al = new ArrayList<Char>();
-        do {
-            _al.add(new Char(_cu));
-        } while (_cu.moveToNext());
+        this._cu = MyDB.selectAll();
+        this._al = new ArrayList<>();
+        if (!_cu.isNull(0)) {
+            do {
+                _al.add(new Char(_cu));
+            } while (_cu.moveToNext());
+        }
     }
     @NonNull
     @Override
@@ -73,5 +77,27 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 }
             });
         }
+    }
+    public void deleteItem(RecyclerView.ViewHolder vh, final int position) {
+        Char ch = _al.get(position);
+        Snackbar s = Snackbar.make(vh.itemView, "¿Seguro que quieres eliminar a "+ch.getCharName()+"?", Snackbar.LENGTH_SHORT).setAction("Sí", new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MyDB.delete(_al.get(position).getCharId());
+                _al.remove(position);
+                notifyItemRemoved(position);
+            }
+        });
+        s.addCallback(new Snackbar.Callback() {
+            @Override
+            public void onDismissed(Snackbar snackbar, int event) {
+                notifyItemChanged(position);
+            }
+        });
+        s.show();
+    }
+    public int addNew(Char c) {
+        _al.add(c);
+        return _al.size()+1;
     }
 }

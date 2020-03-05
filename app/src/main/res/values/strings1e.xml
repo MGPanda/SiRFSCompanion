@@ -128,6 +128,14 @@
         <br><br><b>Objetos equipables:</b> Armadura ligera, armas de una mano (sin doble empuñadura), bastones.]]></item>
         <item><![CDATA[<i>Los elementaristas de tierra estudian el arte de crear, trasmutar y manipular minerales utilizando energía mágica, pero a diferencia de las demás disciplinas arcanas, tienden a alejarse de las ciudades llenas de necios e ignorantes, y estudian en la tranquilidad de sus refugios en las montañas. Se dice que tienen un voto de silencio, pero simplemente es que no se molestan a hablar con aquellos que consideran inferiores. Además, la falta de contacto con la sociedad ha acabado originando técnicas de combate poco ortodoxas pero efectivas, desde recubrirse a ellos mismos con piedra como provocar terremotos, pasando por invocar gólems y abrir grietas bajo los pies de sus enemigos.</i>
         <br><br><b>Objetos equipables:</b> Armadura ligera, armas de una mano (sin doble empuñadura), bastones.]]></item>
+        <item><![CDATA[<i>Existen dos ocupaciones tan antiguas como las razas inteligentes de este mundo: La prostitución y la guerra. Cada cultura tiene sus propias técnicas de combate y estrategias que han ido evolucionando con el tiempo. Sin embargo, todas ellas son variaciones del clásico "Golpea hasta que deje de moverse". Hoy en día, los mercenarios son la forma más común del guerrero. ¿A quién no le gustaría pasarse el día atizando a la gente y que encima te paguen por ello?</i>
+        <br><br><b>Objetos equipables:</b> Armadura ligera y pesada, armas de una y dos manos, escudos, armas arrojadizas y armas de disparo pequeñas.]]></item>
+        <item><![CDATA[<i>A diferencia de los otros templos, el de Risco Gélido alberga a una particular orden de monjes que no veneran a ningún dios o panteón en particular y que creen que pueden alcanzar la iluminación mediante la meditación y un riguroso entrenamiento físico en las altas y gélidas montañas de las Vértebras de Erdelarei, centrado en la practica de diversas artes marciales que ellos denominadn "Sendas". Como resultado, los monjes son temibles combatientes especializados en combate desarmado.</i>
+        <br><br><b>Objetos equipables:</b> Armadura ligera, armas de una mano <i>(solamente caestus, guanteletes o similares)</i>, bastones.]]></item>
+        <item><![CDATA[<i>La nigromancia es la rama del saber mágico especializada en la muerte, no-muerte, las almas y la manipulación de dichos elementos. Aunque técnicamente no es ilegal, la práctica del saber de la muerte está muy mal vista y las academias dispuestas a enseñar nigromancia son pocas y exclusivas. Como resultado, los aprendices que persiguen su vocación hasta el final son poderosos hechiceros.</i>
+        <br><br><b>Objetos equipables:</b> Armadura ligera, armas de una mano (sin doble empuñadura), bastones.]]></item>
+        <item><![CDATA[<i>Los Paladines de Audelarei son una antigua orden sacerdotal conocida por favorecer el uso de martillos de guerra por encima de los sermones y su estilo de combate que combina plegarias y poder sagrado con armas pesadas y armadura de placas. Los paladines dedican su tiempo a la persecución y eliminación de no-muertos, demonios, herejes, criaturas de la noche, seres impíos y cualquier cosa que consideren injusto; y lo hacen con fervor religioso y devoción total por la causa.</i>
+        <br><br><b>Objetos equipables:</b> Armadura ligera y pesada, armas de una mano (sin doble empuñadura), armas de dos manos y escudos.]]></item>
     </string-array>
 
     <string-array name="classesSkills1e">
@@ -281,6 +289,66 @@
         XNEWXForma de gólem
         XNEWXAtlas
         XNEWXAvalancha</item>
+        <item>Veterano
+        XNEWXGrito de orden
+        XNEWXEmbate
+        XNEWXDuelista
+        XNEWXGuardián
+        XNEWXApretón de manos enano
+        XNEWXDesafío honorable
+        XNEWXInterceptar
+        XNEWXLiderazgo
+        XNEWXContragolpe
+        XNEWXProtector
+        XNEWXEmbate con escudo
+        XNEWXTitán
+        XNEWXGolpe triple del espadachín
+        XNEWXOrdenar</item>
+        <item>Senda de la Montaña
+        XNEWXDestreza marcial
+        XNEWXSenda del Roble
+        XNEWXPaz interior
+        XNEWXSenda de la Campana Sagrada
+        XNEWXMantra de curación
+        XNEWXSenda del Templo
+        XNEWXPulso de Chakra
+        XNEWXSenda del Río
+        XNEWXSenda del Viento
+        XNEWXMantra de liberación
+        XNEWXQi desencadenado
+        XNEWXGolpe de las Ocho Vértebras
+        XNEWXPuño del Dragón
+        XNEWXUno con el universo</item>
+        <item>Toque de plaga
+        XNEWXReanimar cadáveres
+        XNEWXLa cosecha
+        XNEWXInvocar arañas-lamento
+        XNEWXSobrecarga necrótica
+        XNEWXSirvientes de la cripta
+        XNEWXMarca de la Perdición
+        XNEWXCírculo de Convocación
+        XNEWXMiasma
+        XNEWXCaballero de la Muerte
+        XNEWXLich
+        XNEWXMuerte y descomposición
+        XNEWXExplosión de almas
+        XNEWXReclamo de la muerte
+        XNEWXLa guadaña</item>
+        <item>Devoción
+        XNEWXPurgar
+        XNEWXSacro deber
+        XNEWXChoque de luz
+        XNEWXFervor sagrado
+        XNEWXPortador de la luz
+        XNEWXÉgida sagrada
+        XNEWXMartillo Celestial
+        XNEWXBendición de Audelarei
+        XNEWXRedención
+        XNEWXEstandarte de la Orden
+        XNEWXDesafío del Cruzado
+        XNEWXIntervención Divina
+        XNEWXForma Seráfica
+        XNEWXCampeón intachable</item>
     </string-array>
 
     <string-array name="classesSkillsDesc1e">
@@ -443,6 +511,70 @@
         XNEWX<i>Hechizo. Dificultad 13+, 4 PE por turno.</i><br><br>El elementarista forma un gólem alrededor de su propio cuerpo y lo controla desde el interior, lo que le proporciona SAB puntos de fuerza adicional (acumulables con <i>Puños plutónicos</i>), 20 puntos de escudo de <i>Marcas telúricas</i> y un tamaño considerable, lo que le permite realizar acciones más creativas como agarrar y lanzar enemigos, aliados, invocaciones, rocas, obeliscos…
         XNEWX<i>Pasiva.</i><br><br>El elementarista comprende lo que es sujetar el peso del mundo, lo que mejora sus hechizos de nivel 3: El coste de <i>Choque telúrico</i> se ve reducido de 6 a 3 PE y su daño aumenta en 1D8 a 1D10, <i>Conjurar gólem</i> ahora invoca dos gólems y <i>Dedos de la montaña</i> creará dos manos de piedra que podrán intentar aplastar a dos objetivos distintos.
         XNEWX<i>Hechizo. Dificultad 9+, 6 PE por lanzamiento.</i><br><br>El elementarista arranca una gran cantidad de piedras y rocas del suelo, y las lanza en la dirección general de sus oponentes, que deberán obtener un 16+ en una tirada de AGI o sufrirán 1D10+SAB puntos de daño y quedarán aturdidos durante un turno.]]></item>
+
+        <item><![CDATA[<i>Pasiva.</i><br><br>El guerrero ha participado en numerosos conflictos y escaramuzas, lo que le otorga +1 DES o +1 FUE (a su elección), además de +5 PV máximos. Por si fuera poco, si el guerrero decide aumentar sus PV al subir de nivel, recibirá 8 en lugar de solamente 5.
+        XNEWX<i>Hechizo. Dificultad 8+, 5 PE por lanzamiento.</i><br><br>El guerrero libera un poderoso grito para reforzar la moral de sus compañeros, lo que les proporciona +2 a todas sus tiradas para impactar y para lanzar hechizos hasta el final de su siguiente turno. Además, si se encuentran bajo algún efecto de pérdida de control del personaje, podrán realizar un chequeo de VOL para intentar librarse.
+        XNEWX<i>Habilidad. -2 para impactar, 3PE por lanzamiento.</i><br><br>El guerrero ataca a su objetivo con especial ímpetu, infligiendo 1D3 puntos de daño adicional y derribándolo con un 16+ natural en la tirada para impactar.
+        XNEWX<i>Pasiva.</i><br><br>El guerrero ha aprendido esgrima en las mejores academias, lo que le confiere +1 DES de forma pasiva y DES igual a su nivel mientras esté empuñando un arma de mano y nada más.
+        XNEWX<i>Pasiva.</i><br><br>El guerrero posee entrenamiento y amplia experiencia en el combate con escudo, lo que duplica la cantidad de armadura obtenida por equipar un escudo.
+        XNEWX<i>Pasiva.</i><br><br>El guerrero conoce el saludo secreto de los enanos de Kan-So\'pes. Cada tercer impacto cuerpo a cuerpo, el guerrero infligirá 1D3 puntos de daño adicional y aturdirá al objetivo durante un turno.
+        XNEWX<i>Hechizo. Dificultad 11+, 0 PE por lanzamiento.</i><br><br>El guerrero lanza un desafío contra un único combatiente enemigo. Si el hechizo es lanzado con éxito, el guerrero y su objetivo abandonarán el combate para luchar en solitario. Ni el guerrero ni su objetivo podrán huir del combate, y si el guerrero gana, obtendrá +1 a todo el daño infligido con ataques cuerpo a cuerpo, hasta que muera o huya de un combate.
+        XNEWX<i>Pasiva.</i><br><br>Una vez por turno, cuando uno de sus aliados sea objetivo de un ataque o hechizo, el guerrero podrá gastar 2 PE para saltar e interponerse entre su compañero y el enemigo, pasando a ser objetivo del ataque o hechizo dirigido a su aliado.
+        XNEWX<i>Pasiva.</i><br><br>A lo largo de su carrera, el guerrero ha aprendido algunos trucos para controlar mejor la situación y a sus soldados en medio del caos. Mejora el hechizo <i>Grito de orden</i>, aumentando su duración de uno a tres turnos, y haciendo que proporcione también +2 a todas las tiradas para bloquear y esquivar, además de +5 a la armadura contra hechizos.
+        XNEWX<i>Pasiva.</i><br><br>El guerrero es extremadamente hábil esquivando y respondiendo a los ataques cuerpo a cuerpo de su oponente, lo que le permite realizar ataques de oportunidad contra cualquier ataque cuerpo a cuerpo fallido realizado contra él y en cuya tirada natural el atacante obtenga un 10 o menos. Los ataques de oportunidad realizados a través de <i>Contragolpe</i> escalan con DES en vez de con FUE.
+        XNEWX<i>Pasiva.</i><br><br>El guerrero ha aprendido a usar armadura pesada con mayor facilidad, permitiéndole dedicar sus esfuerzos en proteger a sus compañeros. Además de obtener pasivamente +5 PV máximos y +3 puntos de armadura adicional por cada pieza de armadura pesada equipada, el guerrero será también inmune a empujones, pero perderá 2 puntos de AGI.
+        XNEWX<i>Pasiva.</i><br><br>El guerrero incorpora los golpes con escudo a su arsenal, mejorando la habilidad <i>Embate</i>. Mientras el guerrero esté sujetando un escudo, el daño de la habilidad pasará a ser igual al valor de armadura de susodicho escudo (sin la bonificación de <i>guardián</i>) + FUE, y derribará siempre en lugar de con un 16+ natural.
+        XNEWX<i>Pasiva.</i><br><br>El guerrero se ha convertido en una auténtica mole con caparazón de acero cuyos pasos hacen temblar la tierra, lo que le otorga pasivamente +5 PV máximos, +3 VOL, un 10% de resistencia al daño (incluso al daño puro), y la posibilidad de realizar chequeos de VOL para evitar cualquier efecto de pérdida de control del personaje. Por si fuera poco, el guerrero ya no podrá ser empujado ni derribado.
+        XNEWX<i>Habilidad. -2 para impactar, 5 PE por lanzamiento. Requiere un arma de una mano.</i><br><br>El guerrero realiza tres golpes contra un único objetivo en rápida sucesión, infligiendo el daño de arma normal + DES (en vez de + FUE) en cada golpe e ignorando un 25% de la armadura del rival.
+        XNEWX<i>Hechizo. Dificultad 5+, 1 PE por lanzamiento.</i><br><br>El guerrero grita una orden a cualquier personaje amistoso que pueda ver, lo que le permitirá jugar un turno entero dentro del turno del guerrero, durante el cual obtendrá +1 al crítico y a todas sus tiradas. Además, el guerrero obtiene +5 a la armadura y +1 VOL hasta el inicio de su siguiente turno.]]></item>
+
+        <item><![CDATA[<i>Habilidad. +1 para impactar, 3 PE por lanzamiento.</i><br><br>El monje golpea a su objetivo con creciente fuerza, infligiendo 1D4 puntos de daño adicional y aumentando su fuerza en 1 por nivel, de forma acumulable, hasta que decida utilizar una habilidad distinta.
+        XNEWX<i>Pasiva.</i><br><br>El monje ha entrenado duramente para dominar diversas sendas de combate. Cuando el monje utilice una habilidad, podrá volver a utilizarla en turnos subsiguientes sin necesidad de gastar PE, hasta que decida utilizar una habilidad distinta.
+        XNEWX<i>Habilidad. +1 para impactar, 3 PE por lanzamiento.</i><br><br>El monje golpea a su objetivo infligiendo 1D3 puntos de daño adicional e inmovilizándolo durante un turno. Luego, asume una posición defensiva, lo que le proporciona +1 por nivel a sus tiradas de bloqueo de forma acumulable hasta que decida utilizar una habilidad distinta.
+        XNEWX<i>Pasiva.</i><br><br>El monje ha alcanzado un estado de permanente tranquilidad mental, lo que le confiere +2 VOL de forma pasiva, además de +3 a la armadura por nivel.
+        XNEWX<i>Habilidad. +1 para impactar, 3 PE por lanzamiento.</i><br><br>El monje desestabiliza a su objetivo con un golpe, infligiendo 1D3+INT puntos de daño adicional y derribándolo.
+        XNEWX<i>Hechizo. Dificultad 4+, 2 PE por lanzamiento.</i><br><br>El monje entona un mantra con propiedades curativas, lo que restaura 1D4+SAB puntos de vida al monje y a un objetivo amistoso.
+        XNEWX<i>Habilidad. -2 para impactar, 4 PE por lanzamiento.</i><br><br>El monje golpea los puntos de energía de su objetivo, infligiendo 1D6+SAB puntos de daño mágico adicional, y recuperando la misma cantidad de PV.
+        XNEWX<i>Pasiva.</i><br><br>El monje canaliza su poder espiritual a través de sus puños, infligiendo 1D6+SAB puntos de daño mágico adicional cada vez que gaste PE en una habilidad.
+        XNEWX<i>Habilidad. -2 para impactar, 4 PE por lanzamiento.</i><br><br>El monje golpea a su objetivo incesantemente, infligiendo daño normal. Si el ataque impacta, el monje podrá seguir atacando al mismo objetivo hasta que falle un golpe.
+        XNEWX<i>Habilidad. -2 para impactar, 3 PE por lanzamiento.</i><br><br>El monje golpea a un enemigo infligiendo 1D4+AGI puntos de daño adicional. Acto seguido, el personaje entrará en un estado de concentración aumentada, lo que le permite contraatacar a cualquier ataque cuerpo a cuerpo del cual sea objetivo hasta el turno siguiente.
+        XNEWX<i>Hechizo. Dificultad 6+, 5 PE por lanzamiento.</i><br><br>El monje entona un poderoso mantra, que eliminará cualquier efecto de pérdida de control del personaje tanto del monje como de un objetivo aliado amistoso, y proporcionará inmunidad frente a tales efectos hasta el principio del siguiente turno del monje.
+        XNEWX<i>Pasiva.</i><br><br>El monje ha aprendido a acumular y desatar su fuerza espiritual a voluntad, lo que le proporciona un contador de <i>Qi</i> cada vez que duerma, con un límite de 6. El monje podrá gastar tantos contadores como quiera cuando realice un ataque cuerpo a cuerpo u habilidad para infligir 2D6 puntos de daño puro adicional por contador.
+        XNEWX<i>Habilidad. -3 para impactar, 8 PE por lanzamiento.</i>El monje golpea a su objetivo con velocidad sobrehumana, lo que le permite golpearlo hasta siete veces sin infligir daño, seguido de un octavo golpe que impactará automáticamente e infligirá daño normal, multiplicado por el número de impactos anteriores. Además, si todos los ataques impactan, el daño pasará a ser puro y proporcionará un contador de <i>Qi</i>, si el monje conoce <i>Qi desencadenado</i>.<br><br><i>Golpe de las Ocho Vértebras</i> no se beneficia de <i>Destreza Marcial</i>.
+        XNEWX<i>Habilidad. -3 para impactar, 8 PE por lanzamiento.</i>El monje envuelve su puño en fuego espiritual antes de golpear a un objetivo, infligiendo 1D10+1D6 + El atributo más elevado del monje (exceptuando PE y PV) puntos de daño puro adicional, aturdiendo y derribando a su objetivo en el proceso. Si el monje utiliza contadores de <i>Qi</i> con esta habilidad, el daño adicional por contador pasará a ser 2D6+1D4.<br><br><i>Puño del Dragón</i> no se beneficia de <i>Destreza Marcial</i>.
+        XNEWX<i>Pasiva.</i><br><br>A través de la meditación, el monje ha alcanzado un estado de trascendencia espiritual, lo que le confiere inmunidad a venenos, enfermedades (incluyendo mentales), derribos, efectos de pérdida de control del personaje de tipo mental y cualquier penalizador causado por pesadillas, estrés o similares. Además, si el monje muere, podrá continuar su aventura como espíritu incapaz de sufrir o infligir daño o reencarnarse y conservar su nivel y conocimientos cuando el jugador cree un nuevo personaje.]]></item>
+
+        <item><![CDATA[<i>Hechizo. Dificultad 9+, 2 PE por lanzamiento.</i><br><br>El nigromante conjura un proyectil de muerte y putrefacción, que inflige 1D6+INT puntos de daño a un único objetivo vivo o restaura la misma cantidad de PV si el objetivo es no-muerto.
+        XNEWX<i>Hechizo. Dificultad 9+, 2 PE por lanzamiento.</i><br><br>El nigromante crea 1D3 zombis o esqueletos a partir de cadáveres humanoides cercanos para que luchen por él, con 5+INT PV, -3 DES, cuyos ataques cuerpo a cuerpo infligen 1D3+FUE y cuya fuerza es igual al nivel del nigromante y que permanecerán activos hasta el final del combate. Si no hubiera suficientes cadáveres cercanos, el nigromante invocará mastines necrófagos en lugar de zombis, con la mitad de PV que los zombis normales.
+        XNEWX<i>Pasiva.</i><br><br>El nigromante alimenta sus hechizos con la muerte y descomposición, lo que le permite recuperar 1D3 PE cada vez que una criatura viva cercana muera. Si el nigromante es quién da el golpe de gracia, recuperará 1D6 PE en lugar de solamente 1D3.
+        XNEWX<i>Hechizo. Dificultad 11+, 3 PE por lanzamiento.</i><br><br>El nigromante invoca un enjambre de arañas-lamento que se abalanzan sobre su objetivo con ferocidad. El enjambre infligirá 11D4+INT puntos de daño por turno durante tres turnos (o hasta que sea dispersado a la fuerza), durante los cuales el objetivo sufrirá un ataque de pánico. Si el objetivo muere durante el efecto o como consecuencia de las arañas-lamento, el enjambre asaltará a otro enemigo al azar y su duración se reiniciará.
+        XNEWX<i>Hechizo. Dificultad 7+, 3 PE por lanzamiento.</i><br><br>El nigromante imbuye al no-muerto aliado objetivo con una sobrecogedora cantidad de energía oscura, duplicando su fuerza y permitiéndole atacar dos veces. Al final de su turno, el no-muerto estallará violentamente, infligiendo 1D4+INT puntos de daño a todos los enemigos presentes en el combate.
+        XNEWX<i>Pasiva.</i><br><br>El nigromante ha aprendido a mantener el control sobre sus no-muertos de forma indefinida, lo que le permite mantener un máximo de 3 no-muertos fuera del combate y utilizarlos como siervos, con 10+INT PV y la capacidad de equiparse con objetos y hablar. Además, <i>Sirvientes de la cripta</i> permite reanimar cadáveres no humanoides.
+        XNEWX<i>Hechizo. Dificultad 11+, 3 PE por lanzamiento.</i><br><br>El nigromante señala a su desafortunado objetivo con un huesudo dedo que recuerda al dedo de la mismísima muerte, infligiendo 1D10+INT puntos de daño a un objetivo, aumentando todo el daño sufrido a manos de invocaciones en un 25% e instando a todas las invocaciones del nigromante a atacarle, si pueden.
+        XNEWX<i>Hechizo. Dificultad 14+, 5 PE por lanzamiento. No puede usarse en combate.</i><br><br>El nigromante traza un círculo mágico, dentro del cual intenta convocar el alma de cualquier criatura inteligente que hubiera conocido en vida o del cual tenga un objeto personal. El espíritu no podrá abandonar el círculo, pero sí hablar, responder preguntas e interactuar con otras criaturas inteligentes dentro o cerca del mismo.
+        XNEWX<i>Hechizo. Dificultad 11+, 1 PE por turno.</i><br><br>El nigromante libera una densa nube de aire ponzoñoso, infligiendo daño puro igual al nivel del nigromante a todas las criaturas vivas en combate y restaurando la misma cantidad de PV a los no-muertos.
+        XNEWX<i>Pasiva.</i><br><br>El nigromante ha incorporado técnicas de combate cuerpo a cuerpo a su repertorio, lo que le permite equipar armadura pesada y armas a dos manos. Además, el nigromante pasará a considerarse no-muerto y <i>La cosecha</i> también proporcionará PV.
+        XNEWX<i>Pasiva.</i><br><br>El nigromante renuncia a su cuerpo mortal, almacenando su alma en una filactelia y ocupando posteriormente su cadáver. El nigromante pasa a considerarse un no-muerto y podrá ocupar otros cadáveres si su cuerpo queda inservible, siempre y cuando su filactelia se mantenga intacta. Por si fuera poco, el nigromante obtiene también +5 PE máximos.
+        XNEWX<i>Pasiva.</i><br><br>El nigromante ha perfeccionado su técnica de lanzamiento de <i>Toque de plaga</i>, aumentando el daño o curación a 1D10+INT, y curando al nigromante la mitad del daño infligido o curación realizada, independientemente de cual fuera su objetivo. Además, el nigromante pasará a considerarse un no-muerto.
+        XNEWX<i>Hechizo. Dificultad 6+, 10 PE por lanzamiento.</i><br><br>El nigromante obtiene una piedra de alma en la que almacena el espíritu de sus víctimas, obteniendo un contador de <i>Explosión de almas</i> cada vez que muera una criatura viva cercana. Al lanzar el hechizo, el nigromante liberará todas las almas almacenadas, infligiendo 1D6+INT puntos de daño mágico por cada una, repartidas equitativamente entre todos los enemigos en combate.
+        XNEWX<i>Hechizo. Dificultad 12+, 5 PE por lanzamiento.</i><br><br>El nigromante convoca una partida de caza compuesta por 1D3 necrófagos hambrientos para que luchen por él. Los necrófagos tienen 15+INT PV, +2 DES y AGI e infligen 1D10+2 puntos de daño puro incluso si fallan. Al final del combate, los necrófagos huirán de vuelta a sus oscuras guaridas, por lo que el nigromante no podrá utilizar <i>Sirvientes de la cripta</i> sobre ellos.
+        XNEWX<i>Hechizo. Dificultad 12+, 4 PE por lanzamiento.</i><br><br>El nigromante corta el alma de su desafortunada víctima por la mitad, infligiendo 1D10+INT puntos de daño puro, o matándolo instantáneamente si su salud está por debajo del 40%. Los no-muertos, demonios y criaturas inmortales no temen a la muerte, y por lo tanto no se verán afectados por este hechizo.]]></item>
+
+        <item><![CDATA[<i>Pasiva.</i><br><br>El paladín lucha con fervor religioso, lo que le proporciona VOL daño mágico adicional con ataques cuerpo a cuerpo y VOLx3 puntos de armadura pasivamente.
+        XNEWX<i>Hechizo. Dificultad 11+, 3 PE por lanzamiento.</i><br><br>El paladín baña a su objetivo con luz sagrada, infligiendo 1D6+VOL puntos de daño si el objetivo es un enemigo o curando la misma cantidad si se lanza sobre un aliado.
+        XNEWX<i>Pasiva.</i><br><br>Los ataques, hechizos y habilidades del paladín infligirán daño puro contra no-muertos, demonios y criaturas de la noche.
+        XNEWX<i>Hechizo. Dificultad 9+, 3 PE por lanzamiento.</i><br><br>El paladín proyecta un intenso haz de luz sagrada sobre su objetivo, infligiendo 1D4+VOL puntos de daño y aturdiéndolo durante un turno. Si el objetivo es un no-muerto, demonio o criatura de la noche, el daño y la duración del aturdimiento se duplican.
+        XNEWX<i>Pasiva.</i><br><br>Los ánimos del paladín aumentan con cada golpe, lo que le proporciona +3 a la armadura y +1 PV máximo cada vez que sea objetivo de un ataque enemigo y hasta el final del combate. Además, todos los no-muertos, demonios y criaturas de la noche atacarán al paladín, si pueden.
+        XNEWX<i>Pasiva.</i><br><br>El paladín se ha especializado en el uso de plegarias de sanación, haciendo que cada vez que el personaje cure a un aliado directamente, tanto el objetivo como el paladín recuperen 1D6 PV.
+        XNEWX<i>Hechizo. Dificultad 8+, 5 PE por lanzamiento.</i><br><br>El paladín envuelve a su objetivo con luz sagrada,  invulnerabilizándolo durante un turno si se trata de un objetivo aliado, o reduciendo todo el daño sufrido (tras calcular la armadura) a la mitad hasta el final del combate si se lanza sobre sí mismo.
+        XNEWX<i>Hechizo. Dificultad 13+, 5 PE por lanzamiento.</i><br><br>El paladín convoca un colosal martillo de luz pura, que desciende desde los cielos y aplasta a su objetivo, infligiendo 1D12+VOL puntos de daño, eliminando todos los efectos positivos y aturdiendo al objetivo durante un turno, o 1D3 turnos si la VOL del paladín es superior a la de su objetivo.
+        XNEWX<i>Pasiva.</i><br><br>El paladín ha perfeccionado su técnica de lanzamiento de <i>Purgar</i>, aumentando la curación realizada a 1D10+VOL. Además, cada vez que el paladín lance <i>Purgar</i> sobre cualquier objetivo, todos los aliados en combate recuperarán 3 PV.
+        XNEWX<i>Habilidad. -2 para impactar, 4 PE por lanzamiento.</i><br><br>El paladín imbuye su arma con luz sagrada, infligiendo 1D6+VOL puntos de daño mágico adicional, o 1D10+VOL si ataca con un arma a dos manos. Si el objetivo muere, la habilidad no cuesta PE.
+        XNEWX<i>Hechizo. Dificultad 11+, 5 PE por lanzamiento.</i><br><br>El paladín coloca un estandarte de su orden de paladines, que permanecerá activo hasta el final del combate. Mientras el estandarte esté en pie, el paladín y todos sus aliados recibirán +8 puntos de armadura y +1 VOL.
+        XNEWX<i>Hechizo. Dificultad 10+ 5 PE por lanzamiento.</i><br><br>El paladín señala a un enemigo como su rival al que jura destruir, convirtiéndose en el único enemigo al que el paladín puede atacar, pero otorgándole al personaje inmunidad frente al daño del objetivo (a menos que no haya ningún otro enemigo cerca) y +3 DES si el objetivo es un no-muerto, demonio o criatura de la noche.
+        XNEWX<i>Hechizo. Dificultad 13+, 10 PE por lanzamiento.</i><br><br>El paladín entona una plegaria a Audelarei, devolviendo a la vida a un objetivo que haya muerto recientemente y restaurando todos sus PE y PV en el proceso. <i>Intervención Divina</i> no funciona sobre no-muertos, demonios, criaturas de la noche ni seres que no estuvieran vivos en primer lugar.
+        XNEWX<i>Hechizo. Dificultad 12+, 10 PE por lanzamiento.</i><br><br>El paladín actúa como canalizador del poder de un serafín durante 1D4+2 turnos, durante los cuales (además de flotar medio metro por encima del suelo, hablar con una voz que no es la suya y emanar luz por los ojos), podrá lanzar hechizos y habilidades sin gastar PE, infligirá daño puro y restaurará el doble de PV con sus hechizos y habilidades.
+        XNEWX<i>Pasiva.</i><br><br>El paladín es un ejemplo de justicia y devoción para su orden, lo que le confiere inmunidad frente a efectos de pérdida de control del personaje y efectos psíquicos mientras esté bajo los efectos de <i>Égida sagrada</i> o <i>Desafío del cruzado</i> y +10 PV máximos. Además, sus hechizos y habilidades infligirán VOL puntos de daño adicional.]]></item>
     </string-array>
 
     <string-array name="alquimistaPociones">

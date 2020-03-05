@@ -27,4 +27,59 @@
     <string name="CritBonus">Bon. Crítico</string>
     <string name="critDmgBonus">Bon. Daño crítico</string>
     <string name="druidaTransformaciones">Transformaciones</string>
+    <string-array name="nombres">
+        <item>Garrim</item>
+        <item>Percivald</item>
+        <item>Alyssa</item>
+        <item>Raphael</item>
+        <item>Carlos II</item>
+        <item>Amapola</item>
+        <item>Celeste</item>
+        <item>Mora</item>
+        <item>Rubio</item>
+        <item>Prado</item>
+        <item>Orquídea</item>
+        <item>Sargento</item>
+        <item>Coronel</item>
+        <item>General</item>
+        <item>Magucius</item>
+        <item>Jonathan</item>
+        <item>Lisa</item>
+        <item>Joseph</item>
+    </string-array>
+    <string-array name="apellidos">
+        <item>Puño</item>
+        <item>Pulmón</item>
+        <item>Cráneo</item>
+        <item>Diente</item>
+        <item>Sable</item>
+        <item>Cabello</item>
+        <item>Pendiente</item>
+        <item>Anillo</item>
+        <item>Hueso</item>
+        <item>Monte</item>
+        <item>Fuente</item>
+        <item>Dedo</item>
+    </string-array>
+    <string-array name="apellidos2">
+        <item>dorado</item>
+        <item>plateado</item>
+        <item>torcido</item>
+        <item>ebrio</item>
+        <item>helado</item>
+        <item>ardiente</item>
+        <item>genial</item>
+        <item>asqueroso</item>
+        <item>intelectual</item>
+        <item>alfa</item>
+        <item>perfecto</item>
+        <item>débil</item>
+        <!--<item>&#160;la Última Hermana</item>
+        <item>&#160;de Piedra</item>
+        <item>, la Hechizada</item>
+        <item>, actor de método</item>
+        <item>&#160;de Kan-So\'pes</item>
+        <item>, la Sanguinaria</item>
+        <item>&#160;el Viajero</item>-->
+    </string-array>
 </resources>
