@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private static MainActivity _ma;
     private static RecyclerView _rv;
     private RecyclerAdapter _ra;
+    private UserPreferences _up;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -34,16 +35,15 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        _up = new UserPreferences(this);
+        if (_up.getNightMode()) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /*if (((getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_NO) || (android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.P)) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }*/
         _ma = this;
         _mydb = new MyDB(this);
-        //_mydb.insertTest();
+        //TODO _mydb.insertTest();
         _rv = findViewById(R.id.recyclerView);
         setAdapter();
 
@@ -55,10 +55,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void darkMode(MenuItem mi) {
-        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        if (!_up.getNightMode()) {
+            _up.setNightMode(true);
         } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            _up.setNightMode(false);
         }
     }
 
@@ -67,21 +67,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setAdapter() {
-        Cursor c = MyDB.selectAll();
-        if (c != null) {
-            _ra = new RecyclerAdapter(this);
-            _rv.setAdapter(_ra);
-            _rv.setLayoutManager(new LinearLayoutManager(this));
-            ItemTouchHelper ith = new ItemTouchHelper(new SwipeToDelete(_ra));
-            ith.attachToRecyclerView(_rv);
-        }
+        _ra = new RecyclerAdapter(this);
+        _rv.setAdapter(_ra);
+        _rv.setLayoutManager(new LinearLayoutManager(this));
+        ItemTouchHelper ith = new ItemTouchHelper(new SwipeToDelete(_ra));
+        ith.attachToRecyclerView(_rv);
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == 1) {
             Char c = (Char) data.getSerializableExtra("CHAR");
-            _ra.notifyItemInserted(_ra.addNew(c));
+            _ra.addNew(c);
+            _ra.notifyItemInserted(0);
+            _rv.smoothScrollToPosition(0);
         }
     }
 }

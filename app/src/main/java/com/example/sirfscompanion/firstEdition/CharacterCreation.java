@@ -4,25 +4,29 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.text.Html;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.sirfscompanion.R;
-import com.example.sirfscompanion.control.MainActivity;
 import com.example.sirfscompanion.control.MyDB;
 import com.example.sirfscompanion.instanciables.Char;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -37,6 +41,9 @@ public class CharacterCreation extends AppCompatActivity {
     private CircleImageView _civ;
     private Random _r;
     private Spinner _ccRace, _ccClass;
+    private Bitmap _myImg;
+    private int FUE, DES, PUN, INT, SAB, AGI, VOL, PV, PE;
+    private String _raceExtra, _classExtra;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +54,9 @@ public class CharacterCreation extends AppCompatActivity {
         assert ab != null;
         ab.setTitle(R.string.creacionPersonaje);
         _r = new Random();
+        dracPerks();
+        _raceExtra = "";
+        _classExtra = "";
         String[] names = getResources().getStringArray(R.array.nombres);
         String[] surname1 = getResources().getStringArray(R.array.apellidos);
         String[] surname2 = getResources().getStringArray(R.array.apellidos2);
@@ -71,6 +81,7 @@ public class CharacterCreation extends AppCompatActivity {
         _ccRace.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String[] races = getResources().getStringArray(R.array.races1e);
                 String[] aux = getResources().getStringArray(R.array.racesStats1e);
                 String aux2 = aux[position];
                 aux = aux2.split(" ");
@@ -86,6 +97,11 @@ public class CharacterCreation extends AppCompatActivity {
                 _VOL.setText(String.valueOf(raceStats[6]));
                 _PV.setText(null);
                 _PE.setText(null);
+                if (parent.getItemAtPosition(position).toString().equals(races[6])) {
+                    findViewById(R.id.draclayout).setVisibility(View.VISIBLE);
+                } else {
+                    findViewById(R.id.draclayout).setVisibility(View.GONE);
+                }
             }
 
             @Override
@@ -164,9 +180,54 @@ public class CharacterCreation extends AppCompatActivity {
         });
     }
 
+    public void dracPerks() {
+        String[] titles = getResources().getStringArray(R.array.racesBonus1e)[6].split("XNEWX");
+        String[] desc = getResources().getStringArray(R.array.racesBonusDesc1e)[6].split("XNEWX");
+        ((TextView) findViewById(R.id.dracbonust1)).setText(Html.fromHtml(titles[0]));
+        ((TextView) findViewById(R.id.dracbonusd1)).setText(Html.fromHtml(desc[0]));
+        ((TextView) findViewById(R.id.dracbonust2)).setText(Html.fromHtml(titles[1]));
+        ((TextView) findViewById(R.id.dracbonusd2)).setText(Html.fromHtml(desc[1]));
+        ((TextView) findViewById(R.id.dracpent1)).setText(Html.fromHtml(titles[2]));
+        ((TextView) findViewById(R.id.dracpend1)).setText(Html.fromHtml(desc[2]));
+        ((TextView) findViewById(R.id.dracpent2)).setText(Html.fromHtml(titles[3]));
+        ((TextView) findViewById(R.id.dracpend2)).setText(Html.fromHtml(desc[3]));
+        ((RadioButton) findViewById(R.id.drac0)).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    ((RadioButton) findViewById(R.id.drac1)).setChecked(false);
+                }
+            }
+        });
+        ((RadioButton) findViewById(R.id.drac1)).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    ((RadioButton) findViewById(R.id.drac0)).setChecked(false);
+                }
+            }
+        });
+        ((RadioButton) findViewById(R.id.drac2)).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    ((RadioButton) findViewById(R.id.drac3)).setChecked(false);
+                }
+            }
+        });
+        ((RadioButton) findViewById(R.id.drac3)).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    ((RadioButton) findViewById(R.id.drac2)).setChecked(false);
+                }
+            }
+        });
+    }
+
     public int roll(View view) {
         _r = new Random();
-        int aux = 0;
+        int aux;
         if (view.equals(findViewById(R.id.ccPVRoll))) {
             aux = _r.nextInt(20) + raceStats[7] + classStats[7];
             if (aux < 10) aux = 10;
@@ -198,44 +259,226 @@ public class CharacterCreation extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == Activity.RESULT_OK)
             if (requestCode == 0) {
-                Uri selectedImage = data.getData();
-                Glide.with(getApplicationContext()).load(selectedImage).asBitmap().into(_civ);
+                try {
+                    Uri selectedImage = data.getData();
+                    _myImg = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImage);
+                    Glide.with(getApplicationContext()).load(selectedImage).asBitmap().into(_civ);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
             }
     }
 
     public void createCharacter(View view) {
         String name = "";
-        if (_ccName.getText().toString().equals("")) name = _ccName.getHint().toString();
+        if (_ccName.getText().toString().equals("")) {
+            name = _ccName.getHint().toString();
+            if (_r.nextFloat() <= 0.11) {
+                _raceExtra = "FUE";
+            } else if (_r.nextFloat() <= 0.22) {
+                _raceExtra = "DES";
+            } else if (_r.nextFloat() <= 0.33) {
+                _raceExtra = "PUN";
+            } else if (_r.nextFloat() <= 0.44) {
+                _raceExtra = "INT";
+            } else if (_r.nextFloat() <= 0.55) {
+                _raceExtra = "SAB";
+            } else if (_r.nextFloat() <= 0.67) {
+                _raceExtra = "AGI";
+            } else if (_r.nextFloat() <= 0.78) {
+                _raceExtra = "VOL";
+            } else if (_r.nextFloat() <= 0.89) {
+                _raceExtra = "PV";
+            } else if (_r.nextFloat() <= 1) {
+                _raceExtra = "PE";
+            }
+            if (_r.nextBoolean()) _classExtra = "FUE"; else _classExtra = "DES";
+        }
         else name = _ccName.getText().toString();
         String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
-        Bitmap img = ((BitmapDrawable) _civ.getDrawable()).getBitmap();
-        int FUE = Integer.parseInt(_FUE.getText().toString());
-        int DES = Integer.parseInt(_DES.getText().toString());
-        int PUN = Integer.parseInt(_PUN.getText().toString());
-        int INT = Integer.parseInt(_INT.getText().toString());
-        int SAB = Integer.parseInt(_SAB.getText().toString());
-        int AGI = Integer.parseInt(_AGI.getText().toString());
-        int VOL = Integer.parseInt(_VOL.getText().toString());
-        int PV;
+        if (_myImg == null) {
+            _myImg = ((BitmapDrawable) _civ.getDrawable()).getBitmap();
+        }
+        String race = _ccRace.getSelectedItem().toString();
+        String myClass = _ccClass.getSelectedItem().toString();
+        FUE = Integer.parseInt(_FUE.getText().toString());
+        if (_raceExtra.equals("FUE")) FUE++;
+        if (_classExtra.equals("FUE")) FUE++;
+        DES = Integer.parseInt(_DES.getText().toString());
+        if (_raceExtra.equals("DES")) DES++;
+        if (_classExtra.equals("DES")) DES++;
+        PUN = Integer.parseInt(_PUN.getText().toString());
+        if (_raceExtra.equals("PUN")) PUN++;
+        INT = Integer.parseInt(_INT.getText().toString());
+        if (_raceExtra.equals("INT")) INT++;
+        SAB = Integer.parseInt(_SAB.getText().toString());
+        if (_raceExtra.equals("SAB")) SAB++;
+        AGI = Integer.parseInt(_AGI.getText().toString());
+        if (_raceExtra.equals("AGI")) AGI++;
+        VOL = Integer.parseInt(_VOL.getText().toString());
+        if (_raceExtra.equals("VOL")) VOL++;
         if (!_PV.getText().toString().equals("")) PV = Integer.parseInt(_PV.getText().toString());
         else PV = roll(findViewById(R.id.ccPVRoll));
-        int PE;
+        if (_raceExtra.equals("PV")) PV += 5;
         if (!_PE.getText().toString().equals("")) PE = Integer.parseInt(_PE.getText().toString());
         else PE = roll(findViewById(R.id.ccPERoll));
+        if (_raceExtra.equals("PE")) PE += 5;
         int armor = 0;
         int marmor = 0;
         int critbonus = 0;
         int critdmgbonus = 0;
         int spellbonus = 0;
         String bonus = "";
-        int gold = 100;
-        Char c = new Char(name, img, date, 1, _ccRace.getSelectedItem().toString(), _ccClass.getSelectedItem().toString(), FUE, DES, PUN, INT, SAB, AGI, VOL, PV, PV, PE, PE, armor, marmor, critbonus, critdmgbonus,
-                spellbonus, "", "", "", "0 1 2", bonus, gold, "");
-        MyDB.createChar(c);
-        Intent i = new Intent();
-        i.putExtra("CHAR", c);
-        setResult(1, i);
-        finish();
+        if (race.equals(getResources().getStringArray(R.array.races1e)[6])) {
+            if (((RadioButton) findViewById(R.id.drac0)).isChecked()) {
+                bonus += " DRAC0";
+            } else if (((RadioButton) findViewById(R.id.drac1)).isChecked()) {
+                bonus += " DRAC1";
+            } else {
+                if (_r.nextBoolean()) bonus += " DRAC0";
+                else bonus += " DRAC1";
+            }
+            if (((RadioButton) findViewById(R.id.drac2)).isChecked()) {
+                bonus += " DRAC2";
+            } else if (((RadioButton) findViewById(R.id.drac3)).isChecked()) {
+                bonus += " DRAC3";
+            } else {
+                if (_r.nextBoolean()) bonus += " DRAC2";
+                else bonus += " DRAC3";
+            }
+        }
+        int gold = 50;
+
+        if (race.equals(getResources().getStringArray(R.array.races1e)[0])) {
+            if (_raceExtra.equals("")) humanExtra();
+            gold *= 3;
+        } else if (race.equals(getResources().getStringArray(R.array.races1e)[1])) {
+            marmor += 10;
+        } else if (race.equals(getResources().getStringArray(R.array.races1e)[2])) {
+            if (FUE >= 3 || DES >= 3 || PUN >= 3 || INT >= 3 || SAB >= 3 || AGI >= 3 || VOL >= 3) {
+                critbonus += 1;
+                bonus += " WECRIT";
+            }
+        } else if (race.equals(getResources().getStringArray(R.array.races1e)[6])) {
+            if (bonus.contains("DRAC0")) armor += 7;
+        }
+
+        if (myClass.equals(getResources().getStringArray(R.array.classes1e)[2])) {
+            PV += 5;
+        } else if (myClass.equals(getResources().getStringArray(R.array.classes1e)[10])) {
+            if (_classExtra.equals("")) warriorExtra();
+            PV += 5;
+        }
+        if (!((race.equals(getResources().getStringArray(R.array.races1e)[0])) && _raceExtra.equals("")) && !((myClass.equals(getResources().getStringArray(R.array.classes1e)[10])) && _classExtra.equals(""))) {
+            Char c = new Char(name, _myImg, date, 1, race, myClass, FUE, DES, PUN, INT, SAB, AGI, VOL, PV, PV, PE, PE, armor, marmor, critbonus, critdmgbonus,
+                    spellbonus, "", "", "", "0 1 2", bonus, gold, "");
+            MyDB.createChar(c);
+            Intent i = new Intent();
+            i.putExtra("CHAR", c);
+            setResult(1, i);
+            finish();
+        }
+
+    }
+
+    public void warriorExtra() {
+        final Dialog d = new Dialog(this);
+        d.setContentView(R.layout.levelupstats);
+        ((TextView) d.findViewById(R.id.luLevel)).setText("¡Bienvenido, bravo Guerrero!");
+        (d.findViewById(R.id.luFUE)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _classExtra = "FUE";
+                d.cancel();
+            }
+        });
+        (d.findViewById(R.id.luDES)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _classExtra = "DES";
+                d.cancel();
+            }
+        });
+        (d.findViewById(R.id.luPUN)).setVisibility(View.GONE);
+        (d.findViewById(R.id.luINT)).setVisibility(View.GONE);
+        (d.findViewById(R.id.luSAB)).setVisibility(View.GONE);
+        (d.findViewById(R.id.luAGI)).setVisibility(View.GONE);
+        (d.findViewById(R.id.luVOL)).setVisibility(View.GONE);
+        (d.findViewById(R.id.luPV)).setVisibility(View.GONE);
+        (d.findViewById(R.id.luPE)).setVisibility(View.GONE);
+        d.show();
+    }
+
+    public void humanExtra() {
+        final Dialog d = new Dialog(this);
+        d.setContentView(R.layout.levelupstats);
+        ((TextView) d.findViewById(R.id.luLevel)).setText("¡Bienvenido, noble Humano!");
+        (d.findViewById(R.id.luFUE)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _raceExtra = "FUE";
+                d.cancel();
+            }
+        });
+        (d.findViewById(R.id.luDES)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _raceExtra = "DES";
+                d.cancel();
+            }
+        });
+        (d.findViewById(R.id.luPUN)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _raceExtra = "PUN";
+                d.cancel();
+            }
+        });
+        (d.findViewById(R.id.luINT)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _raceExtra = "INT";
+                d.cancel();
+            }
+        });
+        (d.findViewById(R.id.luSAB)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _raceExtra = "SAB";
+                d.cancel();
+            }
+        });
+        (d.findViewById(R.id.luAGI)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _raceExtra = "AGI";
+                d.cancel();
+            }
+        });
+        (d.findViewById(R.id.luVOL)).setVisibility(View.VISIBLE);
+        (d.findViewById(R.id.luVOL)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _raceExtra = "VOL";
+                d.cancel();
+            }
+        });
+        (d.findViewById(R.id.luPV)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _raceExtra = "PV";
+                d.cancel();
+            }
+        });
+        (d.findViewById(R.id.luPE)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _raceExtra = "PE";
+                d.cancel();
+            }
+        });
+        d.show();
     }
 }
 

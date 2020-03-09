@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.sirfscompanion.R;
+import com.example.sirfscompanion.control.MainActivity;
 import com.example.sirfscompanion.control.MyDB;
 import com.example.sirfscompanion.instanciables.Char;
 import com.google.android.material.snackbar.Snackbar;
@@ -23,18 +24,21 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
     private Context _c;
-    private Cursor _cu;
     private ArrayList<Char> _al;
     public RecyclerAdapter(Context c) {
         this._c = c;
-        this._cu = MyDB.selectAll();
         this._al = new ArrayList<>();
-        if (!_cu.isNull(0)) {
+        try {
+            Cursor _cu = MyDB.selectAll();
             do {
                 _al.add(new Char(_cu));
             } while (_cu.moveToNext());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
     }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -56,6 +60,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder {
         private CircleImageView _civ;
         private TextView _name, _date, _raceClass;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             this._civ = itemView.findViewById(R.id.imageView);
@@ -63,6 +68,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             this._date = itemView.findViewById(R.id.listDate);
             this._raceClass = itemView.findViewById(R.id.listRaceClass);
         }
+
         public void bind(final Char c) {
             Glide.with(_c).load(c.getCharImg()).asBitmap().into(_civ);
             this._name.setText(c.getCharName());
@@ -73,14 +79,15 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 public void onClick(View v) {
                     Intent i = new Intent(_c, Detail.class);
                     i.putExtra("CHAR", c);
-                    _c.startActivity(i);
+                    MainActivity.get_ma().startActivityForResult(i, 0);
                 }
             });
         }
     }
+
     public void deleteItem(RecyclerView.ViewHolder vh, final int position) {
         Char ch = _al.get(position);
-        Snackbar s = Snackbar.make(vh.itemView, "¿Seguro que quieres eliminar a "+ch.getCharName()+"?", Snackbar.LENGTH_SHORT).setAction("Sí", new View.OnClickListener() {
+        Snackbar s = Snackbar.make(vh.itemView, "¿Seguro que quieres eliminar a " + ch.getCharName() + "?", Snackbar.LENGTH_SHORT).setAction("Sí", new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 MyDB.delete(_al.get(position).getCharId());
@@ -96,8 +103,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         });
         s.show();
     }
+
     public int addNew(Char c) {
-        _al.add(c);
-        return _al.size()+1;
+        _al.add(0, c);
+        return 0;
     }
 }

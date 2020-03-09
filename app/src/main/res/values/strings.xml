@@ -27,6 +27,17 @@
     <string name="CritBonus">Bon. Crítico</string>
     <string name="critDmgBonus">Bon. Daño crítico</string>
     <string name="druidaTransformaciones">Transformaciones</string>
+    <string name="luSelect">Selecciona uno de los siguentes atributos:</string>
+    <string name="luFUE">+1 FUE</string>
+    <string name="luDES">+1 DES</string>
+    <string name="luPUN">+1 PUN</string>
+    <string name="luINT">+1 INT</string>
+    <string name="luSAB">+1 SAB</string>
+    <string name="luAGI">+1 AGI</string>
+    <string name="luVOL">+1 VOL</string>
+    <string name="luPV">+5 PV</string>
+    <string name="luPE">+5 PE</string>
+    <string name="welcome">¡Bienvenido!</string>
     <string-array name="nombres">
         <item>Garrim</item>
         <item>Percivald</item>
@@ -41,11 +52,17 @@
         <item>Orquídea</item>
         <item>Sargento</item>
         <item>Coronel</item>
+        <item>Teniente</item>
+        <item>Capitán</item>
         <item>General</item>
         <item>Magucius</item>
         <item>Jonathan</item>
         <item>Lisa</item>
         <item>Joseph</item>
+        <item>Donatello</item>
+        <item>Michelangelo</item>
+        <item>Leonardo</item>
+        <item>Jumi</item>
     </string-array>
     <string-array name="apellidos">
         <item>Puño</item>
@@ -58,8 +75,8 @@
         <item>Anillo</item>
         <item>Hueso</item>
         <item>Monte</item>
-        <item>Fuente</item>
         <item>Dedo</item>
+        <item>Huevo</item>
     </string-array>
     <string-array name="apellidos2">
         <item>dorado</item>
@@ -74,6 +91,11 @@
         <item>alfa</item>
         <item>perfecto</item>
         <item>débil</item>
+        <item>necio</item>
+        <item>cuadrado</item>
+        <item>partido</item>
+        <item>jodío</item>
+        <item>bravo</item>
         <!--<item>&#160;la Última Hermana</item>
         <item>&#160;de Piedra</item>
         <item>, la Hechizada</item>

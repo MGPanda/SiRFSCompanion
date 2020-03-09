@@ -54,7 +54,7 @@ public class MyDB {
     public MyDB(Context context) {
         dbHelper = new MyDatabaseHelper(context);
         database = dbHelper.getWritableDatabase();
-        //dbHelper.onCreate(database);
+        //TODO dbHelper.onCreate(database);
     }
 
     public static long createChar(Char c) {
@@ -123,6 +123,23 @@ public class MyDB {
             return 0;
         }
 
+    }
+
+    public static void updatePV(int id, int PV) {
+        ContentValues cv = new ContentValues();
+        cv.put(CHAR_PV, PV);
+        database.update(CHAR_TABLE, cv, "_id = ?", new String[]{String.valueOf(id)});
+    }
+
+    public static void updatePE(int id, int PE) {
+        ContentValues cv = new ContentValues();
+        cv.put(CHAR_PE, PE);
+        database.update(CHAR_TABLE, cv, "_id = ?", new String[]{String.valueOf(id)});
+    }
+    public static void updateImg(int id, byte[] img) {
+        ContentValues cv = new ContentValues();
+        cv.put(CHAR_IMG, img);
+        database.update(CHAR_TABLE, cv, "_id = ?", new String[]{String.valueOf(id)});
     }
 
     public void insertTest() {
