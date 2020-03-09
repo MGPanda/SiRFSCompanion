@@ -62,6 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:onClick="levelUp"
                 android:text="@string/detailLevelUp"
                 android:textColor="@color/colorPrimary"
                 android:textSize="18dp"

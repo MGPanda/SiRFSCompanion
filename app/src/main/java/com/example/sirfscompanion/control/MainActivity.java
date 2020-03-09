@@ -84,4 +84,9 @@ public class MainActivity extends AppCompatActivity {
             _rv.smoothScrollToPosition(0);
         }
     }
+
+    public void updateList(Char c, int position) {
+        _ra.updateChar(c, position);
+        _ra.notifyItemChanged(position);
+    }
 }

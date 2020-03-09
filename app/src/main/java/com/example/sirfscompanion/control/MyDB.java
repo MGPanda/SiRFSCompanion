@@ -92,6 +92,39 @@ public class MyDB {
         return database.insert(CHAR_TABLE, null, values);
     }
 
+    public static long levelUp(Char c) {
+        ContentValues values = new ContentValues();
+        values.put(CHAR_NAME, c.getCharName());
+        values.put(CHAR_CRDATE, c.getCharDate());
+        values.put(CHAR_LEVEL, c.getCharLevel());
+        values.put(CHAR_RACE, c.getCharRace());
+        values.put(CHAR_CLASS, c.getCharClass());
+        values.put(CHAR_FUE, c.getCharFue());
+        values.put(CHAR_DES, c.getCharDes());
+        values.put(CHAR_PUN, c.getCharPun());
+        values.put(CHAR_INT, c.getCharInt());
+        values.put(CHAR_SAB, c.getCharSab());
+        values.put(CHAR_AGI, c.getCharAgi());
+        values.put(CHAR_VOL, c.getCharVol());
+        values.put(CHAR_PV, c.getCharPv());
+        values.put(CHAR_MAXPV, c.getCharMaxpv());
+        values.put(CHAR_PE, c.getCharPe());
+        values.put(CHAR_MAXPE, c.getCharMaxpe());
+        values.put(CHAR_ARMOR, c.getCharArmor());
+        values.put(CHAR_MARMOR, c.getCharMarmor());
+        values.put(CHAR_CRITBONUS, c.getCharCritbonus());
+        values.put(CHAR_CRITDMGBONUS, c.getCharCritdmgbonus());
+        values.put(CHAR_SPELLBONUS, c.getCharSpellbonus());
+        values.put(CHAR_WEAPONS, c.getCharWeapons());
+        values.put(CHAR_EQUIP, c.getCharEquip());
+        values.put(CHAR_RELICS, c.getCharRelics());
+        values.put(CHAR_SKILLS, c.getCharSkills());
+        values.put(CHAR_BONUS, c.getCharBonus());
+        values.put(CHAR_GOLD, c.getCharGold());
+        values.put(CHAR_INVENTORY, c.getCharInventory());
+        return database.update(CHAR_TABLE, values, "_id = ?", new String[]{String.valueOf(c.getCharId())});
+    }
+
     public static void delete(int id) {
         database.delete(CHAR_TABLE, "_id = ?", new String[]{String.valueOf(id)});
     }

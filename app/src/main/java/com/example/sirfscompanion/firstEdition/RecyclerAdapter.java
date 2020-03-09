@@ -79,6 +79,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 public void onClick(View v) {
                     Intent i = new Intent(_c, Detail.class);
                     i.putExtra("CHAR", c);
+                    i.putExtra("POSITION", getAdapterPosition());
                     MainActivity.get_ma().startActivityForResult(i, 0);
                 }
             });
@@ -107,5 +108,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     public int addNew(Char c) {
         _al.add(0, c);
         return 0;
+    }
+
+    public void updateChar(Char c, int position) {
+        _al.set(position, c);
     }
 }

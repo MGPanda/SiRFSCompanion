@@ -293,9 +293,9 @@ public class CharacterCreation extends AppCompatActivity {
             } else if (_r.nextFloat() <= 1) {
                 _raceExtra = "PE";
             }
-            if (_r.nextBoolean()) _classExtra = "FUE"; else _classExtra = "DES";
-        }
-        else name = _ccName.getText().toString();
+            if (_r.nextBoolean()) _classExtra = "FUE";
+            else _classExtra = "DES";
+        } else name = _ccName.getText().toString();
         String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
         if (_myImg == null) {
             _myImg = ((BitmapDrawable) _civ.getDrawable()).getBitmap();
