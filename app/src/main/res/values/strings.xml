@@ -38,6 +38,20 @@
     <string name="luPV">+5 PV</string>
     <string name="luPE">+5 PE</string>
     <string name="welcome">¡Bienvenido!</string>
+    <string name="add_new_item">AÑADIR UN NUEVO OBJETO</string>
+    <string name="newItemName">Nombre del objeto</string>
+    <string name="newItemDesc">Descripción del objeto</string>
+    <string name="newItemQuant">Cantidad a añadir</string>
+    <string name="addNewItemButton">Añadir objeto</string>
+    <string-array name="dados">
+        <item>1D3</item>
+        <item>1D4</item>
+        <item>1D6</item>
+        <item>1D8</item>
+        <item>1D10</item>
+        <item>1D12</item>
+        <item>1D20</item>
+    </string-array>
     <string-array name="nombres">
         <item>Garrim</item>
         <item>Percivald</item>
@@ -96,12 +110,25 @@
         <item>partido</item>
         <item>jodío</item>
         <item>bravo</item>
-        <!--<item>&#160;la Última Hermana</item>
-        <item>&#160;de Piedra</item>
-        <item>, la Hechizada</item>
-        <item>, actor de método</item>
-        <item>&#160;de Kan-So\'pes</item>
-        <item>, la Sanguinaria</item>
-        <item>&#160;el Viajero</item>-->
+    </string-array>
+    <string-array name="tiposObjetos">
+        <item>Arma cortante a una mano</item>
+        <item>Arma cortante a dos manos</item>
+        <item>Arma punzante a una mano</item>
+        <item>Arma punzante a dos manos</item>
+        <item>Arma contundente a una mano</item>
+        <item>Arma contundente a dos manos</item>
+        <item>Escudo a una mano</item>
+        <item>Escudo a dos manos</item>
+        <item>Arma de disparo pequeña a una mano</item>
+        <item>Arma de disparo pequeña a dos manos</item>
+        <item>Arma de disparo grande a una mano</item>
+        <item>Arma de disparo grande a dos manos</item>
+        <item>Armadura (cabeza)</item>
+        <item>Armadura (cuerpo)</item>
+        <item>Armadura (piernas)</item>
+        <item>Armadura (pies)</item>
+        <item>Reliquia</item>
+        <item>Miscelánea</item>
     </string-array>
 </resources>

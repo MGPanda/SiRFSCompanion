@@ -111,6 +111,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     }
 
     public void updateChar(Char c, int position) {
+        MyDB.updateChar(c);
         _al.set(position, c);
     }
 }

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/createItemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/newItemName"
+        android:inputType="textPersonName|textCapSentences"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/createItemDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/newItemDesc"
+        android:inputType="textPersonName|textCapSentences"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/createItemQuant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/newItemQuant"
+        android:inputType="number"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/createItemButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/addNewItemButton" />
+</LinearLayout>

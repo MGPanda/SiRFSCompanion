@@ -92,9 +92,10 @@ public class MyDB {
         return database.insert(CHAR_TABLE, null, values);
     }
 
-    public static long levelUp(Char c) {
+    public static long updateChar(Char c) {
         ContentValues values = new ContentValues();
         values.put(CHAR_NAME, c.getCharName());
+        values.put(CHAR_IMG, c.getCharImg());
         values.put(CHAR_CRDATE, c.getCharDate());
         values.put(CHAR_LEVEL, c.getCharLevel());
         values.put(CHAR_RACE, c.getCharRace());
@@ -169,9 +170,16 @@ public class MyDB {
         cv.put(CHAR_PE, PE);
         database.update(CHAR_TABLE, cv, "_id = ?", new String[]{String.valueOf(id)});
     }
-    public static void updateImg(int id, byte[] img) {
+
+    public static void updateGold(int id, int gold) {
         ContentValues cv = new ContentValues();
-        cv.put(CHAR_IMG, img);
+        cv.put(CHAR_GOLD, gold);
+        database.update(CHAR_TABLE, cv, "_id = ?", new String[]{String.valueOf(id)});
+    }
+
+    public static void updateInv(int id, String inv) {
+        ContentValues cv = new ContentValues();
+        cv.put(CHAR_INVENTORY, inv);
         database.update(CHAR_TABLE, cv, "_id = ?", new String[]{String.valueOf(id)});
     }
 
