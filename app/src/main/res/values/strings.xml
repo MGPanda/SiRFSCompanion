@@ -43,14 +43,36 @@
     <string name="newItemDesc">Descripción del objeto</string>
     <string name="newItemQuant">Cantidad a añadir</string>
     <string name="addNewItemButton">Añadir objeto</string>
+    <string name="enc">ENC</string>
+    <string name="meleeWeapons">ARMAS CUERPO A CUERPO</string>
+    <string name="addWeapon">AÑADIR ARMA</string>
+    <string name="removeWeapon">ELIMINAR ARMA</string>
+    <string name="weaponName">Nombre del arma</string>
+    <string name="additionalDmg">Daño adicional</string>
+    <string name="addWeaponButton">Añadir arma</string>
+    <string name="rangedWeapons">ARMAS A DISTANCIA</string>
+    <string name="addHeadArmor">AÑADIR (CABEZA)</string>
+    <string name="removeHeadArmor">ELIMINAR (CABEZA)</string>
+    <string name="addBodyArmor">AÑADIR (CUERPO)</string>
+    <string name="removeBodyArmor">ELIMINAR (CUERPO)</string>
+    <string name="addLegArmor">AÑADIR (PIERNAS)</string>
+    <string name="removeLegArmor">ELIMINAR (PIERNAS)</string>
+    <string name="addFeetArmor">AÑADIR (PIES)</string>
+    <string name="removeFeetArmor">ELIMINAR (PIES)</string>
+    <string name="equipName">Tipo de equipamiento</string>
+    <string name="addArmorButton">Añadir pieza de armadura</string>
+    <string name="magicArmor">Armadura mágica</string>
+    <string name="genericWeapon">Arma genérica</string>
+    <string name="genericArmor">Cutre</string>
     <string-array name="dados">
-        <item>1D3</item>
-        <item>1D4</item>
-        <item>1D6</item>
-        <item>1D8</item>
-        <item>1D10</item>
-        <item>1D12</item>
-        <item>1D20</item>
+        <item>-</item>
+        <item>D3</item>
+        <item>D4</item>
+        <item>D6</item>
+        <item>D8</item>
+        <item>D10</item>
+        <item>D12</item>
+        <item>D20</item>
     </string-array>
     <string-array name="nombres">
         <item>Garrim</item>

@@ -371,8 +371,8 @@ public class CharacterCreation extends AppCompatActivity {
             PV += 5;
         }
         if (!((race.equals(getResources().getStringArray(R.array.races1e)[0])) && _raceExtra.equals("")) && !((myClass.equals(getResources().getStringArray(R.array.classes1e)[10])) && _classExtra.equals(""))) {
-            Char c = new Char(name, _myImg, date, 1, race, myClass, FUE, DES, PUN, INT, SAB, AGI, VOL, PV, PV, PE, PE, armor, marmor, critbonus, critdmgbonus,
-                    spellbonus, "", "", "", "0 1 2", bonus, gold, "");
+            Char c = new Char(name, "1", _myImg, date, 1, race, myClass, FUE, DES, PUN, INT, SAB, AGI, VOL, 0, PV, PV, PE, PE, armor, marmor, critbonus, critdmgbonus,
+                    spellbonus, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "-XPARTX0 / 0XNEWX-XPARTX0 / 0XNEWX-XPARTX0 / 0XNEWX-XPARTX0 / 0", "", "0 1 2", bonus, gold, "");
             MyDB.createChar(c);
             Intent i = new Intent();
             i.putExtra("CHAR", c);

@@ -9,21 +9,20 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.Html;
-import android.util.DisplayMetrics;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -31,7 +30,6 @@ import com.bumptech.glide.Glide;
 import com.example.sirfscompanion.R;
 import com.example.sirfscompanion.control.MainActivity;
 import com.example.sirfscompanion.control.MyDB;
-import com.example.sirfscompanion.control.SwipeToDelete;
 import com.example.sirfscompanion.instanciables.Char;
 import com.google.zxing.BarcodeFormat;
 import com.journeyapps.barcodescanner.BarcodeEncoder;
@@ -44,7 +42,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Detail extends AppCompatActivity {
     private Char _c;
-    private TextView _detailPV, _detailName, _detailRaceClass, _detailPE, _detailFUEVal, _detailDESVal, _detailPUNVal, _detailINTVal, _detailSABVal, _detailAGIVal, _detailVOLVal, _detailArmor, _detailMarmor;
+    private TextView _detailPV, _detailName, _detailRaceClass, _detailPE, _detailFUEVal, _detailDESVal, _detailPUNVal, _detailINTVal, _detailSABVal, _detailAGIVal, _detailVOLVal, _detailENCVal, _detailArmor, _detailMarmor;
     private EditText _goldQuantity;
     private CircleImageView _civ;
     private int _pos;
@@ -62,6 +60,10 @@ public class Detail extends AppCompatActivity {
         _civ = findViewById(R.id.detailImage);
         _detailName = findViewById(R.id.detailName);
         _detailRaceClass = findViewById(R.id.detailRaceClass);
+        if (_c.getCharClass().equals(getResources().getStringArray(R.array.classes1e)[2])) {
+            findViewById(R.id.detailArmorLL1).setVisibility(View.GONE);
+            findViewById(R.id.detailArmorLL2).setVisibility(View.GONE);
+        }
         _detailFUEVal = findViewById(R.id.detailFUEVal);
         _detailDESVal = findViewById(R.id.detailDESVal);
         _detailPUNVal = findViewById(R.id.detailPUNVal);
@@ -69,6 +71,9 @@ public class Detail extends AppCompatActivity {
         _detailSABVal = findViewById(R.id.detailSABVal);
         _detailAGIVal = findViewById(R.id.detailAGIVal);
         _detailVOLVal = findViewById(R.id.detailVOLVal);
+        _detailENCVal = findViewById(R.id.detailENCVal);
+        if (_c.getCharEdition().equals("1"))
+            findViewById(R.id.detailEncLayout).setVisibility(View.GONE);
         _detailArmor = findViewById(R.id.detailArmor);
         _detailMarmor = findViewById(R.id.detailMarmor);
         _goldQuantity = findViewById(R.id.goldQuantity);
@@ -88,6 +93,62 @@ public class Detail extends AppCompatActivity {
         updateDetail();
     }
 
+    public void updateWeapons() {
+        MyDB.updateWeapons(_c.getCharId(), _c.getCharWeapons());
+        String weaponsAux = _c.getCharWeapons();
+        weaponsAux = weaponsAux.replace("FUE", String.valueOf(_c.getCharFue()));
+        weaponsAux = weaponsAux.replace("DES", String.valueOf(_c.getCharDes()));
+        weaponsAux = weaponsAux.replace("PUN", String.valueOf(_c.getCharPun()));
+        weaponsAux = weaponsAux.replace("INT", String.valueOf(_c.getCharInt()));
+        weaponsAux = weaponsAux.replace("SAB", String.valueOf(_c.getCharSab()));
+        weaponsAux = weaponsAux.replace("AGI", String.valueOf(_c.getCharAgi()));
+        weaponsAux = weaponsAux.replace("VOL", String.valueOf(_c.getCharVol()));
+        weaponsAux = weaponsAux.replace("ENC", String.valueOf(_c.getCharEnc()));
+        String[] myWeapons = weaponsAux.split("XNEWX");
+        ((TextView) findViewById(R.id.weap0name)).setText(myWeapons[0].split("XPARTX")[0]);
+        ((TextView) findViewById(R.id.weap0desc)).setText(myWeapons[0].split("XPARTX")[1]);
+        ((TextView) findViewById(R.id.weap1name)).setText(myWeapons[1].split("XPARTX")[0]);
+        ((TextView) findViewById(R.id.weap1desc)).setText(myWeapons[1].split("XPARTX")[1]);
+        ((TextView) findViewById(R.id.weap2name)).setText(myWeapons[2].split("XPARTX")[0]);
+        ((TextView) findViewById(R.id.weap2desc)).setText(myWeapons[2].split("XPARTX")[1]);
+        ((TextView) findViewById(R.id.weap3name)).setText(myWeapons[3].split("XPARTX")[0]);
+        ((TextView) findViewById(R.id.weap3desc)).setText(myWeapons[3].split("XPARTX")[1]);
+    }
+
+    public void updateEquipment() {
+        MyDB.updateEquipment(_c.getCharId(), _c.getCharEquip());
+        String[] equipment = _c.getCharEquip().split("XNEWX");
+        ((TextView) findViewById(R.id.equip0name)).setText(equipment[0].split("XPARTX")[0]);
+        ((TextView) findViewById(R.id.equip0desc)).setText(equipment[0].split("XPARTX")[1]);
+        ((TextView) findViewById(R.id.equip1name)).setText(equipment[1].split("XPARTX")[0]);
+        ((TextView) findViewById(R.id.equip1desc)).setText(equipment[1].split("XPARTX")[1]);
+        ((TextView) findViewById(R.id.equip2name)).setText(equipment[2].split("XPARTX")[0]);
+        ((TextView) findViewById(R.id.equip2desc)).setText(equipment[2].split("XPARTX")[1]);
+        ((TextView) findViewById(R.id.equip3name)).setText(equipment[3].split("XPARTX")[0]);
+        ((TextView) findViewById(R.id.equip3desc)).setText(equipment[3].split("XPARTX")[1]);
+        String[] armor0 = ((TextView) findViewById(R.id.equip0desc)).getText().toString().split(" / ");
+        String[] armor1 = ((TextView) findViewById(R.id.equip1desc)).getText().toString().split(" / ");
+        String[] armor2 = ((TextView) findViewById(R.id.equip2desc)).getText().toString().split(" / ");
+        String[] armor3 = ((TextView) findViewById(R.id.equip3desc)).getText().toString().split(" / ");
+        int finalArmor = _c.getCharArmor() + Integer.parseInt(armor0[0]) + Integer.parseInt(armor1[0]) + Integer.parseInt(armor2[0]) + Integer.parseInt(armor3[0]);
+        int finalMarmor = _c.getCharArmor() + Integer.parseInt(armor0[1]) + Integer.parseInt(armor1[1]) + Integer.parseInt(armor2[1]) + Integer.parseInt(armor3[1]);
+        if (_c.getCharEdition().equals("1")) {
+            _detailArmor.setText(String.format(Locale.getDefault(), "Armadura: %d", finalArmor));
+            if (Math.floor(finalArmor / 5) != 0)
+                _detailArmor.setText(String.format("%s (evitará como mínimo %s punto/s de daño)", _detailArmor.getText(), ((int) Math.floor(finalArmor/5))));
+            _detailMarmor.setText(String.format(Locale.getDefault(), "Armadura mágica: %d", finalMarmor));
+            if (Math.floor(finalMarmor / 5) != 0)
+                _detailMarmor.setText(String.format("%s (evitará como mínimo %s punto/s de daño mágico)", _detailMarmor.getText(), ((int) Math.floor(finalMarmor/5))));
+        } else {
+            _detailArmor.setText(String.format(Locale.getDefault(), "Armadura: %d", finalArmor));
+            if (Math.floor(finalArmor) != 0)
+                _detailArmor.setText(String.format("%s (evitará %s punto/s de daño)", _detailArmor.getText(), ((int) Math.floor(finalArmor/5))));
+            _detailMarmor.setText(String.format(Locale.getDefault(), "Armadura mágica: %d", finalMarmor));
+            if (Math.floor(finalMarmor) != 0)
+                _detailMarmor.setText(String.format("%s (evitará %s punto/s de daño mágico)", _detailMarmor.getText(), ((int) Math.floor(finalMarmor/5))));
+        }
+    }
+
     public void updateDetail() {
         Glide.with(this).load(_c.getCharImg()).asBitmap().into(_civ);
         _detailName.setText(_c.getCharName());
@@ -100,10 +161,11 @@ public class Detail extends AppCompatActivity {
         _detailSABVal.setText(String.valueOf(_c.getCharSab()));
         _detailAGIVal.setText(String.valueOf(_c.getCharAgi()));
         _detailVOLVal.setText(String.valueOf(_c.getCharVol()));
+        _detailENCVal.setText(String.valueOf(_c.getCharEnc()));
         _detailPV.setText(String.format(Locale.getDefault(), "%d / %d", _c.getCharPv(), _c.getCharMaxpv()));
         _detailPE.setText(String.format(Locale.getDefault(), "%d / %d", _c.getCharPe(), _c.getCharMaxpe()));
-        _detailArmor.setText(String.format(Locale.getDefault(), "Armadura: %d (evitará como mínimo %s puntos de daño)", _c.getCharArmor(), Math.floor(_c.getCharArmor() / 5)));
-        _detailMarmor.setText(String.format(Locale.getDefault(), "Armadura mágica: %d (evitará como mínimo %s puntos de daño mágico)", _c.getCharMarmor(), Math.floor(_c.getCharMarmor() / 5)));
+        updateWeapons();
+        updateEquipment();
         _goldQuantity.setText(String.valueOf(_c.getCharGold()));
         MainActivity.get_ma().updateList(_c, _pos);
     }
@@ -513,5 +575,114 @@ public class Detail extends AppCompatActivity {
             d.dismiss();
         });
         d.show();
+    }
+
+    public void addWeapon(View view) {
+        int position = 0;
+        if (view.equals(findViewById(R.id.weapon0add))) position = 0;
+        else if (view.equals(findViewById(R.id.weapon1add))) position = 1;
+        else if (view.equals(findViewById(R.id.weapon2add))) position = 2;
+        else if (view.equals(findViewById(R.id.weapon3add))) position = 3;
+        String[] myWeapons = _c.getCharWeapons().split("XNEWX");
+        final Dialog d = new Dialog(this);
+        d.setContentView(R.layout.addweapon);
+        d.getWindow().setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        d.show();
+        Spinner s = d.findViewById(R.id.newWeaponSpinner);
+        ArrayAdapter<CharSequence> weaponSpinner = ArrayAdapter.createFromResource(this, R.array.dados, R.layout.spinner);
+        weaponSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        s.setAdapter(weaponSpinner);
+        int finalPosition = position;
+        d.findViewById(R.id.createWeaponButton).setOnClickListener(v -> {
+            TextView myName = d.findViewById(R.id.createWeaponName);
+            if (myName.getText().toString().equals("")) myName.setText(R.string.genericWeapon);
+            TextView addDmg = d.findViewById(R.id.createWeaponDmg);
+            TextView diceMult = d.findViewById(R.id.newWeaponMult);
+            if (diceMult.getText().toString().equals("")) diceMult.setText("1");
+            String name = myName.getText().toString();
+            String dmg = "";
+            if (!s.getSelectedItem().toString().equals("-"))
+                dmg += diceMult.getText().toString() + s.getSelectedItem();
+            if (!addDmg.getText().toString().equals("")) {
+                if (!s.getSelectedItem().toString().equals("-")) dmg += " + ";
+                dmg += addDmg.getText().toString();
+            }
+            if (dmg.equals("")) dmg = "-";
+            myWeapons[finalPosition] = name + "XPARTX" + dmg;
+            String newWeapon = "";
+            for (int i = 0; i < myWeapons.length; i++) {
+                if (i != 0) newWeapon += "XNEWX";
+                newWeapon += myWeapons[i];
+            }
+            _c.setCharWeapons(newWeapon);
+            updateWeapons();
+            d.dismiss();
+        });
+
+    }
+
+    public void removeWeapon(View view) {
+        int position = 0;
+        if (view.equals(findViewById(R.id.weapon0remove))) position = 0;
+        else if (view.equals(findViewById(R.id.weapon1remove))) position = 1;
+        else if (view.equals(findViewById(R.id.weapon2remove))) position = 2;
+        else if (view.equals(findViewById(R.id.weapon3remove))) position = 3;
+        String[] myWeapons = _c.getCharWeapons().split("XNEWX");
+        myWeapons[position] = "-XPARTX-";
+        String newWeapon = "";
+        for (int i = 0; i < myWeapons.length; i++) {
+            if (i != 0) newWeapon += "XNEWX";
+            newWeapon += myWeapons[i];
+        }
+        _c.setCharWeapons(newWeapon);
+        updateWeapons();
+    }
+
+    public void addEquipment(View view) {
+        int position = 0;
+        if (view.equals(findViewById(R.id.equip0add))) position = 0;
+        else if (view.equals(findViewById(R.id.equip1add))) position = 1;
+        else if (view.equals(findViewById(R.id.equip2add))) position = 2;
+        else if (view.equals(findViewById(R.id.equip3add))) position = 3;
+        String[] myEquipment = _c.getCharEquip().split("XNEWX");
+        final Dialog d = new Dialog(this);
+        d.setContentView(R.layout.addequipment);
+        d.getWindow().setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        d.show();
+        int finalPosition = position;
+        d.findViewById(R.id.createEquipmentButton).setOnClickListener(v -> {
+            EditText name = d.findViewById(R.id.createEquipName);
+            if (name.getText().toString().equals("")) name.setText(R.string.genericArmor);
+            EditText armor = d.findViewById(R.id.createEquipValue);
+            if (armor.getText().toString().equals("")) armor.setText("0");
+            EditText marmor = d.findViewById(R.id.createEquipValueM);
+            if (marmor.getText().toString().equals("")) marmor.setText("0");
+            myEquipment[finalPosition] = name.getText().toString()+"XPARTX"+armor.getText().toString()+" / "+marmor.getText().toString();
+            String newEquip = "";
+            for (int i = 0; i < myEquipment.length; i++) {
+                if (i != 0) newEquip += "XNEWX";
+                newEquip += myEquipment[i];
+            }
+            _c.setCharEquip(newEquip);
+            updateEquipment();
+            d.dismiss();
+        });
+    }
+
+    public void removeEquipment(View view) {
+        int position = 0;
+        if (view.equals(findViewById(R.id.equip0remove))) position = 0;
+        else if (view.equals(findViewById(R.id.equip1remove))) position = 1;
+        else if (view.equals(findViewById(R.id.equip2remove))) position = 2;
+        else if (view.equals(findViewById(R.id.equip3remove))) position = 3;
+        String[] myEquipment = _c.getCharEquip().split("XNEWX");
+        myEquipment[position] = "-XPARTX0 / 0";
+        String newEquip = "";
+        for (int i = 0; i < myEquipment.length; i++) {
+            if (i != 0) newEquip += "XNEWX";
+            newEquip += myEquipment[i];
+        }
+        _c.setCharEquip(newEquip);
+        updateEquipment();
     }
 }

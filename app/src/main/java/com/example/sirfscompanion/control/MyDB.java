@@ -18,6 +18,7 @@ public class MyDB {
     public final static String CHAR_TABLE = "characters"; // name of table
 
     public final static String CHAR_ID = "_id";
+    public final static String CHAR_EDITION = "edition";
     public final static String CHAR_NAME = "name";
     public final static String CHAR_IMG = "img";
     public final static String CHAR_CRDATE = "crdate";
@@ -31,6 +32,7 @@ public class MyDB {
     public final static String CHAR_SAB = "sab";
     public final static String CHAR_AGI = "agi";
     public final static String CHAR_VOL = "vol";
+    public final static String CHAR_ENC = "enc";
     public final static String CHAR_PV = "pv";
     public final static String CHAR_MAXPV = "maxpv";
     public final static String CHAR_PE = "pe";
@@ -60,6 +62,7 @@ public class MyDB {
     public static long createChar(Char c) {
         ContentValues values = new ContentValues();
         values.put(CHAR_ID, nextId());
+        values.put(CHAR_EDITION, c.getCharEdition());
         values.put(CHAR_NAME, c.getCharName());
         values.put(CHAR_IMG, c.getCharImg());
         values.put(CHAR_CRDATE, c.getCharDate());
@@ -73,6 +76,7 @@ public class MyDB {
         values.put(CHAR_SAB, c.getCharSab());
         values.put(CHAR_AGI, c.getCharAgi());
         values.put(CHAR_VOL, c.getCharVol());
+        values.put(CHAR_ENC, c.getCharEnc());
         values.put(CHAR_PV, c.getCharPv());
         values.put(CHAR_MAXPV, c.getCharMaxpv());
         values.put(CHAR_PE, c.getCharPe());
@@ -94,6 +98,7 @@ public class MyDB {
 
     public static long updateChar(Char c) {
         ContentValues values = new ContentValues();
+        values.put(CHAR_NAME, c.getCharEdition());
         values.put(CHAR_NAME, c.getCharName());
         values.put(CHAR_IMG, c.getCharImg());
         values.put(CHAR_CRDATE, c.getCharDate());
@@ -107,6 +112,7 @@ public class MyDB {
         values.put(CHAR_SAB, c.getCharSab());
         values.put(CHAR_AGI, c.getCharAgi());
         values.put(CHAR_VOL, c.getCharVol());
+        values.put(CHAR_ENC, c.getCharEnc());
         values.put(CHAR_PV, c.getCharPv());
         values.put(CHAR_MAXPV, c.getCharMaxpv());
         values.put(CHAR_PE, c.getCharPe());
@@ -132,7 +138,7 @@ public class MyDB {
 
     public static Cursor selectAll() {
         try {
-            String[] cols = new String[]{CHAR_ID, CHAR_NAME, CHAR_IMG, CHAR_CRDATE, CHAR_LEVEL, CHAR_RACE, CHAR_CLASS, CHAR_FUE, CHAR_DES, CHAR_PUN, CHAR_INT, CHAR_SAB, CHAR_AGI, CHAR_VOL, CHAR_PV,
+            String[] cols = new String[]{CHAR_ID, CHAR_EDITION, CHAR_NAME, CHAR_IMG, CHAR_CRDATE, CHAR_LEVEL, CHAR_RACE, CHAR_CLASS, CHAR_FUE, CHAR_DES, CHAR_PUN, CHAR_INT, CHAR_SAB, CHAR_AGI, CHAR_VOL, CHAR_ENC, CHAR_PV,
                     CHAR_MAXPV, CHAR_PE, CHAR_MAXPE, CHAR_ARMOR, CHAR_MARMOR, CHAR_CRITBONUS, CHAR_CRITDMGBONUS, CHAR_SPELLBONUS, CHAR_WEAPONS, CHAR_EQUIP, CHAR_RELICS, CHAR_SKILLS, CHAR_BONUS, CHAR_GOLD, CHAR_INVENTORY};
             Cursor mCursor;
             mCursor = database.query(true, CHAR_TABLE, cols, null
@@ -183,34 +189,46 @@ public class MyDB {
         database.update(CHAR_TABLE, cv, "_id = ?", new String[]{String.valueOf(id)});
     }
 
+    public static void updateWeapons(int id, String weapons) {
+        ContentValues cv = new ContentValues();
+        cv.put(CHAR_WEAPONS, weapons);
+        database.update(CHAR_TABLE, cv, "_id = ?", new String[]{String.valueOf(id)});
+    }
+
+    public static void updateEquipment(int id, String equipment) {
+        ContentValues cv = new ContentValues();
+        cv.put(CHAR_EQUIP, equipment);
+        database.update(CHAR_TABLE, cv, "_id = ?", new String[]{String.valueOf(id)});
+    }
+
     public void insertTest() {
-        Char c = new Char("Toni Taronges", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.alchemist), "2020-03-01", 5, "Humano", "Alquimista", 0, 0, 0, 0, 0, 0, 0, 14, 20, 18, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 3 8 9 14", "", 300, "");
+        Char c = new Char("Toni Taronges", "1", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.alchemist), "2020-03-01", 5, "Humano", "Alquimista", 0, 0, 0, 0, 0, 0, 0, 0, 14, 20, 18, 20, 10, 0, 3, 1, 0, "SableXPARTX1d3+FUEXNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 3 8 9 14", "", 300, "PelotaXPARTXPlay with it!XPARTX2");
         createChar(c);
-        c = new Char("Tomeu Tomàtiga", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.assassin), "2020-03-01", 5, "Elfo del Este", "Asesino", -2, -1, 0, +2, +1, 0, 0, 14, 17, 17, 26, 10, 0, 3, 1, 0, "", "", "", "0 1 2 3 8 11 12", "", 100, "");
+        c = new Char("Tomeu Tomàtiga", "2", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.assassin), "2020-03-01", 5, "Elfo del Este", "Asesino", -2, -1, 0, +2, +1, 0, 0, 1, 14, 17, 17, 26, 10, 0, 3, 1, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 3 8 11 12", "", 100, "");
         createChar(c);
-        c = new Char("Lluc Llimona", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.barbarian), "2020-03-02", 5, "Elfo del Oeste", "Bárbaro", -2, -1, 0, +2, +1, 0, 0, 14, 17, 17, 26, 10, 0, 3, 1, 0, "", "", "", "0 1 2 5 7 9 12", "", 100, "");
+        c = new Char("Lluc Llimona", "1", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.barbarian), "2020-03-02", 5, "Elfo del Oeste", "Bárbaro", -2, -1, 0, +2, +1, 0, 0, 0, 14, 17, 17, 26, 10, 0, 3, 1, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 5 7 9 12", "", 100, "");
         createChar(c);
-        c = new Char("Simó Sopes", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.bard), "2020-03-02", 5, "Crunisio", "Bardo", -2, -1, 0, +2, +1, 0, 0, 14, 17, 17, 26, 10, 0, 3, 1, 0, "", "", "", "0 1 2 5 6 11 14", "", 100, "");
+        c = new Char("Simó Sopes", "2", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.bard), "2020-03-02", 5, "Crunisio", "Bardo", -2, -1, 0, +2, +1, 0, 0, 2, 14, 17, 17, 26, 10, 0, 3, 1, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 5 6 11 14", "", 100, "");
         createChar(c);
-        c = new Char("Carles Cirera", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hunter), "2020-03-03", 5, "Orco", "Cazador", 3, 0, -2, -2, -1, -1, 1, 14, 26, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 4 8 11 13", "", 100, "");
+        c = new Char("Carles Cirera", "1", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hunter), "2020-03-03", 5, "Orco", "Cazador", 3, 0, -2, -2, -1, -1, 1, 0, 14, 26, 17, 20, 10, 0, 3, 1, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 4 8 11 13", "", 100, "");
         createChar(c);
-        c = new Char("Xisco Ximbomba", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.druid), "2020-03-03", 5, "Enano", "Druida", 2, 0, -1, 0, -1, -2, 1, 14, 26, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 4 8 11 13", "", 100, "");
+        c = new Char("Xisco Ximbomba", "2", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.druid), "2020-03-03", 5, "Enano", "Druida", 2, 0, -1, 0, -1, -2, 1, 3, 14, 26, 17, 20, 10, 0, 3, 1, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 4 8 11 13", "", 100, "");
         createChar(c);
-        c = new Char("Pep Pilotes", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.arcane), "2020-03-04", 5, "Dracónido", "Elementarista - Arcano", 2, 0, -1, 0, 0, -2, 1, 14, 26, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 4 6 10 13", "DRAC1 DRAC3", 100, "");
+        c = new Char("Pep Pilotes", "1", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.arcane), "2020-03-04", 5, "Dracónido", "Elementarista - Arcano", 2, 0, -1, 0, 0, -2, 1, 0, 14, 26, 17, 20, 10, 0, 3, 1, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 4 6 10 13", "DRAC1 DRAC3", 100, "");
         createChar(c);
-        c = new Char("Frit de Matançes", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.fire), "2020-03-04", 5, "Vaark", "Elementarista - Fuego", 2, 0, -1, 0, 0, -2, 1, 14, 26, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 4 8 11 12", "", 100, "");
+        /*c = new Char("Frit de Matançes", "2", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.fire), "2020-03-04", 5, "Vaark", "Elementarista - Fuego", 2, 0, -1, 0, 0, -2, 1, 4, 14, 26, 17, 20, 10, 0, 3, 1, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 4 8 11 12", "", 100, "");
         createChar(c);
-        c = new Char("Tòfol Truita", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.ice), "2020-03-04", 5, "Félido", "Elementarista - Hielo", 2, 0, -1, 0, 0, -2, 1, 14, 26, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 3 7 11 13", "", 100, "");
+        c = new Char("Tòfol Truita", "1", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.ice), "2020-03-04", 5, "Félido", "Elementarista - Hielo", 2, 0, -1, 0, 0, -2, 1, 0, 14, 26, 17, 20, 10, 0, 3, 1, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 3 7 11 13", "", 100, "");
         createChar(c);
-        c = new Char("Andreu Avellana", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.earth), "2020-03-04", 5, "Humano", "Elementarista - Tierra", 2, 0, -1, 0, 0, -2, 1, 14, 26, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 5 6 9 12", "", 100, "");
+        c = new Char("Andreu Avellana", "2", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.earth), "2020-03-04", 5, "Humano", "Elementarista - Tierra", 2, 0, -1, 0, 0, -2, 1, 5, 14, 26, 17, 20, 10, 0, 3, 1, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 5 6 9 12", "", 100, "");
         createChar(c);
-        c = new Char("Miquel Mitjançant", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.warrior), "2020-03-05", 5, "Elfo del Este", "Guerrero", 2, 0, -1, 0, 0, -2, 1, 14, 26, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 5 6 9 12", "", 100, "");
+        c = new Char("Miquel Mitjançant", "1", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.warrior), "2020-03-05", 5, "Elfo del Este", "Guerrero", 2, 0, -1, 0, 0, -2, 1, 0, 14, 26, 17, 20, 10, 0, 3, 1, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 5 6 9 12", "", 100, "");
         createChar(c);
-        c = new Char("Pere Pera", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.monk), "2020-03-05", 5, "Elfo del Oeste", "Monje", 2, 0, -1, 0, 0, -2, 1, 14, 26, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 3 8 11 14", "", 100, "");
+        c = new Char("Pere Pera", "2", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.monk), "2020-03-05", 5, "Elfo del Oeste", "Monje", 2, 0, -1, 0, 0, -2, 1, 6, 14, 26, 17, 20, 10, 0, 3, 1, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 3 8 11 14", "", 100, "");
         createChar(c);
-        c = new Char("Queco Quetglas", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.necromancer), "2020-03-05", 5, "Crunisio", "Nigromante", 2, 0, -1, 0, 0, -2, 1, 14, 26, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 3 7 10 13", "", 100, "");
+        c = new Char("Queco Quetglas", "1", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.necromancer), "2020-03-05", 5, "Crunisio", "Nigromante", 2, 0, -1, 0, 0, -2, 1, 0, 14, 26, 17, 20, 10, 0, 3, 1, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 3 7 10 13", "", 100, "");
         createChar(c);
-        c = new Char("Biel Bimbolla", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.paladin), "2020-03-05", 5, "Orco", "Paladín", 2, 0, -1, 0, 0, -2, 1, 14, 26, 17, 20, 10, 0, 3, 1, 0, "", "", "", "0 1 2 4 7 11 13", "", 100, "");
-        createChar(c);
+        c = new Char("Biel Bimbolla", "2", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.paladin), "2020-03-05", 5, "Orco", "Paladín", 2, 0, -1, 0, 0, -2, 1, 7, 14, 26, 17, 20, 10, 0, 3, 1, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 4 7 11 13", "", 100, "");
+        createChar(c);*/
     }
 }

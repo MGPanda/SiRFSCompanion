@@ -44,7 +44,7 @@ public class RecyclerAdapterInventory extends RecyclerView.Adapter<RecyclerAdapt
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.bind(position);
+        holder.bind();
     }
 
     @Override
@@ -62,23 +62,37 @@ public class RecyclerAdapterInventory extends RecyclerView.Adapter<RecyclerAdapt
             this._itemQuantity = itemView.findViewById(R.id.itemQuantity);
         }
 
-        public void bind(final int position) {
-            String[] item = _al.get(position).split("XPARTX");
+        public void bind() {
+            String[] item = _al.get(getAdapterPosition()).split("XPARTX");
             this._itemName.setText(item[0]);
             this._itemType.setText(item[1]);
             this._itemQuantity.setText(item[2]);
             this.itemView.findViewById(R.id.itemSub).setOnClickListener(v -> {
                 if (item[2].equals("1")) {
-                    _al.remove(position);
-                    notifyItemRemoved(position);
+                    _al.remove(getAdapterPosition());
+                    notifyItemRemoved(getAdapterPosition());
                 } else {
-                    _al.set(position, item[0] + "XPARTX" + item[1] + "XPARTX" + (Integer.parseInt(item[2]) - 1));
-                    notifyItemChanged(position);
+                    _al.set(getAdapterPosition(), item[0] + "XPARTX" + item[1] + "XPARTX" + (Integer.parseInt(item[2]) - 1));
+                    notifyItemChanged(getAdapterPosition());
                 }
+                String ninv = "";
+                for (int i = 0; i < _al.size(); i++) {
+                    if (i != 0) ninv += "XNEWX";
+                    ninv += _al.get(i);
+                }
+                _ch.setCharInventory(ninv);
+                MyDB.updateInv(_ch.getCharId(), ninv);
             });
             this.itemView.findViewById(R.id.itemAdd).setOnClickListener(v -> {
-                _al.set(position, item[0] + "XPARTX" + item[1] + "XPARTX" + (Integer.parseInt(item[2]) + 1));
-                notifyItemChanged(position);
+                _al.set(getAdapterPosition(), item[0] + "XPARTX" + item[1] + "XPARTX" + (Integer.parseInt(item[2]) + 1));
+                notifyItemChanged(getAdapterPosition());
+                String ninv = "";
+                for (int i = 0; i < _al.size(); i++) {
+                    if (i != 0) ninv += "XNEWX";
+                    ninv += _al.get(i);
+                }
+                _ch.setCharInventory(ninv);
+                MyDB.updateInv(_ch.getCharId(), ninv);
             });
         }
     }

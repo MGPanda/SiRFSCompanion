@@ -8,6 +8,7 @@ import java.io.Serializable;
 
 public class Char implements Serializable {
     private int CHAR_ID;
+    private String CHAR_EDITION;
     private String CHAR_NAME;
     private byte[] CHAR_IMG;
     private String CHAR_CRDATE;
@@ -21,6 +22,7 @@ public class Char implements Serializable {
     private int CHAR_SAB;
     private int CHAR_AGI;
     private int CHAR_VOL;
+    private int CHAR_ENC;
     private int CHAR_PV;
     private int CHAR_MAXPV;
     private int CHAR_PE;
@@ -40,40 +42,43 @@ public class Char implements Serializable {
 
     public Char(Cursor cu) {
         this.CHAR_ID = cu.getInt(0);
-        this.CHAR_NAME = cu.getString(1);
-        this.CHAR_IMG = cu.getBlob(2);
-        this.CHAR_CRDATE = cu.getString(3);
-        this.CHAR_LEVEL = cu.getInt(4);
-        this.CHAR_RACE = cu.getString(5);
-        this.CHAR_CLASS = cu.getString(6);
-        this.CHAR_FUE = cu.getInt(7);
-        this.CHAR_DES = cu.getInt(8);
-        this.CHAR_PUN = cu.getInt(9);
-        this.CHAR_INT = cu.getInt(10);
-        this.CHAR_SAB = cu.getInt(11);
-        this.CHAR_AGI = cu.getInt(12);
-        this.CHAR_VOL = cu.getInt(13);
-        this.CHAR_PV = cu.getInt(14);
-        this.CHAR_MAXPV = cu.getInt(15);
-        this.CHAR_PE = cu.getInt(16);
-        this.CHAR_MAXPE = cu.getInt(17);
-        this.CHAR_ARMOR = cu.getInt(18);
-        this.CHAR_MARMOR = cu.getInt(19);
-        this.CHAR_CRITBONUS = cu.getInt(20);
-        this.CHAR_CRITDMGBONUS = cu.getInt(21);
-        this.CHAR_SPELLBONUS = cu.getInt(22);
-        this.CHAR_WEAPONS = cu.getString(23);
-        this.CHAR_EQUIP = cu.getString(24);
-        this.CHAR_RELICS = cu.getString(25);
-        this.CHAR_SKILLS = cu.getString(26);
-        this.CHAR_BONUS = cu.getString(27);
-        this.CHAR_GOLD = cu.getInt(28);
-        this.CHAR_INVENTORY = cu.getString(29);
+        this.CHAR_EDITION = cu.getString(1);
+        this.CHAR_NAME = cu.getString(2);
+        this.CHAR_IMG = cu.getBlob(3);
+        this.CHAR_CRDATE = cu.getString(4);
+        this.CHAR_LEVEL = cu.getInt(5);
+        this.CHAR_RACE = cu.getString(6);
+        this.CHAR_CLASS = cu.getString(7);
+        this.CHAR_FUE = cu.getInt(8);
+        this.CHAR_DES = cu.getInt(9);
+        this.CHAR_PUN = cu.getInt(10);
+        this.CHAR_INT = cu.getInt(11);
+        this.CHAR_SAB = cu.getInt(12);
+        this.CHAR_AGI = cu.getInt(13);
+        this.CHAR_VOL = cu.getInt(14);
+        this.CHAR_ENC = cu.getInt(15);
+        this.CHAR_PV = cu.getInt(16);
+        this.CHAR_MAXPV = cu.getInt(17);
+        this.CHAR_PE = cu.getInt(18);
+        this.CHAR_MAXPE = cu.getInt(19);
+        this.CHAR_ARMOR = cu.getInt(20);
+        this.CHAR_MARMOR = cu.getInt(21);
+        this.CHAR_CRITBONUS = cu.getInt(22);
+        this.CHAR_CRITDMGBONUS = cu.getInt(23);
+        this.CHAR_SPELLBONUS = cu.getInt(24);
+        this.CHAR_WEAPONS = cu.getString(25);
+        this.CHAR_EQUIP = cu.getString(26);
+        this.CHAR_RELICS = cu.getString(27);
+        this.CHAR_SKILLS = cu.getString(28);
+        this.CHAR_BONUS = cu.getString(29);
+        this.CHAR_GOLD = cu.getInt(30);
+        this.CHAR_INVENTORY = cu.getString(31);
     }
 
-    public Char(String name, Bitmap img, String date, int level, String race, String mClass, int fue, int des, int pun, int mInt, int sab, int agi, int vol, int pv, int maxpv, int pe, int maxpe, int armor, int marmor, int critbonus,
-                int critdmgbonus, int spellbonus, String weapons, String equip, String relics, String skills, String bonus, int gold, String inventory) {
+    public Char(String name, String edition, Bitmap img, String date, int level, String race, String mClass, int fue, int des, int pun, int mInt, int sab, int agi, int vol, int enc, int pv, int maxpv, int pe, int maxpe,
+                int armor, int marmor, int critbonus, int critdmgbonus, int spellbonus, String weapons, String equip, String relics, String skills, String bonus, int gold, String inventory) {
         this.CHAR_NAME = name;
+        this.CHAR_EDITION = edition;
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         img.compress(Bitmap.CompressFormat.JPEG, 20, baos);
         this.CHAR_IMG = baos.toByteArray();
@@ -88,6 +93,7 @@ public class Char implements Serializable {
         this.CHAR_SAB = sab;
         this.CHAR_AGI = agi;
         this.CHAR_VOL = vol;
+        this.CHAR_ENC = enc;
         this.CHAR_PV = pv;
         this.CHAR_MAXPV = maxpv;
         this.CHAR_PE = pe;
@@ -112,6 +118,14 @@ public class Char implements Serializable {
 
     public void setCharId(int charId) {
         CHAR_ID = charId;
+    }
+
+    public String getCharEdition() {
+        return CHAR_EDITION;
+    }
+
+    public void setCharEdition(String charEdition) {
+        CHAR_EDITION = charEdition;
     }
 
     public String getCharName() {
@@ -216,6 +230,14 @@ public class Char implements Serializable {
 
     public void setCharVol(int charVol) {
         CHAR_VOL = charVol;
+    }
+
+    public int getCharEnc() {
+        return CHAR_ENC;
+    }
+
+    public void setCharEnc(int charEnc) {
+        CHAR_ENC = charEnc;
     }
 
     public int getCharPv() {
