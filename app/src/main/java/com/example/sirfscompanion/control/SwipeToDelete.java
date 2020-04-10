@@ -4,8 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.sirfscompanion.firstEdition.RecyclerAdapter;
-
 public class SwipeToDelete extends ItemTouchHelper.SimpleCallback {
     private RecyclerAdapter mAdapter;
     /**

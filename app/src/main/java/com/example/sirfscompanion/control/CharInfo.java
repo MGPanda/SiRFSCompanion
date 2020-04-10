@@ -1,8 +1,7 @@
-package com.example.sirfscompanion.firstEdition;
+package com.example.sirfscompanion.control;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,7 +17,6 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.example.sirfscompanion.R;
-import com.example.sirfscompanion.control.MainActivity;
 import com.example.sirfscompanion.instanciables.Char;
 
 public class CharInfo extends AppCompatActivity {

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="races1e">
+    <string-array name="races2e">
         <item>Humano</item>
-        <item>Elfo del Este</item>
-        <item>Elfo del Oeste</item>
+        <item>Elfo Ulieano</item>
+        <item>Elfo Inali</item>
         <item>Crunisio</item>
         <item>Orco</item>
         <item>Enano</item>
@@ -11,8 +11,8 @@
         <item>Vaark</item>
         <item>Félido</item>
     </string-array>
-
-    <string-array name="racesDesc1e">
+    <!--TODO CAMBIAN LAS DESCRIPCIONES?-->
+    <string-array name="racesDesc2e">
         <item><![CDATA[A pesar de ser la raza más joven del mundo, los humanos han conseguido superar en número a todas las demás especies inteligentes y construir asentamientos en todos los confines del planeta, desde las costas de Yruk al este hasta las frondosas selvas occidentales al otro lado del mar, además de convivir con todas las otras razas en sus propias ciudades. Dondequiera que mires encontrarás humanos, y donde hay humanos hay también una vasta red de puertos mercantes entre los cuales circulan mercancías de todo tipo.
             <br><br>Además de por su capacidad para vivir en cualquier entorno, por hostil que pueda ser, los humanos tienen fama de tacaños y codiciosos, quizás debido a ser los inventores de la moneda, y también por la inestabilidad política de sus principados, cuyas fronteras cambian constantemente. A pesar de sus disputas internas y afán por el dinero, los humanos no dudarán en aliarse para enfrentarse a cualquier amenaza de otras razas y ayudar a aquellos que más lo necesiten. Una mentalidad algo contradictoria, sin duda, pero parece ser que les está funcionando.]]></item>
         <item><![CDATA[Altos, delgados, pálidos y de orejas puntiagudas, los elfos del este son seres nobles y longevos con talento innato por la magia, que estudian con fascinación desde que asentaron en la isla de Ulié, sobre la que construyeron impresionantes colegios de magia y universidades arcanas en el centro de sus preciosas ciudades.
@@ -33,19 +33,19 @@
         <br><br>Esta raza procedente de las junglas ecuatoriales de las Tierras de Poniente posee una temible reputación por su estilo de caza sin armas, acechando a sus presas desde las sombras esperando al momento oportuno para atacar. Lo peor de todo es que disfrutan con ello, y eso se ve reflejado en su retorcido sentido del humor.]]></item>
     </string-array>
 
-    <string-array name="racesStats1e">
-        <item>0 0 0 0 0 0 0 0 0</item>
-        <item>-2 -1 0 2 1 0 0 -3 6</item>
-        <item>0 1 2 0 0 1 0 -3 -3</item>
-        <item>1 0 0 1 1 0 1 0 0</item>
-        <item>3 0 -2 -2 -1 -1 1 6 0</item>
-        <item>2 0 -1 0 -1 -2 1 6 0</item>
-        <item>2 0 -1 0 0 -2 1 6 0</item>
-        <item>-1 -1 -2 1 2 1 0 0 3</item>
-        <item>-1 2 0 -1 -1 3 0 -3 3</item>
+    <string-array name="racesStats2e">
+        <item>0 0 0 0 0 0 0 0 0 0</item>
+        <item>-2 -1 0 2 1 0 0 0 -3 6</item>
+        <item>-1 1 2 0 0 1 0 0 -3 -3</item>
+        <item>1 0 0 1 1 0 1 -1 0 0</item>
+        <item>3 1 -2 -2 -1 -1 1 -1 6 0</item>
+        <item>1 0 1 0 -1 -2 1 0 3 0</item>
+        <item>2 0 -1 -1 0 -2 1 0 6 0</item>
+        <item>-1 -1 -2 1 2 1 0 1 -3 3</item>
+        <item>-1 2 0 -1 -1 3 -2 2 -3 3</item>
     </string-array>
-
-    <string-array name="racesBonus1e">
+    <!--TODO CAMBIAR NOMBRES-->
+    <string-array name="racesBonus2e">
         <item>Adaptabilidad
             XNEWXMercado Gris</item>
         <item>Conocimiento arcano
@@ -59,16 +59,14 @@
         <item>¡Cerveza!
         XNEWXHígado de hierro</item>
         <item>Piel escamosa
-        XNEWXAliento de fuego
-        XNEWXVoracidad
-        XNEWXSangre fría</item>
+        XNEWXVoracidad</item>
         <item>Tradición chamanística
             XNEWXHervíboros
         </item>
         <item>Visión felina</item>
     </string-array>
-
-    <string-array name="racesBonusDesc1e">
+    <!--TODO POSIBLES CAMBIOS ADICIONALES?-->
+    <string-array name="racesBonusDesc2e">
         <item><![CDATA[<i>Aunque las diferencias entre un humano y otro sean mínimas, un observador hábil podrá apreciar fácilmente rasgos distintivos según el origen y la ocupación del sujeto.</i><br><br>A la hora de crear un personaje humano, el jugador podrá asignar un punto a un atributo de su elección (+5 si se trata de PE o PV).
             XNEWX<i>Aprovechándose de cualquier ambigüedad legislativa y vacío legal, los humanos han creado una enorme red de comercio libre de aranceles.</i><br><br>Los personajes humanos comienzan la partida con el triple de oro que las demás razas y acceso al Mercado Gris, presente en todas las ciudades portuarias del globo y en el que podrán comprar casi cualquier producto más barato que en tiendas convencionales.]]></item>
         <item><![CDATA[<i>Entre otras cosas, la educación recibida en Ulié incluye numerosas lecciones sobre la magia y el arte del encantamiento.</i><br><br>Los elfos del este comienzan la partida con la capacidad para identificar objetos mágicos y sus efectos. Además, todo el daño causado con armas mágicas aumenta en 1 por nivel.
@@ -81,18 +79,16 @@
         XNEWX<i>A los orcos les encanta desmembrar, mutilar y poner los cadáveres en posiciones estúpidas. Si pudieran tomar fotos, seguro que lo harían.</i><br><br>Al saquear un cadáver, los orcos pueden mancillarlo (a discreción del jugador) para obtener 1D10 monedas de oro adicionales. No obstante, tal acto es detestable y repulsivo a ojos de las demás razas inteligentes.]]></item>
         <item><![CDATA[<i>Aproximadamente un 80% de todos los enanos padece de alcoholismo.</i><br><br>Además de una ración de comida al día, los personajes enanos deberán beber una buena jarra de cerveza (u otra bebida alcohólica en su defecto) o se pondrán muy furiosos (y no recuperarán PV al dormir).
         XNEWX<i>Coincidentemente, aproximadamente un 80% de todos los enanos poseen un hígado a prueba de bombas.</i><br><br>Mientras los enanos estén bajo los efectos del alcohol, obtendrán +1 VOL y no perderán atributos debido a la embriaguez.]]></item>
-        <item><![CDATA[<i>Como la gran mayoría de reptiles, los dracónidos poseen una gruesa capa de resistentes escamas capaces de soportar mordiscos y arañazos con facilidad.</i><br><br>Los dracónidos que elijan esta bonificación racial obtendrán pasivamente +7 a la armadura, independientemente del equipamiento que lleven.
-        XNEWX<i>Algunos de los dracónidos que nacen cerca de los volcanes del sur poseen la capacidad de escupir fuego.</i><br><br>Una vez al día, los dracónidos con esta bonificación racial podrán escupir fuego como acción principal, infligiendo 1D3xNivel puntos de daño a un único objetivo a distancia cuerpo a cuerpo.
-        XNEWX<i>No es sorprendente que una criatura tan colosal como un dracónido necesite tanta comida.</i><br><br>Los dracónidos que elijan esta penalización racial necesitarán comer dos raciones de comida al día para poder recuperar PV al dormir.
-        XNEWX<i>Como reptiles que son, los dracónidos son criaturas de sangre fría. Algo curioso, teniendo en cuenta que algunos son capaces de escupir fuego.</i><br><br>Los dracónidos que elijan esta penalización racial siempre jugarán su turno en último lugar en la primera ronda de combate.]]></item>
-        <item><![CDATA[<i>Transmitidos de generación en generación desde tiempos inmemoriales, los métodos medicinales vaark son indudablemente eficaces.</i><br><br>Los personajes vaark obtienen un +2 al lanzamiento de hechizos de curación.
+        <item><![CDATA[<i>Como la gran mayoría de reptiles, los dracónidos poseen una gruesa capa de resistentes escamas capaces de soportar mordiscos y arañazos con facilidad.</i><br><br>Los dracónidos que elijan esta bonificación racial obtendrán pasivamente +5 a la armadura, independientemente del equipamiento que lleven.
+        XNEWX<i>No es sorprendente que una criatura tan colosal como un dracónido necesite tanta comida.</i><br><br>Los dracónidos que elijan esta penalización racial necesitarán comer dos raciones de comida al día para poder recuperar PV al dormir.]]></item>
+        <item><![CDATA[<i>Transmitidos de generación en generación desde tiempos inmemoriales, los métodos medicinales vaark son indudablemente eficaces.</i><br><br>Los personajes vaark obtienen un +1 al lanzamiento de hechizos de curación.
         XNEWX<i>Los vaark nunca comen carne. No sabemos si es porque no quieren o porque no pueden, y si se lo preguntas, cambiarán de tema.</i><br><br>Los personajes vaark no pueden alimentarse de carne, pescado o huevos.]]></item>
         <item><![CDATA[<i>Al igual que sus parientes cuadrúpedos, los félidos poseen una excelente visión nocturna.</i><br><br>Los personajes félidos necesitan muchísima menos luz que las demás razas para poder ver, lo que les permite seguir empleando la vista en la oscuridad casi absoluta.]]></item>
     </string-array>
 
-    <string-array name="classes1e">
+    <string-array name="classes2e">
         <item>Alquimista</item>
-        <item>Asesino</item>
+        <item>Arcanista</item>
         <item>Bárbaro</item>
         <item>Bardo</item>
         <item>Cazador</item>
@@ -107,11 +103,13 @@
         <item>Paladín</item>
     </string-array>
 
-    <string-array name="classesDesc1e">
-        <item><![CDATA[<i>La alquimista surgió un domingo por la tarde cuando Ser Conrad Blancaluz, un noble crunisio con demasiado tiempo libre y demasiado poca sensatez, se preguntó qué pasaría si mezclaba sales de fuego con salsa picante de nabo lila. El incendio resultante, que destruyó por completo el palacete (y sus cejas) le sirvió de inspiración para fundar la primera academia de alquimia. Varios siglos después, la alquimia sigue siendo un arte basado en la experimentación, la cocina y las leyes de la probabilidad aplicadas, muy practicada por individuos insensatos e individuos que pierden la sensatez tras inhalar demasiados vapores químicos. En el campo de batalla son un peligro que ni ellos mismos pueden predecir, cocineros decentes y excelentes médicos, normalmente…</i>
-        <br><br><b>Objetos equipables:</b> Armadura ligera, armas de una mano (sin doble empuñadura), bastones, armas arrojadizas y armas de disparo pequeñas.]]></item>
-        <item><![CDATA[<i>Es muy difícil determinar el origen del oficio del asesino. Algunos historiadores defienden la tesis de que aparecieron junto a las primeras formas de gobierno, mientras que otros opinan que aparecieron en los principados humanos, poco después de la invención de la moneda. El hecho de que los buenos son invariablemente aquellos que no constan en los tratados de historia hace que estudiarlos sea una labor difícil. En cualquier caso, está claro que sus métodos no han cambiado demasiado. Se valen del sigilo y la infiltración, junto con algunas técnicas mágicas, para eliminar a su objetivo con un único y certero golpe, haciendo el menor ruido posible.</i>
-        <br><br><b>Objetos equipables:</b> Armadura ligera, armas de una mano, armas arrojadizas y armas de disparo pequeñas.]]></item>
+    <string-array name="classesDesc2e">
+        <item><![CDATA[<i>La alquimia surgió un domingo por la tarde cuando Ser Conrad Blancaluz, un noble crunisio con demasiado tiempo libre y demasiado poca sensatez, se preguntó qué pasaría si mezclaba sales de fuego con salsa picante de nabo lila. El incendio resultante, que destruyó por completo el palacete (y sus cejas) le sirvió de inspiración para fundar la primera academia de alquimia. Varios siglos después, la alquimia sigue siendo un arte basado en la experimentación, la cocina y las leyes de la probabilidad aplicadas, muy practicada por individuos insensatos e individuos que pierden la sensatez tras inhalar demasiados vapores químicos. En el campo de batalla son un peligro que ni ellos mismos pueden predecir, cocineros decentes y excelentes médicos, normalmente…</i>
+        <br><br><b>Objetos equipables:</b> Armadura ligera, armas de una mano (sin doble empuñadura), bastones, armas de disparo pequeñas.
+        <br><br><b>Conocimiento alquímico:</b> El alquimista obtiene +1 por nivel a todas sus tiradas para identificar plantas y compuestos alquímicos.]]></item>
+        <item><![CDATA[<i>A diferencia de otras disciplinas mágicas, más centradas en las aplicaciones prácticas que en la teoría, los arcanistas estudian el origen, funcionamiento y leyes por las que se rige la magia y cómo esta afecta a su entorno, además de nociones elementales de física para no partir el mundo en dos por accidente. Bajo el ingente volumen de áridos conocimientos que abarca el Arcano, sus estudiantes acaban desarrollando personalidades excéntricas y a menudo sufren de problemas de, digamos, dependencia hacia cierto tipo de sustancias, pues la vida académica desgasta la cordura de cualquiera. En cualquier caso no hay que subestimarlos; los que no enloquecen (e incluso algunos de los locos) son excelentes investigadores y cazadores de magos, expertos en contrarrestar cualquier tipo de hechizo, para luego devolver la jugada con alguno de su propio repertorio.</i>
+        <br><br><b>Objetos equipables:</b> Armadura ligera, armas de una mano (sin doble empuñadura), bastones.
+        <br><br><b>Detectar magia:</b> El entrenamiento básico del arcanista incluye diversas técnicas para detectar e identificar numerosas formas de magia. Cuando el personaje realice tiradas para inspeccionar, podrá saber también si hay algún objeto mágico, fuente de energía mágica, otros hechiceros o rastros de magia en las cercanías, además de poder identificar las peculiaridades y efectos de los objetos mágicos que encuentre.]]></item>
         <item><![CDATA[<i>Salvajes y temperamentales, los bárbaros disfrutan cortando cabezas (o en su defecto aplatando cráneos) y no dudan a la hora de lanzarse a la batalla completamente desprevovistos de armadura y empuñando armas en ambas manos. Con el tiempo (y el progreso de la civilización), la antigua disciplina marcial de golpear cosas con otras cosas hasta que una de las dos cosas hace "crac" se ha ido perdiendo, aunque todavía goza de cierta popularidad entre orcos e individuos de otras razas igual de musculosos y estúpidos.</i>
         <br><br><b>Objetos equipables:</b> Armas de una y dos manos, armas arrojadizas.]]></item>
         <item><![CDATA[<i>Muchos son los que practican el oficio de los bardos; músicos ambulantes que viajan de taberna en taberna con su instrumento a la espalda y tocando a cambio de vino y unas pocas monedas. Para la mayoría, no es un oficio muy lucrativo y la satisfacción de interpretar es suficiente recompensa, pero existen también algunos bardos que dedican su vida a la aventura, en busca de canciones perdidas que todavía conservan restos de su poder mágico con las que hallar la fama y la gloria.
@@ -138,37 +136,37 @@
         <br><br><b>Objetos equipables:</b> Armadura ligera y pesada, armas de una mano (sin doble empuñadura), armas de dos manos y escudos.]]></item>
     </string-array>
 
-    <string-array name="classesSkills1e">
+    <string-array name="classesSkills2e">
         <item>Poción mundana
-        XNEWXIntestinos férreos
-        XNEWXPólvora alquímica de Khizdushal
+        XNEWXRata de laboratorio
+        XNEWXMedicina de campaña
         XNEWXFrasco explosivo
         XNEWXPócima de muerte lenta
         XNEWXMutágeno de sapo
-        XNEWXMedicina de campaña
+        XNEWXPólvora alquímica de Khizdushal
         XNEWXMutágeno de halcón
         XNEWXCajita de luciérnagas comepiedra
         XNEWXArmadura quimiotécnica
         XNEWXMutágeno de troll de roca
         XNEWXEstallido gélido
-        XNEWXPesadilla de Midas
-        XNEWXMutágeno de Embaucador
+        XNEWXOpus Magnus
+        XNEWXOmnitágeno
         XNEWXConflagración Solar</item>
-        <item>Merodeador
-            XNEWXPuñalada
-            XNEWXGolpe Cruel
-            XNEWXPremeditación
-            XNEWXDiplomacia kernessiana
-            XNEWXPorrazo
-            XNEWXTirador
-            XNEWXPaso sombrío
-            XNEWXArlequín sangriento
-            XNEWXEficacia
-            XNEWXAsesinar
-            XNEWXEl perfecto espía
-            XNEWXFinal sangriento
-            XNEWXProfesional
-            XNEWXBurlar a la muerte</item>
+        <item>Proyectil arcano
+            XNEWXCondensador taumatúrgico
+            XNEWXDispersar
+            XNEWXSilenciar
+            XNEWXContrahechizo
+            XNEWXEspejo mágico
+            XNEWXPortal
+            XNEWXAura de negación
+            XNEWXRobar hechizo
+            XNEWXPoder desatado
+            XNEWXSalvaguarda mágica
+            XNEWXQuemadura arcana
+            XNEWXSingularidad arcana
+            XNEWXMaestro Arcanista
+            XNEWXFase dimensional</item>
         <item>Grito de batalla
         XNEWXBruto salvaje
         XNEWXGolpe poderoso
@@ -351,38 +349,38 @@
         XNEWXCampeón intachable</item>
     </string-array>
 
-    <string-array name="classesSkillsDesc1e">
-        <item><![CDATA[<i>Hechizo. Dificultad 2+, 2 PE por lanzamiento.</i><br><br>El alquimista combina diversos ingredientes alquímicos al azar sin preocuparse por los escasos protocolos de seguridad del oficio. Si el hechizo es lanzado con éxito, añade a tu inventario una poción mundana aleatoria (consulta la tabla alfinal del documento) que puede utilizarse sobre uno mismo o como arma arrojadiza, incluso durante el mismo turno en el que ha sido creada, si el alquimista lo deseara.
-        XNEWX<i>Pasiva.</i><br><br>Los alquimistas acostumbran a probar sus mezclas sobre ellos mismos, lo que les ha acabado confiriendo una mayor resistencia al veneno. El personaje posee un 50% de probabilidades de ignorar los efectos de cualquier veneno, toxina o enfermedad.
-        XNEWX<i>Habilidad. -2 para impactar. 2 PE por lanzamiento. Requiere un arma de fuego.</i><br><br>El alquimista reemplaza la pólvora corriente con una mezcla especial, que aumenta el daño infligido en 1D6+INT, pero aumentando también el riesgo de pifias a cualquier 3 o menos natural.
-        XNEWX<i>Habilidad. +0 para impactar, 2 PE por lanzamiento. Solo funciona con pociones mundanas.</i><br><br>El alquimista añade diversas sustancias explosivas a una poción antes de lanzarla. Si el lanzamiento impacta, el frasco explotará infligiendo 1D6+INT puntos de daño contra su objetivo y rociando a un objetivo adicional por cada 5 puntos de SAB del lanzador, que también se verá afectado por la poción.
-        XNEWX<i>Hechizo. Dificultad 12+, 4 PE por lanzamiento.</i><br><br>El alquimista prepara un horrible veneno y lo arroja contra un objetivo, infligiendo SAB puntos de daño inmediatamente, seguidos de 1D3 puntos de daño que ignoran la armadura del objetivo cada turno durante tres turnos.
-        XNEWX<i>Hechizo. Sin dificultad, 4 PE por lanzamiento.</i><br><br>El alquimista ingiere una serie de principios desvinculados de sapos y otros anfibios, lo que recubre su piel con desagradables verrugas y membranas en los dedos, pero proporcionando a cambio +1 al daño y a la sanación por nivel a todos los hechizos y habilidades del alquimista. El efecto permanece activo hasta utilizar otro mutágeno o hasta el final del día.
-        XNEWX<i>Hechizo. Dificultad 10+, 3 PE por lanzamiento.</i><br><br>El alquimista trata al objetivo con diversas pociones y elixires experimentales, restaurando 1D4+SAB puntos de salud y eliminando además cualquier veneno, enfermedad, sangrado o toxina.
-        XNEWX<i>Hechizo. Sin dificultad, 4 PE por lanzamiento.</i><br><br>El alquimista ingiere una serie de principios desvinculados de diversas aves rapaces, lo que provoca el crecimiento espontáneo de plumas, pero proporcionando a cambio +2 AGI y +3 PUN. El efecto permanece activo hasta utilizar otro mutágeno o hasta el final del día.
-        XNEWX<i>Hechizo. Dificultad 3+, 5 PE por lanzamiento. No puede usarse en combate.</i><br><br>El alquimista coloca una pequeña cajita de madera en una puerta o muro. Si se le prende fuego, la cajita rociará el objeto en el que estuviera pegado con pequeñas gotitas brillantes que disolverán la piedra muy ruidosamente, formando un agujero por el que poder pasar.
-        XNEWX<i>Pasiva.</i><br><br>El alquimista ensambla una armadura pesada experimental repleta de jeringas y tuberías por las que discurren varios líquidos. El personaje podrá equiparse con armadura pesada, y mientras la lleve, podrá utilizar una poción por turno sin contar como acción instantánea, incluso si estuviera inconsciente o muerto y aumentará su resistencia a venenos, toxinas y enfermedades al 75%.
-        XNEWX<i>Hechizo. Sin dificultad, 4 PE por lanzamiento.</i><br><br>El alquimista ingiere una serie de principios desvinculados de troll y diversos minerales, lo que recubre su piel con pedacitos de roca y callos, proporcionando +10 a la armadura, +10PV y +3 FUE. El efecto permanece activo hasta utilizar otro mutágeno o hasta el final del día.
-        XNEWX<i>Hechizo. Dificultad 13+, 4 PE por lanzamiento.</i><br><br>El alquimista lanza un bote de cerámica que explota en el aire y congela brevemente a 1D3 enemigos, infligiendo 1D4+INT puntos de daño y aturdiéndolos durante 1D3 turnos.
-        XNEWX<i>Hechizo. Dificultad 13+, 6 PE por lanzamiento.</i><br><br>El alquimista concentra todos sus esfuerzos en crear una poción capaz de convertir cualquier sustancia en oro. El objetivo seleccionado sufrirá 1D8+INT puntos de daño puro, o matándolo inmediatamente si el hechizo resulta crítico. Si <i>Pesadilla de Midas</i> mata a su objetivo, el cadáver y todas sus posesiones se convertirán en oro.
-        XNEWX<i>Hechizo. Sin dificultad, 4 PE por lanzamiento.</i><br><br>El alquimista ingiere una serie de principios desvinculados de demonio embaucador, lo que provocará que oiga voces infernales con malas intenciones en su cabeza, pero proporcionando +5 INT, +3 SAB y -1 VOL. El efecto permanece activo hasta utilizar otro mutágeno o hasta el final del día.
-        XNEWX<i>Hechizo canalizado. Dificultad 11+, 5 PE por lanzamiento + 3 PE por turno.</i><br><br>El alquimista crea e ingiere su obra maestra: Fuego solar purificado, que, tras ser ingerido, provocará que el alquimista expulse enormes llamaradas blancas por todos los poros de su cuerpo. Mientras el hechizo permanezca activo, todos los personajes en combate (incluyendo el alquimista y su grupo) sufrirán 1D12+INT puntos de daño puro por turno.]]></item>
+    <string-array name="classesSkillsDesc2e">
+        <item><![CDATA[<i>Hechizo. Sin dificultad, 2 PE por lanzamiento.</i><br><br>El alquimista combina diversos ingredientes alquímicos al azar sin preocuparse por los escasos protocolos de seguridad del oficio. Añade a tu inventario una poción mundana aleatoria (consulta la tabla más abajo) que puede utilizarse sobre uno mismo o como arma arrojadiza, incluso durante el mismo turno en el que ha sido creada, si el alquimista lo deseara.<br><br>Las pociones mundanas son altamente inestables y decaerán tras el siguiente amanecer, perdiendo su efecto.
+        XNEWX<i>Pasiva.</i><br><br>Los alquimistas acostumbran a probar sus mezclas sobre ellos mismos, lo que les ha acabado confiriendo una mayor resistencia al veneno. El personaje posee un 50% de probabilidades de ignorar los efectos de cualquier veneno, toxina o enfermedad.<br><br>Además, el alquimista recibirá +1 al crítico por cada 5 puntos de SAB y +1 a su reducción de coste de hechizos por cada 5 puntos de INT.
+        XNEWX<i>Hechizo. Dificultad 10+, 3 PE por lanzamiento.</i><br><br>El alquimista trata al objetivo con diversas pociones y elixires experimentales, restaurando SAB puntos de salud y eliminando además cualquier veneno, enfermedad, sangrado o toxina.
+        XNEWX<i>Habilidad. +0 para impactar, 3 PE por lanzamiento. Solo funciona con pociones mundanas.</i><br><br>El alquimista añade diversas sustancias explosivas a una poción antes de lanzarla. Si el lanzamiento impacta, el frasco explotará infligiendo 1D6+INT puntos de daño contra su objetivo y rociando a dos objetivos adicionales al azar (tanto amigos como enemigos), que también se verán afectados por la poción.
+        XNEWX<i>Hechizo. Dificultad 12+, 4 PE por lanzamiento.</i><br><br>El alquimista prepara un horrible veneno y lo arroja contra un objetivo, infligiendo SAB puntos de daño inmediatamente, seguidos de SAB puntos de daño que ignoran la armadura del objetivo durante 1D4 turnos.
+        XNEWX<i>Hechizo. Sin dificultad, 5 PE por lanzamiento.</i><br><br>El alquimista ingiere una serie de principios desvinculados de sapos y otros anfibios, lo que recubre su piel con desagradables verrugas y membranas en los dedos, pero proporcionando a cambio +1 al daño y a la sanación por nivel a todos los hechizos y habilidades del alquimista. El efecto permanece activo hasta utilizar otro mutágeno o hasta el final del día.
+        XNEWX<i>Habilidad. -2 para impactar. 2 PE por lanzamiento. Requiere un arma de fuego.</i><br><br>El alquimista reemplaza la pólvora corriente con una mezcla especial, que aumenta el daño infligido en 1D6+INT, pero aumentando también el riesgo de pifias a cualquier 3 o menos natural. Además, el alquimista obtendrá también la posibilidad de empuñar armas de disparo grandes.
+        XNEWX<i>Hechizo. Sin dificultad, 5 PE por lanzamiento.</i><br><br>El alquimista ingiere una serie de principios desvinculados de diversas aves rapaces, lo que provoca el crecimiento espontáneo de plumas, pero proporcionando a cambio +2 AGI, +3 PRE y la posibilidad de planear realizando chequeos de AGI. El efecto permanece activo hasta utilizar otro mutágeno o hasta el final del día.
+        XNEWX<i>Hechizo. Dificultad 3+, 5 PE por lanzamiento. No puede usarse en combate.</i><br><br>El alquimista coloca una pequeña cajita de madera en una puerta o muro. Si se le prende fuego, la cajita rociará el objeto en el que estuviera pegado con pequeñas gotitas brillantes que disolverán la piedra muy ruidosamente, formando una agujero por el que poder pasar.
+        XNEWX<i>Pasiva.</i><br><br>El alquimista ensambla una armadura pesada experimental repleta de jeringas y tuberías por las que discurren varios líquidos. El personaje podrá equiparse con armadura pesada y escudo. Mientras lleve al menos una pieza de armadura pesada podrá utilizar una poción por turno sin contar como acción instantánea, incluso si estuviera inconsciente o muerto, y aumentará su resistencia a venenos, toxinas y enfermedades al 75%.
+        XNEWX<i>Hechizo. Sin dificultad, 5 PE por lanzamiento.</i><br><br>El alquimista ingiere una serie de principios desvinculados de troll y diversos minerales, lo que recubre su piel con pedacitos de roca y callos, proporcionando +10 a la armadura, +10 PV y +3 FUE. El efecto permanece activo hasta utilizar otro mutágeno o hasta el final del día.
+        XNEWX<i>Hechizo. Dificultad 13+, 7 PE por lanzamiento.</i><br><br>El alquimista lanza un bote de cerámica que explota en el aire y congela brevemente al objetivo y a 1D3 objetivos cercanos, tanto amigos como enemigos, infligiendo 1D4+INT puntos de daño y aturdiéndolos durante 1D3 turnos. La duración del aturdimiento es distinta para cada objetivo.
+        XNEWX<i>Hechizo. Dificultad 13+, 6 PE por lanzamiento.</i><br><br>El alquimista concentra todos sus esfuerzos en crear una poción capaz de convertir cualquier sustancia en oro. El objetivo seleccionado sufrirá 1D8+INT puntos de daño puro, o matándolo inmediatamente si el hechizo resulta crítico. Si <i>Opus Magnus</i> mata a su objetivo, el cadáver y todas sus posesiones se convertirán en oro.
+        XNEWX<i>Hechizo. Sin dificultad, coste de PE variable.</i><br><br>El alquimista ingiere una serie de principios desvinculados de todos los tipos que sabe fabricar, obteniendo las bonificaciones de todos los otros tipos de mutágeno que conozca hasta el final del día, a cambio de 3 PE por cada mutágeno.
+        XNEWX<i>Hechizo canalizado. Dificultad 11+, 5 PE por lanzamiento y 3 PE por turno.</i><br><br>El alquimista crea e ingiere su obra maestra: fuego solar purificado, que, tras ser ingerido, provocará que el alquimista expulse enormes llamaradas blancas por todos los poros de su cuerpo. Mientras el hechizo permanezca activo, todos los personajes en combate (incluyendo el alquimista y su grupo) sufrirán 1D12+INT puntos de daño puro por turno. Si el alquimista interrumpe el hechizo intencionadamente, quedará aturdido hasta el final del combate.]]></item>
 
-        <item><![CDATA[<i>Pasiva.</i><br><br>El asesino comienza los combates en sigilo, lo que le impedirá que sea objetivo de ataques, hechizos y habilidades enemigas y permitiéndole moverse, huir y perseguir sin tener en cuenta las restricciones habituales de estas acciones hasta que intente llevar a cabo cualquier acción ofensiva. Además, mientras no esté en combate, podrá ocultarse con facilidad y moverse sin hacer apenas ruido.
-        XNEWX<i>Habilidad. +5 para impactar; 3 PE por lanzamiento. Solamente puede usarse en sigilo.</i><br><br>El asesino se coloca a la espalda de su desprevenida víctima y ataca con ambas armas, infligiendo daño de ataque normal, o golpes críticos en los ataques realizados con dagas.
-        XNEWX<i>Habilidad. -1 para impactar, 3PE por lanzamiento.</i><br><br>El asesino ataca al objetivo con ambas armas normalmente. Si uno de los dos ataques impacta, el asesino podrá realizar un ataque adicional con una única arma sobre el mismo objetivo, que impactará automáticamente infligiendo el daño normal.
-        XNEWX<i>Pasiva.</i><br><br>El asesino planea su siguiente golpe desde las sombras. Por cada turno que pase en sigilo, obtendrá +2 al golpe crítico, +25% al daño crítico, +2 DES y +1 FUE en su siguiente ataque, además de reducir la dificultad del hechizo <i>Asesinar</i> en 2 por turno.
-        XNEWX<i>Habilidad. -1 para impactar, 2 PE por lanzamiento.</i><br><br>El asesino golpea a su desafortunada víctima con un arma. Si el golpe impacta, se considerará un golpe crítico automáticamente.
-        XNEWX<i>Hechizo. Dificultad 11+, 4 PE por lanzamiento. Solamente puede usarse en sigilo.</i><br><br>El asesino se coloca a la espalda de su despreocupada víctima y le atesta un fuerte golpe con un objeto contundente en la cabeza, noqueándolo instantáneamente y hasta el final del combate.
-        XNEWX<i>Pasiva.</i><br><br>El asesino perfecciona su técnica de disparo y de lanzamiento, lo que le permite equipar armas de disparo grandes y utilizar <i>Diplomacia kernessiana</i>, <i>Puñalada y Asesinar</i> con armas arrojadizas y armas de disparo.
-        XNEWX<i>Hechizo. Dificultad 8+, 3 PE por lanzamiento.</i><br><br>El asesino utiliza un hechizo de traslación para moverse rápida y sigilosamente a cualquier ubicación cercana visible. En combate, puede utilizarse para huir o perseguir exitosamente sin necesidad de realizar tiradas enfrentadas de agilidad.
-        XNEWX<i>Pasiva.</i><br><br>El asesino salta y baila por el campo de batalla, mezclando el horrible sonido de su risa con los gritos de dolor de sus presas en una horrible cacofonía infernal. Además de con FUE, los ataques cuerpo a cuerpo del asesino escalarán también con AGI, y por cada 5 puntos de AGI obtendrá también +1 al golpe crítico.
-        XNEWX<i>Pasiva.</i><br><br>Tras mucho practicar, el asesino ha refinado su técnica para matar hasta extremos sobrehumanos. El personaje obtiene +2 al golpe crítico, +100% al daño crítico, además de +1 DES por cada daga que empuñe.
-        XNEWX<i>Hechizo. Dificultad 14+, 5 PE por lanzamiento. Solamente puede usarse en sigilo.</i><br><br>El asesino elimina a su objetivo con un único y certero golpe en un punto vital si se tratara de un objetivo humanoide, o infligiendo 3D10+DES puntos de daño en caso contrario.
-        XNEWX<i>Pasiva.</i><br><br>El asesino perfecciona sus técnicas de infiltración y espionaje, lo que mejora la efectividad de <i>Merodeador</i> fuera de combate y proporciona un +5 a las tiradas para forzar cerraduras, carterismo, saquear cadáveres, desactivar trampas, inspeccionar habitaciones y acciones similares.
-        XNEWX<i>Habilidad. -3 para impactar, 6 PE por lanzamiento.</i><br><br>El asesino se abalanza sobre su objetivo y lo golpea con precisión quirúrgica. Si la salud del objetivo es inferior al 25% de sus PV máximos, morirá automáticamente. En caso contrario, <i>Final sangriento</i> infligirá un 10% de la salud máxima del enemigo como daño puro con cada arma, redondeando hacia abajo.
-        XNEWX<i>Pasiva.</i><br><br>Tras mucho entrenar, el asesino aprende técnicas nuevas, lo que le permite aprender una segunda habilidad de nivel 2 o de nivel 3.
-        XNEWX<i>Pasiva.</i><br><br>Cuando el asesino vaya a recibir daño letal, tira 1D20 y súmale tu agilidad. Con un 20 o más, ignora el daño, recupera 1D6 PE y juega un turno adicional. En caso contrario, sufre el daño normalmente y realiza tu tirada de <i>Voluntad férrea</i>.]]></item>
+        <item><![CDATA[<i>Poder. Dificultad 11+, 0 PE por lanzamiento.</i><br><br>El arcanista conjura un proyectil de energía mágica en estado puro y lo lanza contra un objetivo, infligiendo 1D4+INT puntos de daño.
+        XNEWX<i>Pasiva.</i><br><br>El arcanista es capaz de absorber la energía mágica residual en el aire, lo que le permite recuperar 1 PE cada vez que alguien cercano utilice un poder que cueste al menos 1 PE por lanzamiento.
+        XNEWX<i>Poder. Dificultad 12+, 3 PE por lanzamiento.</i><br><br>El arcanista manipula el flujo de energía mágica alrededor de un objetivo, eliminando todos los efectos tanto positivos como negativos que tenga, o desactivando una trampa mágica. Los efectos aplicados por objetos mágicos que el objetivo lleve equipados no pueden ser dispersados.
+        XNEWX<i>Poder. Dificultad 10+, 2 PE por lanzamiento.</i><br><br>El arcanista crea una pequeña burbuja de nulidad arcana alrededor de su objetivo, lo que le impedirá lanzar hechizos y hablar durante tres turnos.
+        XNEWX<i>Poder. Dificultad 12+, 3 PE por lanzamiento.</i><br><br>El arcanista conjura un glifo taumatúrgico en el suelo o una pared cercana, que permanece activo hasta el final del día. Si alguien intenta lanzar un poder cerca del glifo, se activará infligiendo daño puro igual al doble del coste de PE del poder, anulando el efecto (si hubiera sido lanzado con éxito) y derribando al lanzador.
+        XNEWX<i>Poder. Dificultad 7+, 6 PE por lanzamiento.</i><br><br>El arcanista conjura un pequeño espejo mágico en cualquier superficie durante una hora. Mientras dure, el arcanista podrá concentrarse utilizando un espejo mágico para ver el reflejo de cualquier otro de sus espejos mágicos.<br><br>Si se lanza sobre un objeto reflectante permanente (un plato metálico o espejo de pared, por ejemplo), <i>Espejo mágico</i> durará indefinidamente, con un máximo de cinco espejos.
+        XNEWX<i>Poder. Dificultad 6+, 8 PE por lanzamiento.</i><br><br>El arcanista conjura un portal conectando su ubicación actual con cualquier otro sitio que haya visitado. El portal podrá utilizarse para desplazarse de forma inmediata entre ambos extremos.<br><br>El portal será lanzado con éxito con un 6+, pero la ubicación del otro extremo podría son ser precisa con una mala tirada.
+        XNEWX<i>Pasiva.</i><br><br>El arcanista proyecta un aura de negación a su alrededor, que reduce todo el daño mágico sufrido por él y sus aliados en INT. El efecto de <i>Aura de negación</i> no se acumula con otras fuentes de resistencia mágica.
+        XNEWX<i>Poder. Dificultad 13+, 3 PE por lanzamiento.</i><br><br>El elementarista copia el último poder lanzado por el objetivo, permitiéndole lanzarlo inmediatamente como acción instantánea o memorizarlo y utilizarlo posteriormente como si fuera su propio hechizo con el mismo coste, dificultad y efecto. El arcanista olvidará el hechizo robado si intenta robar otro hechizo, se ve silenciado o si se ve aturdido.
+        XNEWX<i>Poder. Dificultad 2+, 0 PE por lanzamiento.</i><br><br>El arcanista ignora todos los protocolos de seguridad aprendidos durante su formación y recurre a su reserva mágica para desatar todo su poder. Al usar este poder, el arcanista empujará a todos los personajes cercanos, perderá la mitad de sus PE actuales y obtendrá +1 INT por cada 2 PE perdidos.<br><br>No obstante, esto hará que sus hechizos sean mucho más inestables, aumentando su riesgo de pifias de 1 a 3 natural o inferior, y proporcionando +2 al bonif. Crítico. El efecto permanece activo hasta el final del combate.
+        XNEWX<i>Poder. Dificultad 13+, 3 PE por lanzamiento.</i><br><br>El arcanista envuelve a su objetivo con una burbuja antimágica, confiriéndole inmunidad al daño mágico e impidiendo que se vea afectado por cualquier hechizo, sea cual sea la fuente e incluso si infligiera daño puro. Las armas mágicas utilizadas contra el objetivo funcionarán como ataques normales del mismo tipo realizados con armas corrientes.<br><br>La salvaguarda permanecerá activa hasta el final del combate o hasta que el arcanista decida lanzar <i>Salvaguarda mágica</i> sobre otro objetivo.
+        XNEWX<i>Poder. Dificultad 13+, 4 PE por lanzamiento.</i><br><br>El arcanista quema la energía mágica de su objetivo, reduciendo sus PE actuales en hasta 1D10+INT e infligiendo daño puro igual a la cantidad de PE eliminados.
+        XNEWX<i>Poder. Dificultad 15+, 10 PE por lanzamiento.</i><br><br>El arcanista abre una brecha entre este plano de la realidad y otro plano desbordante con energía mágica en estado puro, constantemente azotado por tormentas arcanas de magnitud inconmensurable. Los efectos de la singularidad son extremadamente devastadores, pero es imposible saber con exactitud hasta qué punto.
+        XNEWX<i>Pasiva.</i><br><br>Tras muchos años de estudio, el arcanista se ha convertido en un maestro de las artes mágicas, lo que le proporciona un +3 a su bonificador al lanzamiento de hechizos, duplica el daño mágico absorbido por <i>Aura de negación</i>, mejora la precisión de <i>Portal</i>, le permite memorizar hasta tres hechizos con <i>Robar hechizo</i> y aumenta el alcance efectivo de <i>Detectar magia</i>.
+        XNEWX<i>Poder. Dificultad 12+, 4 PE por objetivo.</i><br><br>El arcanista fuerza un cambio de fase sobre los objetivos que desee (tanto aliados como enemigos), haciendo que pasen a ser criaturas etéreas inmunes al daño físico pero que sufrirán el doble de daño mágico. Los objetivos seguirán siendo etéreos hasta que el arcanista lance el hechizo de nuevo.]]></item>
 
         <item><![CDATA[<i>Hechizo. Dificultad 8+, 2 PE por lanzamiento.</i><br><br>El bárbaro libera un estremecedor grito a pleno pulmón que intimidará a todos los enemigos en combate, aplicando un penalizador a sus tiradas y en algunos casos obligándolos a huir, además de proporcionarle al bárbaro +2 FUE en su siguiente turno.
         XNEWX<i>Pasiva.</i><br><br>El bárbaro es algo más grande y tosco de lo normal, lo que le confiere +5 PV máximos iniciales y otros +3 PV máximos o +1 FUE cada vez que suba de nivel. Por si fuera poco, posee también una elevada resistencia al alcohol y sufre un 25% menos de daño en combate desarmado.
@@ -577,9 +575,9 @@
         XNEWX<i>Pasiva.</i><br><br>El paladín es un ejemplo de justicia y devoción para su orden, lo que le confiere inmunidad frente a efectos de pérdida de control del personaje y efectos psíquicos mientras esté bajo los efectos de <i>Égida sagrada</i> o <i>Desafío del cruzado</i> y +10 PV máximos. Además, sus hechizos y habilidades infligirán VOL puntos de daño adicional.]]></item>
     </string-array>
 
-    <string-array name="alquimistaPociones">
-        <item>1XNEWXPoción Inestable. El brebaje explota en las manos del alquimista, infligiéndole 1D10+INT puntos de daño, derribándolo y aturdiéndolo durante un turno.</item>
-        <item>2–3XNEWXVenganza de Blancaluz. El brebaje arde espontáneamente, liberando una colosal llamarada que inflige 1D3+INT puntos de daño al alquimista y reduciendo el resultado de todas sus tiradas en 1 hasta el final del combate.</item>
+    <string-array name="alquimistaPociones2e">
+        <item>1XNEWXPoción Inestable. El brebaje explota en las manos del alquimista, infligiéndole 1D10+INT puntos de daño, derribándolo y aturdiéndolo durante un turno. Además, todas las otras pociones mundanas que lleve consigo también explotarán y pasarán a actuar como si fueran una Poción Inestable inmediatamente.</item>
+        <item>2–3XNEWXVenganza de Blancaluz. El brebaje arde espontáneamente, liberando una colosal llamarada que inflige 1D3+INT puntos de daño al alquimista y reduciendo el resultado de todas sus tiradas en 1 hasta el final del combate. Además, todas las otras pociones mundanas que lleve consigo también arderán y pasarán a actuar como si fueran una Venganza de Blancaluz inmediatamente.</item>
         <item>4XNEWXPoción de maná experimental. El objetivo recupera 1D12 PE, pero pierde 1D3 PV, 1 INT y 1 SAB hasta el final del día.</item>
         <item>5–6XNEWXCocido misterioso de la abuela. La poción resulta coincidir con la receta del cocido misterioso de tu abuela. El objetivo recupera 1D6+SAB PV y 1D3 PE.</item>
         <item>7XNEWXAntorcha líquida. La poción brilla con una suave luz anaranjada. Si se arroja contra un objetivo, sufrirá 1D6+INT puntos de daño.</item>
@@ -588,14 +586,14 @@
         <item>11XNEWXAcidum Salis. El contenido del frasco resulta ser un potente ácido que corroe el metal y quema la carne, infligiendo 2D6+INT puntos de daño repartidos entre tres turnos y reduciendo la armadura del objetivo a la mitad.</item>
         <item>12–14XNEWXPoción de sanación. La poción resulta ser una poción de sanación corriente. El objetivo recupera 1D20+SAB PV.</item>
         <item>15XNEWXPoción de ira. La extraña mezcla provoca un arranque de furia homicida en el objetivo, lo que le proporciona FUE igual a la INT del alquimista, +3 VOL y una segunda acción principal por turno durante 3 turnos. No obstante, mientras dure el efecto, la única acción principal que el objetivo podrá llevar a cabo será un ataque cuerpo a cuerpo.</item>
-        <item>16XNEWXBomba de humo. La poción libera una densa nube negra y tóxica, infligiendo 1+INT puntos de daño ignorando armadura a todos los personajes de combate cada turno, limitando la visión y reduciendo el resultado de todas las tiradas en 3.</item>
-        <item>17XNEWXElixir de vitalidad. El resultado del experimento improvisado del alquimista revigoriza al objetivo restaurando PE iguales a la SAB del alquimista y aumentando todos sus atributos en 1 hasta el final del combate.</item>
+        <item>16XNEWXBomba de humo. La poción libera una densa nube negra y tóxica, infligiendo 1+INT puntos de daño ignorando armadura a todos los personajes en combate cada turno, limitando la visión y reduciendo el resultado de todas las tiradas en 3.</item>
+        <item>17XNEWXElixir de vitalidad. El resultado del experimento improvisado del alquimista revigoriza al objetivo, restaurando PE iguales a la SAB del alquimista y aumentando todos sus atributos en 1 hasta el final del combate.</item>
         <item>18XNEWXSerpientes de ensoñación esmeralda. Al abrirse, el frasco libera un líquido verde que se desplaza serpenteante por el aire. El objetivo deberá realizar un chequeo de voluntad. Si lo falla, caerá dormido hasta que reciba daño y cuando despierte, creerá que todo fue un extraño sueño.</item>
         <item>19XNEWXPoción milagrosa de Kala la sanadora. De algún modo y quizás sin proponérselo, el alquimista consigue crear la poción milagrosa. Si el objetivo ha muerto recientemente, devuélvelo a la vida con la mitad de sus PV máximos.</item>
         <item>20XNEWX¡Justo como estaba planeado! Elige cualquier otro resultado de esta tabla y utilízalo como si lo hubieras obtenido normalmente.</item>
     </string-array>
 
-    <string-array name="cazadorMascotas">
+    <string-array name="cazadorMascotas2e">
         <item>Ave Rapaz</item>
         <item><![CDATA[<b>Ejemplos:</b> Halcón, lechuza invernal, murciélago sureño, rey cuervo, búho emperador, águila…]]></item>
         <item>0 +0 5 +1 0 +0 0 +0 0 +0 6 +2 1 +0</item>
@@ -619,7 +617,7 @@
         XNEWXLa mascota carga contra un objetivo ignorando las restricciones del movimiento, lo derriba y lo pisotea infligiendo 1D6+FUE puntos de daño.</item>
     </string-array>
 
-    <string-array name="druidaTransformaciones">
+    <string-array name="druidaTransformaciones2e">
         <item>Forma de pez manta</item>
         <item>El druida se convierte en pez manta, obteniendo la capacidad de respirar indefinidamente bajo el agua, aumentando enormemente su velocidad de nado y permitiéndole ocultarse en el fondo del mar, ríos o lagos.</item>
         <item>Forma de lechuza</item>

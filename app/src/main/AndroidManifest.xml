@@ -12,9 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".firstEdition.CharInfo"></activity>
-        <activity android:name=".firstEdition.Detail" />
-        <activity android:name=".firstEdition.CharacterCreation" />
+        <activity android:name=".control.CharInfo"></activity>
+        <activity android:name=".control.Detail" />
+        <activity android:name=".control.CharacterCreation" />
         <activity android:name=".control.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

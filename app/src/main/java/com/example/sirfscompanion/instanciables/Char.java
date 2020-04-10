@@ -32,6 +32,7 @@ public class Char implements Serializable {
     private int CHAR_CRITBONUS;
     private int CHAR_CRITDMGBONUS;
     private int CHAR_SPELLBONUS;
+    private int CHAR_SPELLREDBONUS;
     private String CHAR_WEAPONS;
     private String CHAR_EQUIP;
     private String CHAR_RELICS;
@@ -66,17 +67,18 @@ public class Char implements Serializable {
         this.CHAR_CRITBONUS = cu.getInt(22);
         this.CHAR_CRITDMGBONUS = cu.getInt(23);
         this.CHAR_SPELLBONUS = cu.getInt(24);
-        this.CHAR_WEAPONS = cu.getString(25);
-        this.CHAR_EQUIP = cu.getString(26);
-        this.CHAR_RELICS = cu.getString(27);
-        this.CHAR_SKILLS = cu.getString(28);
-        this.CHAR_BONUS = cu.getString(29);
-        this.CHAR_GOLD = cu.getInt(30);
-        this.CHAR_INVENTORY = cu.getString(31);
+        this.CHAR_SPELLREDBONUS = cu.getInt(25);
+        this.CHAR_WEAPONS = cu.getString(26);
+        this.CHAR_EQUIP = cu.getString(27);
+        this.CHAR_RELICS = cu.getString(28);
+        this.CHAR_SKILLS = cu.getString(29);
+        this.CHAR_BONUS = cu.getString(30);
+        this.CHAR_GOLD = cu.getInt(31);
+        this.CHAR_INVENTORY = cu.getString(32);
     }
 
     public Char(String name, String edition, Bitmap img, String date, int level, String race, String mClass, int fue, int des, int pun, int mInt, int sab, int agi, int vol, int enc, int pv, int maxpv, int pe, int maxpe,
-                int armor, int marmor, int critbonus, int critdmgbonus, int spellbonus, String weapons, String equip, String relics, String skills, String bonus, int gold, String inventory) {
+                int armor, int marmor, int critbonus, int critdmgbonus, int spellbonus, int spellredbonus, String weapons, String equip, String relics, String skills, String bonus, int gold, String inventory) {
         this.CHAR_NAME = name;
         this.CHAR_EDITION = edition;
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -103,6 +105,7 @@ public class Char implements Serializable {
         this.CHAR_CRITBONUS = critbonus;
         this.CHAR_CRITDMGBONUS = critdmgbonus;
         this.CHAR_SPELLBONUS = spellbonus;
+        this.CHAR_SPELLREDBONUS = spellredbonus;
         this.CHAR_WEAPONS = weapons;
         this.CHAR_EQUIP = equip;
         this.CHAR_RELICS = relics;
@@ -310,6 +313,14 @@ public class Char implements Serializable {
 
     public void setCharSpellbonus(int charSpellbonus) {
         CHAR_SPELLBONUS = charSpellbonus;
+    }
+
+    public int getCharSpellredbonus() {
+        return CHAR_SPELLREDBONUS;
+    }
+
+    public void setCharSpellredbonus(int charSpellredbonus) {
+        CHAR_SPELLREDBONUS = charSpellredbonus;
     }
 
     public String getCharWeapons() {

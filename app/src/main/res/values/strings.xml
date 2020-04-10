@@ -64,6 +64,10 @@
     <string name="magicArmor">Armadura mágica</string>
     <string name="genericWeapon">Arma genérica</string>
     <string name="genericArmor">Cutre</string>
+    <string name="firstEdition">Primera edición</string>
+    <string name="secondEdition">Segunda edición</string>
+    <string name="pre">PRE</string>
+    <string name="luENC">+1 ENC</string>
     <string-array name="dados">
         <item>-</item>
         <item>D3</item>

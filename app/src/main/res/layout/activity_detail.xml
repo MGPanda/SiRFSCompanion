@@ -7,7 +7,7 @@
     android:clickable="true"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    tools:context=".firstEdition.Detail">
+    tools:context=".control.Detail">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton2"
@@ -862,6 +862,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
+                    android:imeOptions="actionDone"
                     android:inputType="number"
                     android:lines="1"
                     android:maxLines="1"

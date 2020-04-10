@@ -7,18 +7,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.content.res.Configuration;
-import android.database.Cursor;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.example.sirfscompanion.R;
-import com.example.sirfscompanion.firstEdition.RecyclerAdapter;
-import com.example.sirfscompanion.firstEdition.CharacterCreation;
 import com.example.sirfscompanion.instanciables.Char;
+import com.getbase.floatingactionbutton.FloatingActionButton;
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
 
 public class MainActivity extends AppCompatActivity {
     private static MyDB _mydb;
@@ -26,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private static RecyclerView _rv;
     private RecyclerAdapter _ra;
     private UserPreferences _up;
+    private FloatingActionsMenu _fam;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -45,13 +43,37 @@ public class MainActivity extends AppCompatActivity {
         _mydb = new MyDB(this);
         //TODO _mydb.insertTest();
         _rv = findViewById(R.id.recyclerView);
+        _fam = findViewById(R.id.selectEdition);
+        setupFam();
         setAdapter();
 
     }
 
-    public void addNew(View view) {
-        Intent i = new Intent(this, CharacterCreation.class);
-        startActivityForResult(i, 0);
+    public void setupFam() {
+        FloatingActionButton firstEdition = new FloatingActionButton(this);
+        firstEdition.setTitle(getString(R.string.firstEdition));
+        firstEdition.setIcon(R.drawable.first_edition_icon);
+        firstEdition.setSize(FloatingActionButton.SIZE_MINI);
+        firstEdition.setColorNormal(R.color.colorPrimary);
+        firstEdition.setOnClickListener(v -> {
+            Intent i = new Intent(getApplicationContext(), CharacterCreation.class);
+            i.putExtra("EDITION", 1);
+            startActivityForResult(i, 0);
+            _fam.collapse();
+        });
+        _fam.addButton(firstEdition);
+        FloatingActionButton secondEdition = new FloatingActionButton(this);
+        secondEdition.setTitle(getString(R.string.secondEdition));
+        secondEdition.setIcon(R.drawable.second_edition_icon);
+        secondEdition.setSize(FloatingActionButton.SIZE_MINI);
+        secondEdition.setColorNormal(R.color.colorPrimary);
+        secondEdition.setOnClickListener(v -> {
+            Intent i = new Intent(getApplicationContext(), CharacterCreation.class);
+            i.putExtra("EDITION", 2);
+            startActivityForResult(i, 0);
+            _fam.collapse();
+        });
+        _fam.addButton(secondEdition);
     }
 
     public void darkMode(MenuItem mi) {

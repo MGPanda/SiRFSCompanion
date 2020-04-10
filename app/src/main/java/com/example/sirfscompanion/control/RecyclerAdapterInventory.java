@@ -1,7 +1,6 @@
-package com.example.sirfscompanion.firstEdition;
+package com.example.sirfscompanion.control;
 
 import android.content.Context;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,13 +10,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sirfscompanion.R;
-import com.example.sirfscompanion.control.MainActivity;
-import com.example.sirfscompanion.control.MyDB;
 import com.example.sirfscompanion.instanciables.Char;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Locale;
 
 public class RecyclerAdapterInventory extends RecyclerView.Adapter<RecyclerAdapterInventory.ViewHolder> {
     private Context _c;

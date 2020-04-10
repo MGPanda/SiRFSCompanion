@@ -42,6 +42,7 @@ public class MyDB {
     public final static String CHAR_CRITBONUS = "critbonus";
     public final static String CHAR_CRITDMGBONUS = "critdmgbonus";
     public final static String CHAR_SPELLBONUS = "spellbonus";
+    public final static String CHAR_SPELLREDBONUS = "spellredbonus";
     public final static String CHAR_WEAPONS = "weapons";
     public final static String CHAR_EQUIP = "equip";
     public final static String CHAR_RELICS = "relics";
@@ -86,6 +87,7 @@ public class MyDB {
         values.put(CHAR_CRITBONUS, c.getCharCritbonus());
         values.put(CHAR_CRITDMGBONUS, c.getCharCritdmgbonus());
         values.put(CHAR_SPELLBONUS, c.getCharSpellbonus());
+        values.put(CHAR_SPELLREDBONUS, c.getCharSpellredbonus());
         values.put(CHAR_WEAPONS, c.getCharWeapons());
         values.put(CHAR_EQUIP, c.getCharEquip());
         values.put(CHAR_RELICS, c.getCharRelics());
@@ -122,6 +124,7 @@ public class MyDB {
         values.put(CHAR_CRITBONUS, c.getCharCritbonus());
         values.put(CHAR_CRITDMGBONUS, c.getCharCritdmgbonus());
         values.put(CHAR_SPELLBONUS, c.getCharSpellbonus());
+        values.put(CHAR_SPELLREDBONUS, c.getCharSpellredbonus());
         values.put(CHAR_WEAPONS, c.getCharWeapons());
         values.put(CHAR_EQUIP, c.getCharEquip());
         values.put(CHAR_RELICS, c.getCharRelics());
@@ -139,7 +142,7 @@ public class MyDB {
     public static Cursor selectAll() {
         try {
             String[] cols = new String[]{CHAR_ID, CHAR_EDITION, CHAR_NAME, CHAR_IMG, CHAR_CRDATE, CHAR_LEVEL, CHAR_RACE, CHAR_CLASS, CHAR_FUE, CHAR_DES, CHAR_PUN, CHAR_INT, CHAR_SAB, CHAR_AGI, CHAR_VOL, CHAR_ENC, CHAR_PV,
-                    CHAR_MAXPV, CHAR_PE, CHAR_MAXPE, CHAR_ARMOR, CHAR_MARMOR, CHAR_CRITBONUS, CHAR_CRITDMGBONUS, CHAR_SPELLBONUS, CHAR_WEAPONS, CHAR_EQUIP, CHAR_RELICS, CHAR_SKILLS, CHAR_BONUS, CHAR_GOLD, CHAR_INVENTORY};
+                    CHAR_MAXPV, CHAR_PE, CHAR_MAXPE, CHAR_ARMOR, CHAR_MARMOR, CHAR_CRITBONUS, CHAR_CRITDMGBONUS, CHAR_SPELLBONUS, CHAR_SPELLREDBONUS, CHAR_WEAPONS, CHAR_EQUIP, CHAR_RELICS, CHAR_SKILLS, CHAR_BONUS, CHAR_GOLD, CHAR_INVENTORY};
             Cursor mCursor;
             mCursor = database.query(true, CHAR_TABLE, cols, null
                     , null, null, null, "_id desc", null);
@@ -202,19 +205,19 @@ public class MyDB {
     }
 
     public void insertTest() {
-        Char c = new Char("Toni Taronges", "1", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.alchemist), "2020-03-01", 5, "Humano", "Alquimista", 0, 0, 0, 0, 0, 0, 0, 0, 14, 20, 18, 20, 10, 0, 3, 1, 0, "SableXPARTX1d3+FUEXNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 3 8 9 14", "", 300, "PelotaXPARTXPlay with it!XPARTX2");
+        Char c = new Char("Toni Taronges", "1", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.alchemist), "2020-03-01", 5, "Humano", "Alquimista", 0, 0, 0, 0, 0, 0, 0, 0, 14, 20, 18, 20, 10, 0, 3, 1, 0, 0, "SableXPARTX1d3+FUEXNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 3 8 9 14", "", 300, "PelotaXPARTXPlay with it!XPARTX2");
         createChar(c);
-        c = new Char("Tomeu Tomàtiga", "2", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.assassin), "2020-03-01", 5, "Elfo del Este", "Asesino", -2, -1, 0, +2, +1, 0, 0, 1, 14, 17, 17, 26, 10, 0, 3, 1, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 3 8 11 12", "", 100, "");
+        c = new Char("Tomeu Tomàtiga", "2", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.assassin), "2020-03-01", 5, "Elfo del Este", "Asesino", -2, -1, 0, +2, +1, 0, 0, 1, 14, 17, 17, 26, 10, 0, 3, 1, 0, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 3 8 11 12", "", 100, "");
         createChar(c);
-        c = new Char("Lluc Llimona", "1", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.barbarian), "2020-03-02", 5, "Elfo del Oeste", "Bárbaro", -2, -1, 0, +2, +1, 0, 0, 0, 14, 17, 17, 26, 10, 0, 3, 1, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 5 7 9 12", "", 100, "");
+        c = new Char("Lluc Llimona", "1", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.barbarian), "2020-03-02", 5, "Elfo del Oeste", "Bárbaro", -2, -1, 0, +2, +1, 0, 0, 0, 14, 17, 17, 26, 10, 0, 3, 1, 0, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 5 7 9 12", "", 100, "");
         createChar(c);
-        c = new Char("Simó Sopes", "2", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.bard), "2020-03-02", 5, "Crunisio", "Bardo", -2, -1, 0, +2, +1, 0, 0, 2, 14, 17, 17, 26, 10, 0, 3, 1, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 5 6 11 14", "", 100, "");
+        c = new Char("Simó Sopes", "2", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.bard), "2020-03-02", 5, "Crunisio", "Bardo", -2, -1, 0, +2, +1, 0, 0, 2, 14, 17, 17, 26, 10, 0, 3, 1, 0, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 5 6 11 14", "", 100, "");
         createChar(c);
-        c = new Char("Carles Cirera", "1", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hunter), "2020-03-03", 5, "Orco", "Cazador", 3, 0, -2, -2, -1, -1, 1, 0, 14, 26, 17, 20, 10, 0, 3, 1, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 4 8 11 13", "", 100, "");
+        c = new Char("Carles Cirera", "1", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.hunter), "2020-03-03", 5, "Orco", "Cazador", 3, 0, -2, -2, -1, -1, 1, 0, 14, 26, 17, 20, 10, 0, 3, 1, 0, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 4 8 11 13", "", 100, "");
         createChar(c);
-        c = new Char("Xisco Ximbomba", "2", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.druid), "2020-03-03", 5, "Enano", "Druida", 2, 0, -1, 0, -1, -2, 1, 3, 14, 26, 17, 20, 10, 0, 3, 1, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 4 8 11 13", "", 100, "");
+        c = new Char("Xisco Ximbomba", "2", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.druid), "2020-03-03", 5, "Enano", "Druida", 2, 0, -1, 0, -1, -2, 1, 3, 14, 26, 17, 20, 10, 0, 3, 1, 0, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 4 8 11 13", "", 100, "");
         createChar(c);
-        c = new Char("Pep Pilotes", "1", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.arcane), "2020-03-04", 5, "Dracónido", "Elementarista - Arcano", 2, 0, -1, 0, 0, -2, 1, 0, 14, 26, 17, 20, 10, 0, 3, 1, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 4 6 10 13", "DRAC1 DRAC3", 100, "");
+        c = new Char("Pep Pilotes", "1", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.arcane), "2020-03-04", 5, "Dracónido", "Elementarista - Arcano", 2, 0, -1, 0, 0, -2, 1, 0, 14, 26, 17, 20, 10, 0, 3, 1, 0, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 4 6 10 13", "DRAC1 DRAC3", 100, "");
         createChar(c);
         /*c = new Char("Frit de Matançes", "2", BitmapFactory.decodeResource(MainActivity.get_ma().getResources(), R.drawable.fire), "2020-03-04", 5, "Vaark", "Elementarista - Fuego", 2, 0, -1, 0, 0, -2, 1, 4, 14, 26, 17, 20, 10, 0, 3, 1, 0, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "", "", "0 1 2 4 8 11 12", "", 100, "");
         createChar(c);

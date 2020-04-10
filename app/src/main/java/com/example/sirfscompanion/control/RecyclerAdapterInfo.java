@@ -1,4 +1,4 @@
-package com.example.sirfscompanion.firstEdition;
+package com.example.sirfscompanion.control;
 
 import android.content.Context;
 import android.text.Html;
@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sirfscompanion.R;
-import com.example.sirfscompanion.control.MainActivity;
 import com.example.sirfscompanion.instanciables.Char;
 
 import java.util.ArrayList;
@@ -23,14 +22,28 @@ public class RecyclerAdapterInfo extends RecyclerView.Adapter<RecyclerAdapterInf
     public RecyclerAdapterInfo(Context c, Char ch) {
         this._c = c;
         this._al = new ArrayList<>();
-        String[] races = MainActivity.get_ma().getResources().getStringArray(R.array.races1e);
+        String[] races = null;
+        if (ch.getCharEdition().equals("1")) {
+            races = MainActivity.get_ma().getResources().getStringArray(R.array.races1e);
+        } else if (ch.getCharEdition().equals("2")) {
+            races = MainActivity.get_ma().getResources().getStringArray(R.array.races2e);
+        }
+
         for (int i = 0; i < races.length; i++) {
             if (races[i].equals(ch.getCharRace())) _p = i;
         }
         _al.add(races[_p]);
-        _al.add(MainActivity.get_ma().getResources().getStringArray(R.array.racesDesc1e)[_p]);
-        String[] racesBonus = MainActivity.get_ma().getResources().getStringArray(R.array.racesBonus1e)[_p].split("XNEWX");
-        String[] racesBonusDesc = MainActivity.get_ma().getResources().getStringArray(R.array.racesBonusDesc1e)[_p].split("XNEWX");
+        String[] racesBonus = null, racesBonusDesc = null;
+        if (ch.getCharEdition().equals("1")) {
+            _al.add(MainActivity.get_ma().getResources().getStringArray(R.array.racesDesc1e)[_p]);
+            racesBonus = MainActivity.get_ma().getResources().getStringArray(R.array.racesBonus1e)[_p].split("XNEWX");
+            racesBonusDesc = MainActivity.get_ma().getResources().getStringArray(R.array.racesBonusDesc1e)[_p].split("XNEWX");
+        } else if (ch.getCharEdition().equals("2")) {
+            _al.add(MainActivity.get_ma().getResources().getStringArray(R.array.racesDesc2e)[_p]);
+            racesBonus = MainActivity.get_ma().getResources().getStringArray(R.array.racesBonus2e)[_p].split("XNEWX");
+            racesBonusDesc = MainActivity.get_ma().getResources().getStringArray(R.array.racesBonusDesc2e)[_p].split("XNEWX");
+        }
+
         if (racesBonus.length > 2) {
             int[] bonus = new int[2];
             if (ch.getCharBonus().contains("DRAC0")) bonus[0] = 0;
@@ -51,11 +64,20 @@ public class RecyclerAdapterInfo extends RecyclerView.Adapter<RecyclerAdapterInf
         for (int i = 0; i < classes.length; i++) {
             if (classes[i].equals(ch.getCharClass())) _p = i;
         }
-        _al.add(MainActivity.get_ma().getResources().getStringArray(R.array.classes1e)[_p]);
-        _al.add(MainActivity.get_ma().getResources().getStringArray(R.array.classesDesc1e)[_p]);
-        String[] mySkills = ch.getCharSkills().split(" ");
-        String[] skills = MainActivity.get_ma().getResources().getStringArray(R.array.classesSkills1e)[_p].split("XNEWX");
-        String[] skillsDesc = MainActivity.get_ma().getResources().getStringArray(R.array.classesSkillsDesc1e)[_p].split("XNEWX");
+        String[] mySkills = null, skills = null, skillsDesc = null;
+        if (ch.getCharEdition().equals("1")) {
+            _al.add(MainActivity.get_ma().getResources().getStringArray(R.array.classes1e)[_p]);
+            _al.add(MainActivity.get_ma().getResources().getStringArray(R.array.classesDesc1e)[_p]);
+            mySkills = ch.getCharSkills().split(" ");
+            skills = MainActivity.get_ma().getResources().getStringArray(R.array.classesSkills1e)[_p].split("XNEWX");
+            skillsDesc = MainActivity.get_ma().getResources().getStringArray(R.array.classesSkillsDesc1e)[_p].split("XNEWX");
+        } else if (ch.getCharEdition().equals("2")) {
+            _al.add(MainActivity.get_ma().getResources().getStringArray(R.array.classes2e)[_p]);
+            _al.add(MainActivity.get_ma().getResources().getStringArray(R.array.classesDesc2e)[_p]);
+            mySkills = ch.getCharSkills().split(" ");
+            skills = MainActivity.get_ma().getResources().getStringArray(R.array.classesSkills2e)[_p].split("XNEWX");
+            skillsDesc = MainActivity.get_ma().getResources().getStringArray(R.array.classesSkillsDesc2e)[_p].split("XNEWX");
+        }
         for (int i = 0; i < mySkills.length; i++) {
             _al.add(skills[Integer.parseInt(mySkills[i])]);
             _al.add(skillsDesc[Integer.parseInt(mySkills[i])]);

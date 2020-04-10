@@ -1,4 +1,4 @@
-package com.example.sirfscompanion.firstEdition;
+package com.example.sirfscompanion.control;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,8 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.sirfscompanion.R;
-import com.example.sirfscompanion.control.MainActivity;
-import com.example.sirfscompanion.control.MyDB;
 import com.example.sirfscompanion.instanciables.Char;
 import com.google.android.material.snackbar.Snackbar;
 
