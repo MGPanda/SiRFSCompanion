@@ -57,7 +57,7 @@ public class MyDB {
     public MyDB(Context context) {
         dbHelper = new MyDatabaseHelper(context);
         database = dbHelper.getWritableDatabase();
-        //TODO dbHelper.onCreate(database);
+        dbHelper.onCreate(database);
     }
 
     public static long createChar(Char c) {

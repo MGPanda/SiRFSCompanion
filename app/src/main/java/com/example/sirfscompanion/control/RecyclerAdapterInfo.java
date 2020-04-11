@@ -22,11 +22,13 @@ public class RecyclerAdapterInfo extends RecyclerView.Adapter<RecyclerAdapterInf
     public RecyclerAdapterInfo(Context c, Char ch) {
         this._c = c;
         this._al = new ArrayList<>();
-        String[] races = null;
+        String[] races = null, classes = null;
         if (ch.getCharEdition().equals("1")) {
             races = MainActivity.get_ma().getResources().getStringArray(R.array.races1e);
+            classes = MainActivity.get_ma().getResources().getStringArray(R.array.classes1e);
         } else if (ch.getCharEdition().equals("2")) {
             races = MainActivity.get_ma().getResources().getStringArray(R.array.races2e);
+            classes = MainActivity.get_ma().getResources().getStringArray(R.array.classes2e);
         }
 
         for (int i = 0; i < races.length; i++) {
@@ -60,7 +62,6 @@ public class RecyclerAdapterInfo extends RecyclerView.Adapter<RecyclerAdapterInf
                 _al.add(racesBonusDesc[i]);
             }
         }
-        String[] classes = MainActivity.get_ma().getResources().getStringArray(R.array.classes1e);
         for (int i = 0; i < classes.length; i++) {
             if (classes[i].equals(ch.getCharClass())) _p = i;
         }

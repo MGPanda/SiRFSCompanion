@@ -327,8 +327,7 @@ public class CharacterCreation extends AppCompatActivity {
                     _raceExtra = "PE";
                 }
             }
-            //TODO REVISAR NÚMERO CLASE
-            if (_ccClass.getSelectedItem().equals(getResources().getStringArray(R.array.classes2e)[10])) {
+            if (_ccClass.getSelectedItem().equals(getResources().getStringArray(R.array.classes2e)[9])) {
                 if (_r.nextFloat() <= 0.25) _classExtra = "FUE";
                 else if (_r.nextFloat() <= 0.5) _classExtra = "DES";
                 else if (_r.nextFloat() <= 0.75) _classExtra = "ENC";
@@ -389,22 +388,21 @@ public class CharacterCreation extends AppCompatActivity {
         } else if (race.equals(getResources().getStringArray(R.array.races2e)[6])) {
             armor += 5;
         }
-        //TODO REVISAR POSICIÓN CLASES
-        if (myClass.equals(getResources().getStringArray(R.array.classes2e)[2])) {
+        if (myClass.equals(getResources().getStringArray(R.array.classes2e)[3])) {
             PV += 5;
-        } else if (myClass.equals(getResources().getStringArray(R.array.classes2e)[10])) {
+        } else if (myClass.equals(getResources().getStringArray(R.array.classes2e)[9])) {
             if (_classExtra.equals("")) {
                 warriorExtra();
             }
             PV += 5;
-        }
+        } else if (myClass.equals(getResources().getStringArray(R.array.classes2e)[11])) PV += (int) Math.floor(PE/2);
+        else if (myClass.equals(getResources().getStringArray(R.array.classes2e)[12])) armor += VOL*2;
         critbonus += (int) Math.floor(PUN / 3);
         spellbonus += (int) Math.floor(INT / 3);
         spellredbonus += (int) Math.floor(SAB / 3);
         bonus += " XBGX"+((TextView) findViewById(R.id.ccBackground)).getText().toString()+"XBGX ";
         bonus += " XSLX"+((TextView) findViewById(R.id.ccSlang)).getText().toString()+"XSLX ";
-        //TODO REVISAR POSICIÓN CLASES
-        if (!((race.equals(getResources().getStringArray(R.array.races2e)[0])) && _raceExtra.equals("")) && !((myClass.equals(getResources().getStringArray(R.array.classes2e)[10])) && _classExtra.equals(""))) {
+        if (!((race.equals(getResources().getStringArray(R.array.races2e)[0])) && _raceExtra.equals("")) && !((myClass.equals(getResources().getStringArray(R.array.classes2e)[9])) && _classExtra.equals(""))) {
             Char c = new Char(name, "2", _myImg, date, 1, race, myClass, FUE, DES, PUN, INT, SAB, AGI, VOL, ENC, PV, PV, PE, PE, armor, marmor, critbonus, critdmgbonus,
                     spellbonus, spellredbonus, "-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-XNEWX-XPARTX-", "-XPARTX0 / 0XNEWX-XPARTX0 / 0XNEWX-XPARTX0 / 0XNEWX-XPARTX0 / 0", "", "0 1 2", bonus, gold, "");
             MyDB.createChar(c);

@@ -68,6 +68,7 @@
     <string name="secondEdition">Segunda edición</string>
     <string name="pre">PRE</string>
     <string name="luENC">+1 ENC</string>
+    <string name="chooseDruid">(elige una al adquirir Cambiaformas y otra a nivel 4)</string>
     <string-array name="dados">
         <item>-</item>
         <item>D3</item>

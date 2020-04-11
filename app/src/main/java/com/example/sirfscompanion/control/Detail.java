@@ -100,14 +100,15 @@ public class Detail extends AppCompatActivity {
     public void updateWeapons() {
         MyDB.updateWeapons(_c.getCharId(), _c.getCharWeapons());
         String weaponsAux = _c.getCharWeapons();
-        weaponsAux = weaponsAux.replace("FUE", String.valueOf(_c.getCharFue()));
-        weaponsAux = weaponsAux.replace("DES", String.valueOf(_c.getCharDes()));
-        weaponsAux = weaponsAux.replace("PUN", String.valueOf(_c.getCharPun()));
-        weaponsAux = weaponsAux.replace("INT", String.valueOf(_c.getCharInt()));
-        weaponsAux = weaponsAux.replace("SAB", String.valueOf(_c.getCharSab()));
-        weaponsAux = weaponsAux.replace("AGI", String.valueOf(_c.getCharAgi()));
-        weaponsAux = weaponsAux.replace("VOL", String.valueOf(_c.getCharVol()));
-        weaponsAux = weaponsAux.replace("ENC", String.valueOf(_c.getCharEnc()));
+        weaponsAux = weaponsAux.replace("FUE", _detailFUEVal.getText().toString());
+        weaponsAux = weaponsAux.replace("DES", _detailDESVal.getText().toString());
+        weaponsAux = weaponsAux.replace("PUN", _detailPUNVal.getText().toString());
+        weaponsAux = weaponsAux.replace("PRE", _detailPUNVal.getText().toString());
+        weaponsAux = weaponsAux.replace("INT", _detailINTVal.getText().toString());
+        weaponsAux = weaponsAux.replace("SAB", _detailSABVal.getText().toString());
+        weaponsAux = weaponsAux.replace("AGI", _detailAGIVal.getText().toString());
+        weaponsAux = weaponsAux.replace("VOL", _detailVOLVal.getText().toString());
+        weaponsAux = weaponsAux.replace("ENC", _detailENCVal.getText().toString());
         String[] myWeapons = weaponsAux.split("XNEWX");
         ((TextView) findViewById(R.id.weap0name)).setText(myWeapons[0].split("XPARTX")[0]);
         ((TextView) findViewById(R.id.weap0desc)).setText(myWeapons[0].split("XPARTX")[1]);
@@ -134,22 +135,45 @@ public class Detail extends AppCompatActivity {
         String[] armor1 = ((TextView) findViewById(R.id.equip1desc)).getText().toString().split(" / ");
         String[] armor2 = ((TextView) findViewById(R.id.equip2desc)).getText().toString().split(" / ");
         String[] armor3 = ((TextView) findViewById(R.id.equip3desc)).getText().toString().split(" / ");
-        int finalArmor = _c.getCharArmor() + Integer.parseInt(armor0[0]) + Integer.parseInt(armor1[0]) + Integer.parseInt(armor2[0]) + Integer.parseInt(armor3[0]);
-        int finalMarmor = _c.getCharMarmor() + Integer.parseInt(armor0[1]) + Integer.parseInt(armor1[1]) + Integer.parseInt(armor2[1]) + Integer.parseInt(armor3[1]);
+        int shieldVal = 0, shieldValM = 0;
+        String[] weapons = _c.getCharWeapons().split("XNEWX");
+        for (int i = 0; i < 2; i++) {
+            try {
+                if (weapons[i].split("XPARTX")[0].toUpperCase().contains("ESCUDO") || weapons[i].split("XPARTX")[0].toUpperCase().contains("RODELA")) {
+                    if (weapons[i].split("XPARTX")[0].toUpperCase().contains("MÁGICO") || weapons[i].split("XPARTX")[0].toUpperCase().contains("MAGIA") || weapons[i].split("XPARTX")[0].toUpperCase().contains("MÁGICA")) {
+                        shieldValM += Integer.parseInt(weapons[i].split("XPARTX")[1]);
+                    } else shieldVal += Integer.parseInt(weapons[i].split("XPARTX")[1]);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        if (_c.getCharEdition().equals("2") && _c.getCharClass().equals(getResources().getStringArray(R.array.classes2e)[9]) && _c.getCharSkills().contains(" 4")) {
+            shieldVal *= 2;
+            shieldValM *= 2;
+        }
+        int finalArmor = _c.getCharArmor() + Integer.parseInt(armor0[0]) + Integer.parseInt(armor1[0]) + Integer.parseInt(armor2[0]) + Integer.parseInt(armor3[0]) + shieldVal;
+        int finalMarmor = _c.getCharMarmor() + Integer.parseInt(armor0[1]) + Integer.parseInt(armor1[1]) + Integer.parseInt(armor2[1]) + Integer.parseInt(armor3[1]) + shieldValM;
+        int finalValue = (int) Math.floor(finalArmor / 5);
+        int finalValueM = (int) Math.floor(finalMarmor / 5);
+        if (_c.getCharEdition().equals("2") && _c.getCharClass().equals(getResources().getStringArray(R.array.classes2e)[9]) && _c.getCharSkills().contains(" 12")) {
+            finalValue += 3;
+            finalValueM += 3;
+        }
         if (_c.getCharEdition().equals("1")) {
             _detailArmor.setText(String.format(Locale.getDefault(), "Armadura: %d", finalArmor));
-            if (Math.floor(finalArmor / 5) != 0)
-                _detailArmor.setText(String.format("%s (evitará como mínimo %s punto/s de daño)", _detailArmor.getText(), ((int) Math.floor(finalArmor / 5))));
+            if (finalValue != 0)
+                _detailArmor.setText(String.format("%s (evitará como mínimo %s punto/s de daño)", _detailArmor.getText(), finalValue));
             _detailMarmor.setText(String.format(Locale.getDefault(), "Armadura mágica: %d", finalMarmor));
-            if (Math.floor(finalMarmor / 5) != 0)
-                _detailMarmor.setText(String.format("%s (evitará como mínimo %s punto/s de daño mágico)", _detailMarmor.getText(), ((int) Math.floor(finalMarmor / 5))));
+            if (finalValueM != 0)
+                _detailMarmor.setText(String.format("%s (evitará como mínimo %s punto/s de daño mágico)", _detailMarmor.getText(), finalValueM));
         } else {
             _detailArmor.setText(String.format(Locale.getDefault(), "Armadura: %d", finalArmor));
-            if (Math.floor(finalArmor) != 0)
-                _detailArmor.setText(String.format("%s (evitará %s punto/s de daño)", _detailArmor.getText(), ((int) Math.floor(finalArmor / 5))));
+            if (finalValue != 0)
+                _detailArmor.setText(String.format("%s (evitará %s punto/s de daño)", _detailArmor.getText(), finalValue));
             _detailMarmor.setText(String.format(Locale.getDefault(), "Armadura mágica: %d", finalMarmor));
-            if (Math.floor(finalMarmor) != 0)
-                _detailMarmor.setText(String.format("%s (evitará %s punto/s de daño mágico)", _detailMarmor.getText(), ((int) Math.floor(finalMarmor / 5))));
+            if (finalValueM != 0)
+                _detailMarmor.setText(String.format("%s (evitará %s punto/s de daño mágico)", _detailMarmor.getText(), finalValueM));
         }
     }
 
@@ -160,6 +184,13 @@ public class Detail extends AppCompatActivity {
         if (_c.getCharLevel() == 5) findViewById(R.id.detailLevelUp).setVisibility(View.GONE);
         _detailFUEVal.setText(String.valueOf(_c.getCharFue()));
         _detailDESVal.setText(String.valueOf(_c.getCharDes()));
+        String[] weapons = _c.getCharWeapons().split("XNEWX");
+        if (_c.getCharEdition().equals("2") && _c.getCharClass().equals(getResources().getStringArray(R.array.classes2e)[9]) && _c.getCharSkills().contains(" 3") && ((weapons[0].substring(0, 1).equals("-") && !weapons[1].substring(0, 1).equals("-")) || (!weapons[0].substring(0, 1).equals("-") && weapons[1].substring(0, 1).equals("-")))) {
+            _detailDESVal.setText(String.valueOf(_c.getCharDes() + _c.getCharLevel()));
+        } else if (_c.getCharEdition().equals("2") && _c.getCharClass().equals(getResources().getStringArray(R.array.classes2e)[3]) && _c.getCharSkills().contains(" 3") && !_c.getCharSkills().contains(" 12") && ((!weapons[0].substring(0, 1).equals("-") && !weapons[1].substring(0, 1).equals("-")))) {
+            _detailFUEVal.setText(String.valueOf(_c.getCharFue() + 2));
+            _detailDESVal.setText(String.valueOf(_c.getCharDes() + 1));
+        }
         _detailPUNVal.setText(String.valueOf(_c.getCharPun()));
         _detailINTVal.setText(String.valueOf(_c.getCharInt()));
         _detailSABVal.setText(String.valueOf(_c.getCharSab()));
@@ -168,6 +199,18 @@ public class Detail extends AppCompatActivity {
         _detailENCVal.setText(String.valueOf(_c.getCharEnc()));
         _detailPV.setText(String.format(Locale.getDefault(), "%d / %d", _c.getCharPv(), _c.getCharMaxpv()));
         _detailPE.setText(String.format(Locale.getDefault(), "%d / %d", _c.getCharPe(), _c.getCharMaxpe()));
+        int myCritbonus = _c.getCharCritbonus();
+        if (_c.getCharEdition().equals("2") && _c.getCharClass().equals(getResources().getStringArray(R.array.classes2e)[3]) && _c.getCharSkills().contains(" 4") && ((weapons[0].substring(0, 1).equals("-") && !weapons[1].substring(0, 1).equals("-")) || (!weapons[0].substring(0, 1).equals("-") && weapons[1].substring(0, 1).equals("-"))))
+            myCritbonus += 1;
+        ((TextView) findViewById(R.id.detailCritbonus)).setText(String.format(Locale.getDefault(), "Bonif. crítico: %d (críticos con %d natural o superior)", _c.getCharCritbonus(), 20 - myCritbonus));
+        ((TextView) findViewById(R.id.detailCritdmgbonus)).setText(String.format(Locale.getDefault(), "Mult. crítico: %d", _c.getCharCritdmgbonus()));
+        if (_c.getCharEdition().equals("1")) {
+            ((TextView) findViewById(R.id.detailSpellbonus)).setText(String.format(Locale.getDefault(), "Bonif. hechizo: %d", _c.getCharSpellbonus()));
+            ((TextView) findViewById(R.id.detailSpellredbonus)).setText(String.format(Locale.getDefault(), "Bonif. hechizo crítico: %d (críticos con %d natural o superior)", _c.getCharSpellredbonus(), 20 - _c.getCharSpellredbonus()));
+        } else {
+            ((TextView) findViewById(R.id.detailSpellbonus)).setText(String.format(Locale.getDefault(), "Bonif. poder: %d", _c.getCharSpellbonus()));
+            ((TextView) findViewById(R.id.detailSpellredbonus)).setText(String.format(Locale.getDefault(), "Reduc. poder: %d", _c.getCharSpellredbonus()));
+        }
         updateWeapons();
         updateEquipment();
         _goldQuantity.setText(String.valueOf(_c.getCharGold()));
@@ -329,6 +372,7 @@ public class Detail extends AppCompatActivity {
         if (_c.getCharLevel() < 5) {
             final Dialog d = new Dialog(this);
             d.setContentView(R.layout.levelupstats);
+            ((Button) d.findViewById(R.id.luPUN)).setText("+1 PRE");
             _c.setCharLevel(_c.getCharLevel() + 1);
             ((TextView) d.findViewById(R.id.luLevel)).setText(String.format(Locale.getDefault(), "¡Nivel %d!", _c.getCharLevel()));
             (d.findViewById(R.id.luFUE)).setOnClickListener(v -> {
@@ -371,12 +415,18 @@ public class Detail extends AppCompatActivity {
             });
             (d.findViewById(R.id.luAGI)).setOnClickListener(v -> {
                 _c.setCharAgi(_c.getCharAgi() + 1);
+                if (_c.getCharClass().equals(getResources().getStringArray(R.array.classes2e)[2]) && _c.getCharBonus().contains("ASCRIT")) {
+                    if (_c.getCharAgi() % 5 == 0)
+                        _c.setCharCritbonus(_c.getCharCritbonus() + 1);
+                }
                 MyDB.updateChar(_c);
                 updateDetail();
                 d.cancel();
             });
             (d.findViewById(R.id.luVOL)).setOnClickListener(v -> {
                 _c.setCharVol(_c.getCharVol() + 1);
+                if (_c.getCharClass().equals(getResources().getStringArray(R.array.classes2e)[12]))
+                    _c.setCharArmor(_c.getCharArmor() + 2);
                 MyDB.updateChar(_c);
                 updateDetail();
                 d.cancel();
@@ -387,9 +437,6 @@ public class Detail extends AppCompatActivity {
                 updateDetail();
                 d.cancel();
             });
-            /*
-            if ((_c.getCharClass().equals(getResources().getStringArray(R.array.classes1e)[10])))
-                ((Button) d.findViewById(R.id.luPV)).setText("+8 PV");*/
             (d.findViewById(R.id.luPV)).setOnClickListener(v -> {
                 /*if (_c.getCharClass().equals(getResources().getStringArray(R.array.classes1e)[10]))
                     _c.setCharMaxpv(_c.getCharMaxpv() + 8);
@@ -399,29 +446,24 @@ public class Detail extends AppCompatActivity {
                 updateDetail();
                 d.cancel();
             });
-            /*if (_c.getCharClass().equals(getResources().getStringArray(R.array.classes1e)[6]) && _c.getCharSkills().contains(" 5"))
-                ((Button) d.findViewById(R.id.luPE)).setText("+8 PE");*/
             (d.findViewById(R.id.luPE)).setOnClickListener(v -> {
-                /*if (_c.getCharClass().equals(getResources().getStringArray(R.array.classes1e)[6]) && _c.getCharSkills().contains(" 5"))
-                    _c.setCharMaxpe(_c.getCharMaxpe() + 8);
-                else*/
                 _c.setCharMaxpe(_c.getCharMaxpe() + 5);
+                if (_c.getCharClass().equals(getResources().getStringArray(R.array.classes2e)[11]))
+                    _c.setCharMaxpv(_c.getCharMaxpv() + 2);
                 MyDB.updateChar(_c);
                 updateDetail();
                 d.cancel();
             });
             d.show();
-            if (_c.getCharRace().equals(getResources().getStringArray(R.array.races1e)[2]) && (_c.getCharFue() >= 3 || _c.getCharDes() >= 3 || _c.getCharPun() >= 3 || _c.getCharInt() >= 3 || _c.getCharSab() >= 3 ||
+            if (_c.getCharRace().equals(getResources().getStringArray(R.array.races2e)[2]) && (_c.getCharFue() >= 3 || _c.getCharDes() >= 3 || _c.getCharPun() >= 3 || _c.getCharInt() >= 3 || _c.getCharSab() >= 3 ||
                     _c.getCharAgi() >= 3 || _c.getCharVol() >= 3) && !_c.getCharBonus().contains("WECRIT")) {
                 _c.setCharCritbonus(_c.getCharCritbonus() + 1);
                 _c.setCharBonus(_c.getCharBonus() + " WECRIT");
             }
-            /*if (_c.getCharClass().equals(getResources().getStringArray(R.array.classes1e)[11]) && _c.getCharSkills().contains(" 3")) {
-                _c.setCharArmor(_c.getCharArmor() + 3);
-            }
-            if (_c.getCharClass().equals(getResources().getStringArray(R.array.classes1e)[2])) {
+            if (_c.getCharClass().equals(getResources().getStringArray(R.array.classes2e)[3]) && ((_c.getCharLevel() == 3) || (_c.getCharLevel() == 5)))
                 barbDialog();
-            }*/
+            if (_c.getCharClass().equals(getResources().getStringArray(R.array.classes2e)[10]) && _c.getCharSkills().contains(" 3"))
+                _c.setCharArmor(_c.getCharArmor() + 3);
             chooseSkill();
             MyDB.updateChar(_c);
             updateDetail();
@@ -432,31 +474,36 @@ public class Detail extends AppCompatActivity {
         final Dialog barbD = new Dialog(this);
         barbD.setContentView(R.layout.levelupstats);
         ((TextView) barbD.findViewById(R.id.luLevel)).setText("Elige sabiamente, poderoso Bárbaro.");
-        (barbD.findViewById(R.id.luFUE)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                _c.setCharFue(_c.getCharFue() + 1);
+        (barbD.findViewById(R.id.luFUE)).setOnClickListener(v -> {
+            _c.setCharFue(_c.getCharFue() + 1);
+            MyDB.updateChar(_c);
+            updateDetail();
+            barbD.cancel();
+        });
+        if (_c.getCharEdition().equals("1")) {
+            (barbD.findViewById(R.id.luVOL)).setVisibility(View.GONE);
+            ((Button) barbD.findViewById(R.id.luPV)).setText("+3 PV");
+            (barbD.findViewById(R.id.luPV)).setOnClickListener(v -> {
+                _c.setCharPv(_c.getCharPv() + 3);
                 MyDB.updateChar(_c);
                 updateDetail();
                 barbD.cancel();
-            }
-        });
+            });
+        } else {
+            (barbD.findViewById(R.id.luVOL)).setOnClickListener(v -> {
+                _c.setCharVol(_c.getCharVol() + 1);
+                MyDB.updateChar(_c);
+                updateDetail();
+                barbD.cancel();
+            });
+            (barbD.findViewById(R.id.luPV)).setVisibility(View.GONE);
+        }
         (barbD.findViewById(R.id.luDES)).setVisibility(View.GONE);
         (barbD.findViewById(R.id.luPUN)).setVisibility(View.GONE);
         (barbD.findViewById(R.id.luINT)).setVisibility(View.GONE);
         (barbD.findViewById(R.id.luSAB)).setVisibility(View.GONE);
         (barbD.findViewById(R.id.luAGI)).setVisibility(View.GONE);
-        (barbD.findViewById(R.id.luVOL)).setVisibility(View.GONE);
-        ((Button) barbD.findViewById(R.id.luPV)).setText("+3 PV");
-        (barbD.findViewById(R.id.luPV)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                _c.setCharPv(_c.getCharPv() + 3);
-                MyDB.updateChar(_c);
-                updateDetail();
-                barbD.cancel();
-            }
-        });
+        (barbD.findViewById(R.id.luENC)).setVisibility(View.GONE);
         (barbD.findViewById(R.id.luPE)).setVisibility(View.GONE);
         barbD.show();
     }
@@ -563,58 +610,45 @@ public class Detail extends AppCompatActivity {
         ((TextView) skillD.findViewById(R.id.luSkillD3)).setText(Html.fromHtml(desc[((_c.getCharLevel() - 1) * 3) + 2]));
         ((RadioButton) skillD.findViewById(R.id.luSkill1)).setOnCheckedChangeListener((buttonView, isChecked) -> {
             String[] myArray = getResources().getStringArray(R.array.classes2e);
-            /*if (_c.getCharClass().equals(myArray[1]) && ((_c.getCharLevel() - 1) * 3) == 9) {
-                _c.setCharCritbonus(_c.getCharCritbonus() + 2);
-                _c.setCharCritdmgbonus(_c.getCharCritdmgbonus() + 100);
-            } else if (_c.getCharClass().equals(myArray[8]) && ((_c.getCharLevel() - 1) * 3) == 9) {
-                _c.setCharVol(_c.getCharVol() + 1);
-            } else if (_c.getCharClass().equals(myArray[10]) && ((_c.getCharLevel() - 1) * 3) == 3) {
+            if ((_c.getCharClass().equals(myArray[9])) && (((_c.getCharLevel() - 1) * 3) == 3))
                 _c.setCharDes(_c.getCharDes() + 1);
-            } else if (_c.getCharClass().equals(myArray[10]) && ((_c.getCharLevel() - 1) * 3) == 12) {
+            else if ((_c.getCharClass().equals(myArray[9])) && (((_c.getCharLevel() - 1) * 3) == 12)) {
                 _c.setCharMaxpv(_c.getCharMaxpv() + 5);
                 _c.setCharVol(_c.getCharVol() + 3);
-            } else if (_c.getCharClass().equals(myArray[11]) && ((_c.getCharLevel() - 1) * 3) == 3) {
+            } else if ((_c.getCharClass().equals(myArray[10])) && (((_c.getCharLevel() - 1) * 3) == 3)) {
                 _c.setCharVol(_c.getCharVol() + 2);
                 _c.setCharArmor(_c.getCharArmor() + 6);
             }
-            */_c.setCharSkills(_c.getCharSkills() + " " + (_c.getCharLevel() - 1) * 3);
+            _c.setCharSkills(_c.getCharSkills() + " " + (_c.getCharLevel() - 1) * 3);
             MyDB.updateChar(_c);
             updateDetail();
             skillD.cancel();
         });
         ((RadioButton) skillD.findViewById(R.id.luSkill2)).setOnCheckedChangeListener((buttonView, isChecked) -> {
             String[] myArray = getResources().getStringArray(R.array.classes2e);
-            /*if (_c.getCharClass().equals(myArray[2]) && (((_c.getCharLevel() - 1) * 3) + 1) == 4) {
-                _c.setCharCritbonus(_c.getCharCritbonus() + 1);
-            } else if (_c.getCharClass().equals(myArray[1]) && (((_c.getCharLevel() - 1) * 3) + 1) == 13) {
+            if ((_c.getCharClass().equals(myArray[2])) && (((_c.getCharLevel() - 1) * 3) + 1 == 13))
                 assassinSkill();
-            } else if (_c.getCharClass().equals(myArray[7]) && (((_c.getCharLevel() - 1) * 3) + 1) == 7) {
+            else if ((_c.getCharClass().equals(myArray[3])) && (((_c.getCharLevel() - 1) * 3) + 1 == 4))
                 _c.setCharCritbonus(_c.getCharCritbonus() + 1);
-                _c.setCharCritdmgbonus(_c.getCharCritdmgbonus() + 100);
-            } else if (_c.getCharClass().equals(myArray[8]) && (((_c.getCharLevel() - 1) * 3) + 1) == 13) {
-                _c.setCharMaxpe(_c.getCharMaxpe() + 8);
-            } else if (_c.getCharClass().equals(myArray[10]) && (((_c.getCharLevel() - 1) * 3) + 1) == 10) {
-                _c.setCharMaxpv(_c.getCharMaxpv() + 5);
-            } else if (_c.getCharClass().equals(myArray[12]) && (((_c.getCharLevel() - 1) * 3) + 1) == 10) {
-                _c.setCharMaxpe(_c.getCharMaxpe() + 5);
+            else if ((_c.getCharClass().equals(myArray[13])) && (((_c.getCharLevel() - 1) * 3) + 1 == 7)) {
+                _c.setCharCritbonus(_c.getCharCritbonus() + 1);
+                _c.setCharCritdmgbonus(_c.getCharCritdmgbonus() + 1);
             }
-            */_c.setCharSkills(_c.getCharSkills() + " " + (((_c.getCharLevel() - 1) * 3) + 1));
+            _c.setCharSkills(_c.getCharSkills() + " " + (((_c.getCharLevel() - 1) * 3) + 1));
             MyDB.updateChar(_c);
             updateDetail();
             skillD.cancel();
         });
         ((RadioButton) skillD.findViewById(R.id.luSkill3)).setOnCheckedChangeListener((buttonView, isChecked) -> {
             String[] myArray = getResources().getStringArray(R.array.classes2e);
-            /*if (_c.getCharClass().equals(myArray[4]) && (((_c.getCharLevel() - 1) * 3) + 2) == 5) {
+            if (_c.getCharClass().equals(myArray[2]) && (((_c.getCharLevel() - 1) * 3) + 2) == 8) {
+                _c.setCharCritbonus(_c.getCharCritbonus() + (int) Math.floor(_c.getCharAgi() / 5));
+                _c.setCharBonus(_c.getCharBonus() + " ASCRIT");
+            } else if (_c.getCharClass().equals(myArray[9]) && (((_c.getCharLevel() - 1) * 3) + 2) == 8) {
+                _c.setCharMarmor(_c.getCharMarmor() + 5);
+            } else if (_c.getCharClass().equals(myArray[13]) && (((_c.getCharLevel() - 1) * 3) + 2) == 11)
                 _c.setCharCritbonus(_c.getCharCritbonus() + 1);
-                _c.setCharPun(_c.getCharPun() + 2);
-                _c.setCharMaxpe(_c.getCharMaxpe() + 5);
-            } else if (_c.getCharClass().equals(myArray[6]) && (((_c.getCharLevel() - 1) * 3) + 2) == 5) {
-                _c.setCharMaxpe(_c.getCharMaxpe() + 3);
-            } else if (_c.getCharClass().equals(myArray[13]) && (((_c.getCharLevel() - 1) * 3) + 2) == 14) {
-                _c.setCharMaxpv(_c.getCharMaxpv() + 10);
-            }
-            */_c.setCharSkills(_c.getCharSkills() + " " + (((_c.getCharLevel() - 1) * 3) + 2));
+            _c.setCharSkills(_c.getCharSkills() + " " + (((_c.getCharLevel() - 1) * 3) + 2));
             MyDB.updateChar(_c);
             updateDetail();
             skillD.cancel();
@@ -625,13 +659,22 @@ public class Detail extends AppCompatActivity {
     public void assassinSkill() {
         final Dialog skillD = new Dialog(this);
         skillD.setContentView(R.layout.chooseskill);
-        String[] classes = getResources().getStringArray(R.array.classes1e);
+        String[] classes = null, titles = null, desc = null;
+        if (_c.getCharEdition().equals("1"))
+            classes = getResources().getStringArray(R.array.classes1e);
+        else if (_c.getCharEdition().equals("2"))
+            classes = getResources().getStringArray(R.array.classes2e);
         int myClass = 0;
         for (int i = 0; i < classes.length; i++) {
             if (_c.getCharClass().equals(classes[i])) myClass = i;
         }
-        String[] titles = getResources().getStringArray(R.array.classesSkills1e)[myClass].split("XNEWX");
-        String[] desc = getResources().getStringArray(R.array.classesSkillsDesc1e)[myClass].split("XNEWX");
+        if (_c.getCharEdition().equals("1")) {
+            titles = getResources().getStringArray(R.array.classesSkills1e)[myClass].split("XNEWX");
+            desc = getResources().getStringArray(R.array.classesSkillsDesc1e)[myClass].split("XNEWX");
+        } else if (_c.getCharEdition().equals("2")) {
+            titles = getResources().getStringArray(R.array.classesSkills2e)[myClass].split("XNEWX");
+            desc = getResources().getStringArray(R.array.classesSkillsDesc2e)[myClass].split("XNEWX");
+        }
         int[] possible = new int[4];
         if (_c.getCharSkills().contains(" 3")) {
             possible[0] = 4;
@@ -783,7 +826,12 @@ public class Detail extends AppCompatActivity {
                 newWeapon += myWeapons[i];
             }
             _c.setCharWeapons(newWeapon);
-            updateWeapons();
+            if (_c.getCharEdition().equals("2") && _c.getCharClass().equals(getResources().getStringArray(R.array.classes2e)[9]) && _c.getCharSkills().contains(" 11") && (myName.getText().toString().toUpperCase().contains("ESCUDO") || myName.getText().toString().toUpperCase().contains("RODELA"))) {
+                _c.setCharMaxpv(_c.getCharMaxpv() + 5);
+                _c.setCharArmor(_c.getCharArmor() + 5);
+                updateDetail();
+            }
+            updateDetail();
             d.dismiss();
         });
 
@@ -796,6 +844,11 @@ public class Detail extends AppCompatActivity {
         else if (view.equals(findViewById(R.id.weapon2remove))) position = 2;
         else if (view.equals(findViewById(R.id.weapon3remove))) position = 3;
         String[] myWeapons = _c.getCharWeapons().split("XNEWX");
+        if (_c.getCharEdition().equals("2") && _c.getCharClass().equals(getResources().getStringArray(R.array.classes2e)[9]) && _c.getCharSkills().contains(" 11") && (myWeapons[position].split("XPARTX")[0].toUpperCase().contains("ESCUDO") || myWeapons[position].split("XPARTX")[0].toUpperCase().contains("RODELA"))) {
+            _c.setCharMaxpv(_c.getCharMaxpv() - 5);
+            _c.setCharArmor(_c.getCharArmor() - 5);
+            updateDetail();
+        }
         myWeapons[position] = "-XPARTX-";
         String newWeapon = "";
         for (int i = 0; i < myWeapons.length; i++) {
@@ -803,7 +856,7 @@ public class Detail extends AppCompatActivity {
             newWeapon += myWeapons[i];
         }
         _c.setCharWeapons(newWeapon);
-        updateWeapons();
+        updateDetail();
     }
 
     public void addEquipment(View view) {
@@ -832,7 +885,7 @@ public class Detail extends AppCompatActivity {
                 newEquip += myEquipment[i];
             }
             _c.setCharEquip(newEquip);
-            updateEquipment();
+            updateDetail();
             d.dismiss();
         });
     }
@@ -851,6 +904,6 @@ public class Detail extends AppCompatActivity {
             newEquip += myEquipment[i];
         }
         _c.setCharEquip(newEquip);
-        updateEquipment();
+        updateDetail();
     }
 }
