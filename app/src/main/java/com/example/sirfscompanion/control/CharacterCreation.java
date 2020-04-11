@@ -151,13 +151,13 @@ public class CharacterCreation extends AppCompatActivity {
                     Glide.with(getApplicationContext()).load(R.drawable.hunter).asBitmap().into(_civ);
                 else if (parent.getItemAtPosition(position).toString().equals(classes[5]))
                     Glide.with(getApplicationContext()).load(R.drawable.druid).asBitmap().into(_civ);
-                else if (parent.getItemAtPosition(position).toString().equals(classes[6]))
+                else if (parent.getItemAtPosition(position).toString().equals(classes[6]) || parent.getItemAtPosition(position).toString().equals(getResources().getStringArray(R.array.classes2e)[1]))
                     Glide.with(getApplicationContext()).load(R.drawable.arcane).asBitmap().into(_civ);
-                else if (parent.getItemAtPosition(position).toString().equals(classes[7]))
+                else if (parent.getItemAtPosition(position).toString().equals(classes[7]) || parent.getItemAtPosition(position).toString().equals(getResources().getStringArray(R.array.classes2e)[13]))
                     Glide.with(getApplicationContext()).load(R.drawable.fire).asBitmap().into(_civ);
-                else if (parent.getItemAtPosition(position).toString().equals(classes[8]))
+                else if (parent.getItemAtPosition(position).toString().equals(classes[8]) || parent.getItemAtPosition(position).toString().equals(getResources().getStringArray(R.array.classes2e)[6]))
                     Glide.with(getApplicationContext()).load(R.drawable.ice).asBitmap().into(_civ);
-                else if (parent.getItemAtPosition(position).toString().equals(classes[9]))
+                else if (parent.getItemAtPosition(position).toString().equals(classes[9]) || parent.getItemAtPosition(position).toString().equals(getResources().getStringArray(R.array.classes2e)[8]))
                     Glide.with(getApplicationContext()).load(R.drawable.earth).asBitmap().into(_civ);
                 else if (parent.getItemAtPosition(position).toString().equals(classes[10]))
                     Glide.with(getApplicationContext()).load(R.drawable.warrior).asBitmap().into(_civ);
